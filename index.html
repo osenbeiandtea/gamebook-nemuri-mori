@@ -1,0 +1,1436 @@
+<!doctype html><html lang="ja"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png"><link rel="shortcut icon" href="favicon.ico"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#1e2d40"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>眠りの森の王子</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap">
+<style>
+/* 配置: 一頁の本を机に置いた見た目。段落番号を大きく据え、選択肢は点線の引出線で行き先の番号に結ぶ。
+   色: 再生紙(灰みの黄)・墨・臙脂。小瓶の青/赤/金だけが物語の色。夜は青黒い紙に変わる。
+   書体: 見出しと本文は明朝(しっぽり明朝)、記録紙の見出しとラベルは角ゴシック。 */
+:root {
+  --desk: #d3ccb6;
+  --paper: #e6e3d2;
+  --paper-2: #dad6c1;
+  --ink: #1f1c1a;
+  --ink-2: #5a5549;
+  --rule: #b1ab94;
+  --accent: #7b1f2a;
+  --accent-ink: #f3eee0;
+  --moon: #26231f;
+  --moon-ink: #ece6d2;
+  --b-blue: #3b66a8;
+  --b-red: #a52c2c;
+  --b-gold: #a97d12;
+  --silver: #6f7a85;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2  0 0 0 0 .17  0 0 0 0 .1  0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  --shadow: 0 1px 0 rgba(255,255,255,.35) inset, 0 10px 30px -12px rgba(40,30,10,.45);
+  --plate-filter: none;
+  --font-display: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif;
+  --font-body: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif;
+  --font-ui: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Noto Sans JP', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --desk: #0d0e11; --paper: #191a1f; --paper-2: #212228; --ink: #e4ddca; --ink-2: #a39d8b;
+    --rule: #3b3c44; --accent: #d9776a; --accent-ink: #1a1112; --moon: #ebe5d1; --moon-ink: #1a1b20;
+    --b-blue: #6f9be0; --b-red: #e0645e; --b-gold: #e0b94c; --silver: #aeb8c2;
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9  0 0 0 0 .88  0 0 0 0 .8  0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+    --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 12px 34px -14px rgba(0,0,0,.8);
+    --plate-filter: brightness(.9) saturate(.95);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --desk: #0d0e11; --paper: #191a1f; --paper-2: #212228; --ink: #e4ddca; --ink-2: #a39d8b;
+  --rule: #3b3c44; --accent: #d9776a; --accent-ink: #1a1112; --moon: #ebe5d1; --moon-ink: #1a1b20;
+  --b-blue: #6f9be0; --b-red: #e0645e; --b-gold: #e0b94c; --silver: #aeb8c2;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9  0 0 0 0 .88  0 0 0 0 .8  0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+  --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 12px 34px -14px rgba(0,0,0,.8);
+  --plate-filter: brightness(.9) saturate(.95);
+    color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--desk);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.9;
+  padding-inline: 16px;
+  padding-block: 0 48px;
+  -webkit-text-size-adjust: 100%;
+}
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.wrap { max-width: 64rem; margin-inline: auto; }
+
+/* ---- 上の帯 ---- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+  padding-block: .6rem; margin-bottom: .75rem;
+  background: var(--desk);
+  font-family: var(--font-ui);
+}
+.bar .name {
+  background: none; border: 0; padding: .4rem 0; cursor: pointer;
+  font-family: var(--font-display); font-weight: 600; letter-spacing: .12em; font-size: .95rem;
+}
+.bar .tools { display: flex; gap: .5rem; flex-wrap: wrap; justify-content: flex-end; }
+.btn {
+  font-family: var(--font-ui); font-size: .85rem; letter-spacing: .06em;
+  min-height: 2.5rem; padding: .35rem .95rem; cursor: pointer;
+  background: transparent; border: 1px solid var(--rule); color: var(--ink);
+}
+.btn:hover { border-color: var(--ink-2); background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
+.btn.primary:hover { background: color-mix(in srgb, var(--accent) 88%, var(--ink)); }
+.btn[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.btn.danger { color: var(--accent); }
+
+/* ---- 表紙 ---- */
+.cover {
+  max-width: 40rem; margin-inline: auto;
+  background: var(--paper) var(--grain); border: 1px solid var(--rule); box-shadow: var(--shadow);
+  padding: clamp(1.25rem, 5vw, 2.5rem) clamp(1rem, 5vw, 2.5rem) 2rem;
+  display: flex; flex-direction: column; align-items: center; gap: 1.4rem; text-align: center;
+}
+.moon {
+  width: min(78vw, 19rem); aspect-ratio: 1; border-radius: 50%;
+  background: var(--moon); color: var(--moon-ink);
+  box-shadow: 0 0 0 .55rem color-mix(in srgb, var(--moon) 14%, transparent), 0 0 0 1.1rem color-mix(in srgb, var(--moon) 6%, transparent);
+  display: grid; place-items: center;
+}
+.moon h1 {
+  margin: 0; display: flex; flex-direction: column; align-items: center; gap: .24em;
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(1.7rem, 7.2vw, 2.2rem);
+  line-height: 1;
+}
+.moon h1 span { display: block; }
+.cover .sub { margin: 0; font-family: var(--font-ui); font-size: .8rem; letter-spacing: .3em; color: var(--ink-2); }
+.cover .epi { margin: 0; font-size: 1rem; letter-spacing: .12em; color: var(--ink-2); }
+.cover .acts { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+
+.seals { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin: 0; padding: 0; list-style: none; }
+.seals li {
+  min-width: 5.2rem; padding: .45rem .6rem; font-family: var(--font-ui); font-size: .82rem; letter-spacing: .1em;
+  border: 1px dashed var(--rule); color: var(--ink-2);
+}
+.seals li.on { border: 1.5px solid var(--accent); color: var(--accent); font-weight: 700; }
+.cover h2, .sheet h2 {
+  margin: 0; font-family: var(--font-ui); font-size: .78rem; font-weight: 700; letter-spacing: .24em; color: var(--ink-2);
+}
+.stat { margin: 0; font-family: var(--font-ui); font-size: .9rem; color: var(--ink-2); }
+.stat b { font-family: var(--font-display); font-size: 1.5rem; color: var(--ink); font-weight: 800; padding-inline: .15em; }
+
+.code-box { width: 100%; display: grid; gap: .6rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); font-family: var(--font-ui); }
+.code-row { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; align-items: center; }
+.code-row input {
+  font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; letter-spacing: .2em; text-align: center;
+  width: 11rem; min-height: 2.5rem; padding: .2rem .5rem; color: var(--ink);
+  background: var(--paper-2); border: 1px solid var(--rule); border-radius: 0;
+}
+.code-row input::placeholder { color: var(--ink-2); opacity: .6; letter-spacing: .1em; font-weight: 400; font-size: .95rem; }
+.note-s { margin: 0; font-size: .8rem; line-height: 1.7; color: var(--ink-2); }
+.msg { min-height: 1.4em; margin: 0; font-family: var(--font-ui); font-size: .85rem; color: var(--accent); text-align: center; }
+
+/* ---- 読む画面 ---- */
+.layout { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 60rem) {
+  .layout.has-sheet { grid-template-columns: minmax(0, 40rem) 19rem; justify-content: center; align-items: start; gap: 1.5rem; }
+  .layout.has-sheet .book { grid-column: 1; grid-row: 1; }
+  .layout.has-sheet .sheet { grid-column: 2; grid-row: 1; position: sticky; top: calc(4rem + env(safe-area-inset-top, 0px)); }
+  .layout:not(.has-sheet) .book { max-width: 40rem; margin-inline: auto; width: 100%; }
+}
+.book {
+  background: var(--paper) var(--grain); border: 1px solid var(--rule); box-shadow: var(--shadow);
+  padding: clamp(1.1rem, 4.5vw, 2.6rem) clamp(1.1rem, 4.5vw, 2.8rem) clamp(1.4rem, 4vw, 2.4rem);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .book .fade { animation: arrive .45s ease-out; }
+  @keyframes arrive { from { opacity: .3; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+}
+.phead { display: grid; justify-items: center; gap: .1rem; margin-bottom: 1.4rem; }
+.chap { margin: 0; font-family: var(--font-ui); font-size: .76rem; letter-spacing: .34em; color: var(--ink-2); padding-left: .34em; }
+.no {
+  margin: 0; width: 100%; display: flex; align-items: center; gap: 1rem;
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(2.5rem, 10vw, 3.5rem); line-height: 1.15;
+  color: var(--accent); letter-spacing: .04em; justify-content: center;
+}
+.no::before, .no::after { content: ''; flex: 1; height: 1px; background: var(--rule); max-width: 7rem; }
+.no:focus { outline: none; }
+.ptitle { margin: 0; font-family: var(--font-ui); font-size: .78rem; color: var(--ink-2); letter-spacing: .08em; }
+
+.text p { margin: 0 0 .9em; text-indent: 1em; line-break: strict; text-wrap: pretty; }
+.text p.say { text-indent: 0; }
+.text blockquote.note {
+  margin: 1.1em 1.2em 1.3em; padding-block: .7em; border-block: 1px dotted var(--ink-2);
+  font-size: .95em; line-height: 1.85; letter-spacing: .02em; color: var(--ink);
+}
+.text blockquote.note p { text-indent: 0; margin: 0 0 .5em; }
+.text blockquote.note p:last-child { margin-bottom: 0; }
+
+.gains { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.2rem 0 .2rem; }
+.stamp {
+  display: inline-block; padding: .15rem .8rem; border: 1.5px solid var(--accent); color: var(--accent);
+  font-family: var(--font-ui); font-weight: 700; font-size: .82rem; letter-spacing: .1em; transform: rotate(-1.2deg);
+}
+
+.pz { margin: 1.4rem 0 0; padding: 1rem 1rem 1.1rem; border: 1px solid var(--rule); background: color-mix(in srgb, var(--paper-2) 70%, transparent); display: grid; gap: .8rem; justify-items: center; text-align: center; }
+.pz-h { margin: 0; font-family: var(--font-ui); font-size: .78rem; font-weight: 700; letter-spacing: .3em; color: var(--ink-2); padding-left: .3em; }
+.pz-h:focus { outline: none; }
+.pz-say { margin: 0; min-height: 3.2em; font-size: .95rem; line-height: 1.7; color: var(--ink); }
+.pz-small { margin: 0; font-size: .9rem; color: var(--ink-2); }
+.pz .acts { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+.pz-wall { position: relative; width: 100%; max-width: 22rem; height: 8rem; overflow: hidden; border: 1px solid #3a4258; background: #141824; }
+.pz-wall i { position: absolute; inset: 0; opacity: var(--glow, .35); transition: opacity .1s linear;
+  background: repeating-linear-gradient(90deg, transparent 0 1.1rem, rgba(255,243,196,.25) 1.1rem 1.18rem), radial-gradient(ellipse at 50% 50%, #fff3c4 0, rgba(255,243,196,.55) 38%, transparent 75%); }
+@media (prefers-reduced-motion: reduce) { .pz-wall i { transition: none; } }
+.stele { position: relative; width: min(100%, 20rem); aspect-ratio: 320 / 440; }
+.stele svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; overflow: hidden; border-radius: 10px; border: 1px solid color-mix(in srgb, var(--ink-2) 40%, transparent); }
+.stele .slot { position: absolute; padding: 0; margin: 0; border: 0; background: transparent; cursor: pointer; border-radius: 8px; }
+.stele .slot:hover { background: rgba(255,255,255,.14); }
+.stele .slot:focus-visible { outline: 2px solid #fff; outline-offset: 1px; box-shadow: 0 0 0 4px var(--accent); }
+.stele .sel-ring { fill: none; stroke: #fff; stroke-width: 2.5; stroke-dasharray: 5 4; }
+.stele .rune { opacity: .5; transition: opacity .6s; }
+.stele.done .rune { opacity: 1; }
+.stele .fly { animation: none; }
+@media (prefers-reduced-motion: no-preference) { .stele .fly { animation: fly 4.5s ease-in-out infinite alternate; } @keyframes fly { from { opacity: .35; } to { opacity: 1; } } }
+@media (prefers-reduced-motion: no-preference) {
+  .moss-fall { animation: mossfall .7s ease-in forwards; transform-box: fill-box; transform-origin: 50% 100%; }
+  .moss-grow { animation: mossgrow .5s ease-out; transform-box: fill-box; transform-origin: 50% 50%; }
+  @keyframes mossfall { to { transform: translateY(14px) scale(.8, .6); opacity: 0; } }
+  @keyframes mossgrow { 0% { transform: scale(.9); } 55% { transform: scale(1.1); } 100% { transform: scale(1); } }
+}
+.stele text.eng { font-family: var(--font-display); font-size: 38px; font-weight: 800; text-anchor: middle; fill: #172030; paint-order: stroke; stroke: rgba(190,225,250,.65); stroke-width: 1.3px; }
+.stele text.eng.hit { fill: #eaf6ff; stroke: rgba(150,225,255,.9); stroke-width: 1.2px; filter: drop-shadow(0 0 4px #8fd6ff); }
+.stele text.eng.cut { fill: #0f151e; }
+.cands { display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap; min-height: 4rem; align-items: center; }
+.cands .cand { width: 3.6rem; height: 3.6rem; font-family: var(--font-display); font-size: 2rem; font-weight: 800; line-height: 1; cursor: pointer; padding: 0;
+  color: var(--ink); background: var(--paper); border: 1.5px solid var(--rule); box-shadow: 0 2px 0 var(--rule); }
+.cands .cand:hover { border-color: var(--accent); }
+.cands .cand.hint { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent); }
+.cands-note { font-family: var(--font-ui); font-size: .8rem; color: var(--ink-2); }
+.vid { margin: 1.4rem 0 0; display: grid; gap: .5rem; }
+.vid video { width: 100%; display: block; background: #0b0e14; border: 1px solid var(--rule); aspect-ratio: 16 / 9; }
+.vid-card { display: grid; grid-template-columns: auto 1fr; gap: .2rem .9rem; align-items: center; padding: .9rem 1rem; text-decoration: none; color: var(--ink);
+  border: 1px solid var(--rule); background: color-mix(in srgb, var(--paper-2) 70%, transparent); box-shadow: 0 2px 0 var(--rule); }
+.vid-card:hover { border-color: var(--accent); }
+.vid-card .play { grid-row: 1 / 3; width: 2.8rem; height: 2.8rem; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font-size: 1.1rem; padding-left: .15rem; }
+.vid-card .t { font-family: var(--font-ui); font-weight: 700; font-size: .95rem; letter-spacing: .04em; }
+.vid-card .s { font-family: var(--font-ui); font-size: .78rem; color: var(--ink-2); }
+.vid-note { margin: 0; font-family: var(--font-ui); font-size: .78rem; line-height: 1.6; color: var(--ink-2); }
+.vid.empty { padding: 1rem; text-align: center; border: 1px dashed var(--rule); color: var(--ink-2); font-family: var(--font-ui); font-size: .85rem; }
+.vid.empty small { display: block; margin-top: .2rem; font-size: .72rem; }
+.choices { list-style: none; margin: 1.4rem 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.choices li { border-bottom: 1px solid var(--rule); }
+.choice {
+  width: 100%; display: flex; align-items: baseline; gap: .5rem; text-align: left; cursor: pointer;
+  background: none; border: 0; padding: .8rem .35rem; line-height: 1.6; font-size: 1rem;
+}
+.choice:hover:not(:disabled) { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.choice .t { flex: 0 1 auto; min-width: 0; }
+.choice .dots { flex: 1 1 1.5rem; min-width: 1.2rem; border-bottom: 2px dotted var(--rule); align-self: flex-end; margin-bottom: .45em; }
+.choice .go { flex: none; font-family: var(--font-display); font-weight: 800; color: var(--accent); white-space: nowrap; }
+.choice .go small { font-weight: 600; font-size: .75em; margin-left: .15em; color: var(--ink-2); }
+.choice:disabled { cursor: not-allowed; color: var(--ink-2); opacity: .72; }
+.choice:disabled .go { color: var(--ink-2); }
+.why { margin: -.25rem .35rem .75rem; font-family: var(--font-ui); font-size: .78rem; line-height: 1.6; color: var(--ink-2); }
+.why b { color: var(--accent); font-weight: 700; letter-spacing: .08em; }
+
+.end { margin-top: 1.8rem; padding-top: 1.6rem; border-top: 1px solid var(--rule); display: grid; justify-items: center; gap: .6rem; text-align: center; }
+.seal {
+  margin: 0; width: 3.6rem; height: 3.6rem; display: grid; place-items: center; transform: rotate(-4deg);
+  border: 2px solid var(--accent); color: var(--accent); font-family: var(--font-display); font-weight: 800; font-size: 2rem; line-height: 1;
+}
+.end-name { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; letter-spacing: .14em; }
+.end-gain { margin: 0; font-family: var(--font-ui); font-size: .88rem; color: var(--ink-2); }
+.end-gain b { color: var(--accent); }
+.end .acts { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin-top: .4rem; }
+.end .code-row { margin-top: .4rem; }
+
+/* ---- 冒険記録紙 ---- */
+.sheet {
+  background: var(--paper-2) var(--grain); border: 1px solid var(--rule); padding: 1.1rem 1.1rem 1.2rem;
+  font-family: var(--font-ui); font-size: .88rem; line-height: 1.7; display: grid; gap: 1rem; align-content: start;
+}
+.sheet section { display: grid; gap: .45rem; }
+.sheet h3 { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .22em; color: var(--ink-2); border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+.sheet ul, .sheet ol { list-style: none; margin: 0; padding: 0; }
+.items { display: flex; flex-wrap: wrap; gap: .6rem 1rem; }
+.item { display: grid; justify-items: center; gap: .1rem; min-width: 3.4rem; font-size: .76rem; color: var(--ink-2); }
+.item svg { width: 2rem; height: 2.4rem; display: block; }
+.item.off svg { opacity: .35; }
+.item.on { color: var(--ink); }
+.notes li { border-bottom: 1px dotted var(--rule); }
+.notes details summary { cursor: pointer; padding: .3rem 0; list-style: none; display: flex; gap: .5rem; align-items: baseline; }
+.notes details summary::-webkit-details-marker { display: none; }
+.notes .mark { font-family: var(--font-display); font-weight: 800; color: var(--accent); }
+.notes .off { display: flex; gap: .5rem; padding: .3rem 0; color: var(--ink-2); opacity: .6; }
+.notes .off .mark { color: var(--ink-2); }
+.notes .body { font-family: var(--font-body); font-size: .88rem; line-height: 1.8; padding: .1rem 0 .6rem 1.7rem; color: var(--ink); }
+.notes .body p { margin: 0 0 .4em; }
+.frag { margin: 0; color: var(--ink-2); }
+.frag b { font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); font-weight: 800; padding-inline: .15em; }
+.testbox { border-top: 1px dashed var(--ink-2); padding-top: .8rem; }
+.testbox label { display: flex; gap: .5rem; align-items: center; cursor: pointer; min-height: 2rem; }
+.testbox input[type=checkbox] { width: 1.1rem; height: 1.1rem; accent-color: var(--accent); }
+.testbox dl { display: grid; grid-template-columns: auto 1fr; gap: .1rem .8rem; margin: 0; font-size: .8rem; }
+.testbox dt { color: var(--ink-2); }
+.testbox dd { margin: 0; }
+.testbox .row { display: flex; flex-wrap: wrap; gap: .4rem; }
+.testbox .btn { min-height: 2.1rem; font-size: .78rem; padding: .2rem .65rem; }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* 表紙のテスト欄 */
+.cover .testbox { width: 100%; display: grid; gap: .6rem; justify-items: center; font-family: var(--font-ui); font-size: .85rem; }
+.cover .testbox .row { justify-content: center; }
+
+/* ---- 挿絵 ---- */
+.plate { margin: 0 0 1.5rem; }
+.plate img {
+  display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; filter: var(--plate-filter);
+  outline: 1px solid var(--rule); outline-offset: 3px; box-shadow: 0 8px 22px -14px rgba(30, 20, 5, .6);
+}
+.plate { padding: 4px; }
+.plate.empty {
+  aspect-ratio: 3 / 2; max-width: 100%; display: grid; place-items: center; text-align: center;
+  border: 1px dashed var(--rule); color: var(--ink-2); font-family: var(--font-ui); font-size: .85rem; letter-spacing: .08em; padding: 1rem;
+}
+.plate.empty span { display: grid; gap: .3rem; }
+.plate.empty small { font-size: .72rem; letter-spacing: .04em; opacity: .8; }
+.cover-plate { width: 100%; margin: 0; }
+.cover-title {
+  margin: 0; font-family: var(--font-display); font-weight: 800; letter-spacing: .24em; padding-left: .24em;
+  font-size: clamp(1.7rem, 7.2vw, 2.4rem); line-height: 1.3;
+}
+</style>
+<div class="wrap" id="root"></div>
+<script>
+/* ============================================================
+   眠りの森の王子 ― 本文と分岐のデータ(ここだけ直せば物語が変わる)
+   s = いまの周回の状態 / m = 周回をまたいで残る記録(記憶の断片など)
+   ============================================================ */
+'use strict';
+
+const CIRC = ['', '①', '②', '③', '④', '⑤', '⑥'];
+const ITEMS = { gold: '金の瓶', blue: '青の瓶', red: '赤の瓶' };
+const ORDER_NAME = { B: '青', R: '赤', G: '金' };
+const CORRECT_ORDER = 'BRG'; // 青(苦しみ) → 赤(襲った日) → 金(幼い頃)
+
+const CHAPTERS = [
+  { name: '序章', from: 1, to: 5 },
+  { name: '眠りの森', from: 6, to: 13 },
+  { name: '廃城', from: 14, to: 22 },
+  { name: '戦い', from: 23, to: 29 },
+  { name: '王子の間', from: 30, to: 36 },
+  { name: '終章', from: 37, to: 41 },
+];
+
+const ENDINGS = {
+  37: { name: '犠牲者', label: '犠牲者の結末' },
+  38: { name: '逃走', label: '逃走の結末' },
+  39: { name: '再封印', label: '再封印の結末' },
+  40: { name: '討つ', label: '討つ結末' },
+  41: { name: '魂の解放', label: '魂の解放(真のエンディング)' },
+};
+
+/* 挿絵の枠。画像そのものは plates.js(PLATE_IMG)に入れる。画像がなければ何も出さない */
+const PLATES = {
+  cover: { name: '表紙', alt: '満月の下の沈黙の谷と、森の縁に立つ旅人' },
+  6: { name: '森の道', alt: '三つに分かれる霧の道' },
+  17: { name: '広場', alt: '灰の山の上に一輪だけ咲く花' },
+  24: { name: '幻', alt: '灰色の外套の男と、王子と王の幻' },
+  29: { name: '煙', alt: '煙になって消えていく男と、足元の小瓶' },
+  31: { name: '王子', alt: '寝台に身を起こす王子と、少し違う姿勢の影' },
+  41: { name: '魂の解放', alt: '光になって窓へ溶けていく王子' },
+};
+
+/* 手記(記録紙で読み返せる) */
+const NOTES = {
+  1: { title: '先客の手帳', lines: ['瓶には色がある。金は遠い日、青は病の夜、赤は血の日。……順に、とは書けなかった。私は間違えた'] },
+  2: { title: '民家の手記', lines: ['あの方は、泣きながら人を襲った。最初の夜、私の目の前で。……だから私は、あの方を憎めなかった。赤い瓶は、あの方の部屋の扉の前に置いた。あの日を、あの方が一人で抱えないように'] },
+  3: { title: '庵の記録', lines: ['傷は罪より古い。古いものから触れよ。', 'Mの呪いは私の手には余った。ならば私が、あの子の眠りの番をしよう', '(紙の隅に小さく)この呪文は、唱えた者を守りに変える'] },
+  4: { title: '王の日記', lines: ['悪い夢を見た夜、あの子は私の袖をつかんで離さなかった。だから教えた。嫌なことは先に話しなさい。いちばん楽しい話は、眠る直前までとっておくんだ、と'] },
+  5: { title: '王の祈り', lines: ['どうか、あの子を、昔のように眠らせてやってほしい。私にはもう、何も与えられない。ただ、眠りだけは'] },
+  6: { title: '廊下の手記', lines: ['あの方は、最初に人を襲った日を、誰よりも悔やんでいる。だから私は思う。罪から先に向き合わせるべきだと。苦しみも、幼い日も、その後でいい'] },
+};
+
+/* ---- 条件の小道具 ---- */
+const hasSilver = (s) => s.silver;
+const noteN = (s) => s.notes.length;
+const canTurnBack = {
+  ok: (s) => noteN(s) >= 2,
+  hint: () => 'いまは、引き返す理由が足りない。',
+  why: (s) => '手記が2枚以上必要(いま' + noteN(s) + '枚)',
+};
+const go = (t, to, extra) => Object.assign({ t, to }, extra || {});
+
+/* 瓶を開ける選択肢(33) */
+const openBottles = {
+  ok: (s, m) => hasAll(s) && noteN(s) >= 6 && m.fragments >= 1,
+  hint: (s, m) => (hasAll(s) && noteN(s) >= 6)
+    ? '小瓶の光が弱すぎる。まだ開けられない。'
+    : 'まだ、何かが足りない気がする。',
+  why: (s, m) => {
+    const r = [];
+    if (!hasAll(s)) r.push('瓶が3つ必要(いま' + bottleCount(s) + 'つ)');
+    if (noteN(s) < 6) r.push('手記が6枚必要(いま' + noteN(s) + '枚)');
+    if (m.fragments < 1) r.push('記憶の断片が必要(2周目以降)');
+    return r.join(' / ');
+  },
+};
+
+/* 煙になったオルヴェンの最期の言葉(29) */
+function lastWords(s, m) {
+  const f = m.fragments;
+  if (f < 1) return '男の唇が動く。けれど、囁きは煙に溶けて、聞き取れない。';
+  const full = f >= 3;
+  if (s.shattered) {
+    const cut = full ? '眠らせてやれ。……あの子が、いつも眠っ' : '眠らせ';
+    return '「' + cut + '——」。言葉は、そこで途切れた。';
+  }
+  return full ? '「眠らせてやれ。……あの子が、いつも眠った順に」' : '「眠らせてやれ。……」';
+}
+
+/* 幻に押し返される場面(25)。24で選んだ行動の文だけを出す。記録がなければ両方 */
+function pushedBack(s) {
+  const slash = '斬りかかった剣は、霧を裂くだけだった。';
+  const answer = '呼びかけに答えた足は、見えない手で優しく押し戻される。';
+  const first = s.r25 === 'slash' ? slash : s.r25 === 'answer' ? answer : slash + answer;
+  return first + '傷は一つもつかない。灰色の男は、苦しそうに息をついている。';
+}
+
+/* ============================================================
+   段落
+   body: 文字列=地の文 / {q:[…]}=手記の引用 / {if,t}=条件つき
+   c: 選択肢 {t,to,show,req,fx}  end: 結末の番号
+   gets: 入手(gold,blue,red,note1〜note6)
+   ============================================================ */
+const P = {
+  1: { title: '夢の声', body: [
+    '夢を見る。霧の中に、眠る青年の気配がある。声が、耳元ではなく胸の奥から響く。「……起こして。ずっと眠いんだ。誰も、私を起こしてくれない」',
+    '目が覚めると、枕が冷たい。窓の外に、見慣れない谷の名が浮かぶ。沈黙の谷。眠りの森。',
+    { if: (s, m) => m.fragments >= 1, t: '声は、そこで終わらなかった。「……また、来てくれたの」' },
+  ], c: [go('先へ進む', 2)] },
+
+  2: { title: '宿場の老婆', body: [
+    '宿場の老婆が、あなたの荷を見て眉をひそめる。「森へ行く気かい。あそこは、百年も人が帰らない」',
+    '老婆は湯気の立つ椀を差し出し、あなたの顔を長く見る。まるで、誰かに似ているというように。',
+  ], c: [go('理由を聞く', 3), go('礼を言って、聞き流す', 4)] },
+
+  3: { title: '老婆の話', body: [
+    '「森には魔法使いが棲んでいる。王子を閉じ込めた、悪い灰色の男だよ」。老婆の声は、確信に満ちていた。',
+    'けれど、「私の祖母から聞いた話さ」と付け足し、自分の目では見ていないと目を伏せる。',
+  ], c: [go('先へ進む', 4)] },
+
+  4: { title: '旅立ちの夜', body: [
+    'その夜、夢の声は、はっきりした呼び声になる。「来てくれるよね。君なら、きっと」',
+    '声は優しく、少し震えている。あなたは荷をまとめ、夜明け前の道へ出る。',
+  ], c: [go('先へ進む', 5)] },
+
+  5: { title: '森の入口', puzzle: 'tablet', body: [
+    '森の入口に、苔むした石碑が立つ。刻まれた文字は、風化して「眠りを…守れ」としか読めない。',
+    '石碑の向こうは、霧が静かに揺れている。引き返す最後の場所だ。',
+  ], c: [go('森へ入る', 6)] },
+
+  6: { title: '森の道', body: [
+    '霧が足首にまとわりつく。鳥の声は一つもなく、夢の声だけが前から聞こえる。道は三つに分かれ、一つ目の先に朽ちた小屋、二つ目の道端に倒れた人影、三つ目の脇道の奥に煙の匂いがある。',
+  ], c: [go('狩猟小屋へ', 7), go('倒れた人影へ', 9), go('煙の匂いの脇道へ', 10), go('城へ向かう', 13)] },
+
+  7: { title: '狩猟小屋', body: [
+    '屋根の落ちた小屋の壁に、小さな子どもの背丈の傷が何本も刻まれている。誰かが成長を測っていたのだろう。暖炉の奥だけ、煤が拭われている。',
+  ], c: [go('暖炉を調べる', 8), go('小屋を出る', 6)] },
+
+  8: { title: '暖炉の奥', gets: ['gold'], body: [
+    '煤けた小箱の中に、金色に光る小瓶があった。指を添えると、ほのかに温かい。中で揺れる光は、笑い声の形をしている気がする。あなたは小瓶を懐にしまう。',
+  ], c: [go('森の道へ戻る', 6)] },
+
+  9: { title: '先客の遺品', gets: ['note1'], body: [
+    '道端に、旅人の亡骸が横たわっている。衣は朽ち、骨に塵が積もっている。握られた手帳に、震える字がある。',
+    { q: NOTES[1].lines },
+  ], c: [go('森の道へ戻る', 6)] },
+
+  10: { title: '脇道', body: [
+    '煙の匂いをたどると、木々の間に低い石の庵が建っている。戸口に張られた光の糸が、あなたの接近でかすかに震える。結界だ。けれど、拒む気配ではなく、見張るような気配に近い。',
+  ], c: [go('庵に入る', 11), go('引き返す', 6)] },
+
+  11: { title: '魔法使いの庵', body: [
+    '薬草の束と、封印の道具が整然と並ぶ。主の姿はない。壁には、何本もの引っかき傷と、数えきれない線の記録がある。百年の日数かもしれない。机の奥に、書きかけの紙が残っている。',
+  ], c: [go('机の紙を読む', 12), go('庵を出る', 6)] },
+
+  12: { title: '庵の奥', gets: ['note3'], body: [
+    { q: NOTES[3].lines.slice(0, 2) },
+    '紙の隅に、小さく書き足されている。',
+    { q: ['この呪文は、唱えた者を守りに変える'] },
+  ], c: [go('森の道へ戻る', 6)] },
+
+  13: { title: '森を抜ける', body: [
+    '木々が切れ、谷の底に灰色の城が見える。窓の一つに、淡い光が灯っている。夢の声が近い。',
+    '森を一歩出れば、もう戻れない気がする。',
+  ], c: [go('森を出る(森には戻れない)', 14)] },
+
+  14: { title: '城門', body: [
+    '崩れかけた門に、「エルドヴァル」の文字が半分だけ残っている。谷は、風の音さえ遠慮するほど静かだ。ここは今、沈黙の谷と呼ばれている。',
+    'あなたが門をくぐると、夢の声がひとこと、嬉しそうに息をのんだ。',
+  ], c: [go('城下町へ', 15)] },
+
+  15: { title: '城下町', body: [
+    '灰色の石畳に、傾いた家々が並ぶ。人の気配はないのに、見られている感覚だけがある。民家、広場、坂の上の書庫、その奥の礼拝堂。そして正面には、城の大広間へ続く扉がある。',
+  ], c: [go('民家へ', 16), go('広場へ', 17), go('書庫へ', 18), go('礼拝堂へ', 19), go('大広間へ', 22)] },
+
+  16: { title: '民家', gets: ['note2'], body: [
+    '卓の上に、半ば消えた手記がある。',
+    { q: NOTES[2].lines },
+    '文字は、途中から爪で引っかいたように乱れている。',
+  ], c: [go('城下町へ戻る', 15)] },
+
+  17: { title: '広場', body: [
+    '広場の中央に、灰の山がいくつも積もっている。形は、人が膝を抱えて座っていた跡に似ている。灰の上に、風が吹いても崩れない花が一輪、咲いている。',
+    'あなたは、しばらく立ち尽くす。静かすぎて、自分の鼓動の音が大きい。',
+  ], c: [go('城下町へ戻る', 15)] },
+
+  18: { title: '書庫', gets: ['note4'], body: [
+    '埃の積もった棚の奥に、革表紙の日記が一冊だけ残る。持ち主は王。幼い王子の寝顔の話が、いくつも続く。',
+    { q: NOTES[4].lines },
+    'ページの端に、誰かの名前が書かれていたはずの跡がある。削り取られて、「M」の一文字だけが残っている。',
+  ], c: [go('城下町へ戻る', 15)] },
+
+  19: { title: '礼拝堂の入口', body: [
+    '扉は半分開いている。薄暗い奥で、祭壇の上の何かが、微かに光を返している。',
+  ], c: [go('奥へ進む', 20), go('引き返す', 15)] },
+
+  20: { title: '祭壇', body: [
+    { if: (s) => !s.silver, t: '祭壇に、銀の聖具が供えられている。誰かが毎日磨いていたように、曇りひとつない。足元には、折りたたまれた紙が挟まっている。' },
+    { if: (s) => s.silver, t: '祭壇には、聖具のあった跡だけが残る。足元には、折りたたまれた紙が挟まっている。' },
+    { if: (s) => !s.silver, t: '武器になるかもしれない。けれど、供え物でもある。' },
+  ], c: [
+    go('聖具を手に取る', 21, { show: (s) => !s.silver, fx: (s) => { s.silver = true; s.gained = []; } }),
+    go((s) => s.silver ? '足元の紙を読み返す' : '触れずに、紙だけ読む', 21),
+    go('何もせず立ち去る', 15),
+  ] },
+
+  21: { title: '王の祈り', gets: ['note5'], body: [
+    '紙には、王の筆跡がある。',
+    { q: NOTES[5].lines },
+    '祈りの言葉はそれだけで、署名はない。',
+  ], c: [go('城下町へ戻る', 15)] },
+
+  22: { title: '大広間', body: [
+    '扉の向こうは、高い天井の広間。灰色の外套の男が、杖を手に立っている。百年そこにいたような、疲れた目をしている。',
+    '「……来たか。旅人」',
+    'ここから先、城下町には戻れない。',
+  ], c: [go('広間へ踏み込む', 23), go('城下町へ戻る', 15)] },
+
+  23: { title: '対峙', body: [
+    '「ここで引き返せば、私は何もしない」。男は杖を構えながら、静かに言う。',
+    '「だが、あなたは進むだろう。……あの声に呼ばれた者は、皆そうだった」',
+    '杖の先に、灰色の光が集まる。戦いは避けられない。あなたも剣の柄に手をかける。',
+  ], c: [go('先へ進む', 24)] },
+
+  24: { title: '第1ラウンド「幻」', body: [
+    '光が弾け、広間に人影が立つ。優しい顔の青年と、その肩に手を置く王冠の男。夢の声と同じ、柔らかな笑顔が、あなたに向く。',
+    '「ほら、来てくれた。……こっちへおいで」',
+  ], c: [go('幻に斬りかかる', 25, { fx: (s) => { s.r25 = 'slash'; } }), go('幻の呼びかけに答える', 25, { fx: (s) => { s.r25 = 'answer'; } }), go('目を閉じて、そのまま進む', 26)] },
+
+  25: { title: '押し返される', body: [
+    { t: pushedBack },
+    '「……それは違う。もう一度」',
+  ], c: [go('もう一度、幻と向き合う', 24)] },
+
+  26: { title: '第2ラウンド「結界」', body: [
+    '目を閉じて進むと、幻は音もなく溶ける。次の瞬間、光の壁があなたを四方から囲む。閉じ込めるための壁で、押し潰す気配はない。',
+  ], c: [
+    go('銀の聖具で壁を割る', 28, { show: hasSilver, fx: (s) => { s.shattered = true; } }),
+    go('壁の綻びを探す', 27, { fx: (s) => { s.p27 = false; } }),
+  ] },
+
+  27: { title: '綻びを探す', puzzle: 'blink', body: [
+    '壁は、一定の間隔で、息をするように明滅している。あなたは立ち止まり、その間隔を数える。',
+    { if: (s) => s.p27, t: '光が薄れる一瞬に、手を差し入れる。壁は、思ったよりあっけなくほどけた。' },
+    { if: (s) => s.p27, t: '男は、小さく頷いたように見えた。' },
+  ], c: [go('先へ進む', 28, { show: (s) => s.p27 })] },
+
+  28: { title: '第3ラウンド「決着」', body: [
+    '灰色の杖が、真っ直ぐあなたに向く。そして、止まる。杖を握る手は、震えていた。',
+    'あなたは一歩踏み込み、剣を突き出す。',
+    { if: (s) => s.notes.includes(3), t: '「……それでいい」。男は、確かにそう呟いた。' },
+    { if: (s) => s.shattered, t: '光の壁を割った銀が、まだ手の中で冷たく鳴っている。' },
+  ], c: [go('先へ進む', 29)] },
+
+  29: { title: '煙', gets: ['blue'], body: [
+    '男の身体が、端から煙にほどけていく。血は一滴も流れない。外套も、杖も、百年分の疲れも、灰色の煙になって天井へ昇る。',
+    '足元に、青い小瓶が転がる。拾うと、冷たく、苦しげな光が揺れている。',
+    '煙が消える間際、男が何かを言う。',
+    { t: lastWords },
+    { if: (s, m) => m.endings.includes(39), t: '最後に、「……お前もか」と聞こえた気がした。' },
+  ], c: [go('先へ進む', 30)] },
+
+  30: { title: '廊下', gets: ['red', 'note6'], body: [
+    '扉の前に、赤い小瓶が置かれている。血のように濃い光が、ゆっくり脈打つ。傍らに、民の手記が一冊。',
+    { q: NOTES[6].lines },
+    '扉の向こうから、微かな寝息が聞こえる。',
+  ], c: [go('扉を開ける', 31)] },
+
+  31: { title: '王子', body: [
+    '白い寝台の上に、青年が身を起こす。月のように整った顔で、夢の声と同じ笑い方をする。',
+    '「やっと来てくれた。百年、ずっと待っていたんだ。……私はセレン。病で眠っていただけなのに、あの灰色の男に閉じ込められた」',
+    '語りはなめらかで、瞳だけが濡れている。',
+  ], c: [go('王子の言葉に耳を傾ける', (s) => s.silver ? 32 : 33)] },
+
+  32: { title: '銀', body: [
+    '王子の笑みが、ふっと止まる。視線が、あなたの懐に落ちる。',
+    '「……それを持ったまま、私と話すのかい」',
+    '声は穏やかで、ひどく寂しそうだ。',
+  ], c: [
+    go('銀を床に置く', 33, { fx: (s) => { s.silver = false; s.silverPlaced = true; } }),
+    go('持ったまま話す', 34),
+  ] },
+
+  33: { title: '信頼', body: [
+    '王子は肩の力を抜き、寝台の端に座る。',
+    '「ありがとう。……父上のことを、話してもいいかな。夜中に熱を出すと、いつも手を握っていてくれた。それだけで、怖くなかったんだ」',
+    'その語りは本当のように聞こえる。ふと、あなたの懐の小瓶が熱を帯びる。',
+  ], c: [
+    go('瓶を開ける', 35, { req: openBottles }),
+    go('封印を解いてやる', 37, { fx: (s) => { s.r37 = 'seal'; } }),
+    go('引き返す', 38, { req: canTurnBack }),
+    go('置いた銀を拾い直す', 37, { show: (s) => s.silverPlaced, fx: (s) => { s.silver = true; s.silverPlaced = false; s.r37 = 'silver'; } }),
+  ] },
+
+  34: { title: '冷たい語り', body: [
+    '王子の声が、一段低くなる。',
+    '「そう。警戒するんだね。……それが賢い。けれど、賢い人ほど、最後は私の傍に来るよ」',
+    '瓶の話を出しても、「そんなものは要らない」と笑って遮られる。',
+    { if: (s) => s.doubt >= 1, t: '問い詰めるたびに、王子の笑みが、少しずつ薄くなっていく。' },
+  ], c: [
+    go('王子を疑って問い詰める', 34, { fx: (s) => { s.doubt = Math.min(s.doubt + 1, 5); } }),
+    go('封印を解いてやる', 37, { fx: (s) => { s.r37 = 'seal'; } }),
+    go('引き返す', 38, { req: canTurnBack }),
+    go('手記③の呪文を唱える', 39, { req: {
+      ok: (s) => s.notes.includes(3) && s.silver,
+      hint: () => '唱えるべき呪文を、まだ知らない。',
+      why: (s) => '手記③と銀の聖具が必要',
+    } }),
+    go('銀で王子を刺す', 40, { req: {
+      ok: (s) => s.silver && s.doubt >= 2,
+      hint: () => 'まだ、刃を向ける確信がない。',
+      why: (s) => '銀の聖具を持ち、疑いが2以上(いま' + s.doubt + ')',
+    } }),
+  ] },
+
+  35: { title: '瓶を開ける', body: [
+    '床に三つの小瓶を並べる。青、赤、金。光が、お互いを呼び合うように揺れる。',
+    'どの順番で開ける?',
+  ], c: ['BRG', 'BGR', 'RBG', 'RGB', 'GBR', 'GRB'].map((o) =>
+    go(o.split('').map((k) => ORDER_NAME[k]).join(' → '), 36, { fx: (s) => { s.order = o; } })) },
+
+  36: { title: '確認', body: [
+    'あなたの手が、最初の栓にかかる。王子が息をのむ。',
+    '「……本当に、その順番で?」',
+    '一度開けた光は、もう戻せない。',
+    { t: (s) => '選んだ順番:' + (s.order || '').split('').map((k) => ORDER_NAME[k]).join(' → ') },
+  ], c: [
+    go('この順で開ける', (s) => s.order === CORRECT_ORDER ? 41 : 37, { fx: (s) => { if (s.order !== CORRECT_ORDER) s.r37 = 'wrong'; } }),
+    go('選び直す', 35),
+  ] },
+
+  37: { title: '犠牲者', end: 37, body: [
+    { if: (s) => s.r37 === 'wrong', t: '「……ちがう。それじゃない」と、王子が絶叫する。' },
+    { if: (s) => s.r37 === 'silver', t: '「やはり、そうなんだね」と、王子は悲しげに呟く。' },
+    '王子は、あなたの手を取る。冷たいのに、不思議と怖くない。',
+    '「ありがとう。……ずっと、誰かにこうしてほしかった」',
+    '首筋に、ひどく優しい痛みが走る。視界の端で、灰色の城が、百年ぶりに色を取り戻していく。',
+    { if: (s) => s.r37 === 'seal', t: '王子の笑顔は、最後まで優しいままだった。' },
+    '最後に見えたのは、窓の外で目を覚ます、無数の影だった。',
+    '目覚めた王子は、窓の外の谷を見やる。奥の水面が、一度だけ白く光った。「……ああ、聞こえているよ」。王子は、誰に言うともなく呟く。',
+    '夢の声は、もう聞こえない。あなたが、その声の一部になったからだ。',
+  ] },
+
+  38: { title: '逃走', end: 38, body: [
+    '「……すまない。私は、ここにいられない」',
+    'あなたは扉に背を向ける。王子は引き止めない。ただ、小さな声で言う。',
+    '「そう。……また、夢で呼ぶよ」',
+    '森を抜けると、朝の光が目に刺さる。振り返ると、城はもう霧に隠れている。',
+    '森を抜ける道の途中、ぬかるみに足跡がある。裸足の、細い足跡だ。谷の水辺から続き、あなたの足跡のすぐ隣で途切れている。',
+    'けれど夜になると、枕元の闇が、囁く。',
+    '「……起こして」',
+    'その声は、いつの間にか、少しだけ女の声に聞こえるようになる。',
+  ] },
+
+  39: { title: '再封印', end: 39, body: [
+    'あなたは手記③の呪文を、口に出す。銀の聖具が白く光り、足元に古い円が広がる。',
+    '王子が叫ぶ。「やめろ! それは、あの男と同じ──」',
+    'あなたの指先から、灰色の煙が立ちのぼる。痛みはない。ただ、身体が、ゆっくりと軽くなる。',
+    '意識が、風に溶ける前に、あなたは理解する。あの男も、かつては旅人だった。',
+    '夜が明ける。森の入口に、新しい旅人が立つ。',
+    '煙になったあなたは、道を塞ぐ。何も言えないまま。',
+    '煙になったあなたの目にだけ、谷の水辺に立つ女性の影が映る。彼女は、森の入口を見上げて、長いあいだ動かない。頭を下げたように見えたが、感謝か謝罪かは分からない。',
+  ] },
+
+  40: { title: '討つ', end: 40, body: [
+    'あなたは銀の聖具を、王子の胸に突き立てる。',
+    '王子は、驚いた顔をしない。ただ、安堵したように息を吐く。',
+    '「……やっと」',
+    '城中で、灰が崩れる音がする。百年、眠れなかった者たちが、一斉に崩れていく。',
+    '懐の瓶の光が、すべて消える。王の祈りが、誰にも届かないまま、静寂が降りる。',
+    '森を出たあと、あなたは毎晩、見知らぬ王の夢を見る。その背中の先に、水辺で膝をついて泣く女がいる。顔は見えない。目が覚めても、その泣き声だけが耳に残っている。',
+    '誰も、あなたを咎めない。誰も、あなたを褒めない。',
+  ] },
+
+  41: { title: '魂の解放', end: 41, body: [
+    'あなたは、青い小瓶の栓を抜く。病の夜の苦しみが、王子の身体に戻っていく。彼は歯を食いしばるが、あなたの手を離さない。',
+    '次に、赤い小瓶。襲った日の記憶。王子は、嗚咽する。「……すまない。すまない」。あなたは、その背を撫でる。',
+    '最後に、金の小瓶。笑い声が、広間に満ちる。誰かが、幼い子を抱き上げている。「おやすみ。いちばん楽しい話は、明日にとっておこう」',
+    '王子の頬を、一筋の涙が伝う。',
+    '「……父上」',
+    'その身体が、光になって、窓の外へ溶けていく。広場の灰の山から、一輪ずつ花が咲く。',
+    '夢の声は、もう聞こえない。',
+    'ふと、谷の奥の方で、水面が揺れる音がする。風のない谷なのに、波紋が広がる。水の底から、誰かの子守唄が、一節だけ聞こえた。王の日記にも、どの手記にも書かれていない、知らない旋律だった。',
+    '空になった金の小瓶を見ると、底に小さな刻印がある。「M」。',
+    '旅人は、小瓶をそっと懐にしまう。',
+    '森に、朝が来る。',
+  ] },
+};
+</script>
+<script>
+/* 挿絵の画像データ。make_plates.py が書き出す */
+const PLATE_IMG = {
+  cover: "images/plate_cover.webp",
+  6: "images/plate_6.webp",
+  17: "images/plate_17.webp",
+  24: "images/plate_24.webp",
+  29: "images/plate_29.webp",
+  31: "images/plate_31.webp",
+  41: "images/plate_41.webp"
+};
+const VIDEO_POSTER = {
+  28: "images/poster_28.webp",
+  37: "images/poster_37.webp",
+  38: "images/poster_38.webp",
+  39: "images/poster_39.webp",
+  40: "images/poster_40.webp",
+  41: "images/poster_41.webp"
+};
+</script>
+<script>
+/* 山場の動画。url に次のどちらかを入れると、その段落に出ます。
+     ・Xの投稿やYouTubeなどのリンク(https://…) → 「外部サイトで開く」カードになります
+     ・.mp4 / .webm の直リンク(https://…)        → アプリの中でそのまま再生できます
+   url が空のままなら、テスト表示のときだけ点線の枠が出て、ふだんは何も出ません。
+   note は、カードの下に小さく出る一言です(空でもかまいません)。 */
+const VIDEOS = {
+  28: { title: '決着', url: 'videos/scene28.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
+  37: { title: '犠牲者', url: 'videos/scene37.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
+  38: { title: '逃走', url: 'videos/scene38.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
+  39: { title: '再封印', url: 'videos/scene39.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
+  40: { title: '討つ', url: 'videos/scene40.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
+  41: { title: '魂の解放', url: 'videos/scene41.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
+};
+</script>
+<script>
+/* ============================================================
+   エンジン(画面に依存しない部分。テストでもそのまま使う)
+   ============================================================ */
+'use strict';
+
+function newMeta() { return { fragments: 0, endings: [], runs: 0 }; }
+
+function newRun() {
+  return {
+    at: 1, notes: [], gold: false, blue: false, red: false,
+    silver: false, silverPlaced: false, shattered: false,
+    doubt: 0, order: null, r37: null, r25: null, p27: false,
+    ended: false, endGain: 0, endNew: false, gained: [],
+  };
+}
+
+function clone(o) { return JSON.parse(JSON.stringify(o)); }
+function bottleCount(s) { return (s.gold ? 1 : 0) + (s.blue ? 1 : 0) + (s.red ? 1 : 0); }
+function hasAll(s) { return s.gold && s.blue && s.red; }
+function chapterOf(n) { return CHAPTERS.find((c) => n >= c.from && n <= c.to); }
+
+/* ---- パズル27「結界の明滅」: 三つの短い薄れのあと、四つ目だけ長く薄れる。その間だけ手が通る ---- */
+const BLINK = { glow: 1000, fade: 700, gapFade: 1900, beats: 4, ramp: 300, dimAfter: 400 };
+const BLINK_STEPS = [
+  '光が満ちる。(ひとつ)', '光が薄れる。すぐに戻る。',
+  '光が満ちる。(ふたつ)', '光が薄れる。すぐに戻る。',
+  '光が満ちる。(みっつ)', '光が薄れる。すぐに戻る。',
+  '光が満ちる。(よっつ)', '光が薄れる。長く、薄いまま。',
+];
+function blinkPhase(t) {
+  const B = BLINK;
+  const cyc = (B.beats - 1) * (B.glow + B.fade) + B.glow + B.gapFade;
+  t = ((t % cyc) + cyc) % cyc;
+  for (let b = 0; b < B.beats; b++) {
+    const last = b === B.beats - 1;
+    const f = last ? B.gapFade : B.fade;
+    if (t < B.glow) return { beat: b, kind: 'glow', into: t, long: false };
+    t -= B.glow;
+    if (t < f) return { beat: b, kind: 'fade', into: t, long: last };
+    t -= f;
+  }
+  return { beat: 0, kind: 'glow', into: 0, long: false };
+}
+function blinkStepPhase(i) {
+  const k = ((i % 8) + 8) % 8, beat = k >> 1;
+  return k % 2 === 0 ? { beat, kind: 'glow', into: 1000, long: false } : { beat, kind: 'fade', into: 1000, long: beat === BLINK.beats - 1 };
+}
+function blinkGlow(ph) {
+  return ph.kind === 'glow' ? 0.2 + 0.8 * Math.min(1, ph.into / BLINK.ramp) : 1 - 0.8 * Math.min(1, ph.into / BLINK.dimAfter);
+}
+function blinkOpen(ph) { return ph.kind === 'fade' && ph.long && ph.into >= BLINK.dimAfter; }
+
+/* ---- パズル5「苔むした石碑」: 苔を払うと、風化した文字が読める ---- */
+const TABLET = {
+  /* 苔の下の6文字。opts は候補(正解は ch)。dir は、苔が剥がれて見える側(l=左 r=右 t=上 b=下) */
+  slots: [
+    { ch: '乱', opts: ['荒', '乱', '起', '妨'], dir: 'l' },
+    { ch: 'す', opts: ['ま', 'よ', 'き', 'す'], dir: 'b' },
+    { ch: '者', opts: ['物', '民', '者', '人'], dir: 'l' },
+    { ch: 'を', opts: ['そ', 'さ', 'を', 'ん'], dir: 'b' },
+    { ch: '退', opts: ['追', '避', '迎', '退'], dir: 'r' },
+    { ch: 'け', opts: ['ほ', 'け', 'は', 'に'], dir: 'r' },
+  ],
+  /* 見える割合。記憶の断片が増えるほど、苔が薄くなって読みやすい */
+  reveal: [0.32, 0.5, 0.75],
+  full: '眠りを乱す者を退け、守れ',
+  low: '眠れぬ者にも、眠りを',
+};
+function tabletLevel(m) { return m.fragments >= 4 ? 2 : m.fragments >= 1 ? 1 : 0; }
+/* 候補を選ぶ。正解なら true */
+function tabletPick(z, slot, ch) {
+  if (TABLET.slots[slot].ch !== ch) { z.wrong = (z.wrong || 0) + 1; return false; }
+  if (!z.moss.includes(slot)) z.moss.push(slot);
+  return true;
+}
+
+/* 結末に着いたときの記録(新しい結末なら断片が2、見たことのある結末なら1) */
+function registerEnding(m, id) {
+  const isNew = !m.endings.includes(id);
+  const gain = 1 + (isNew ? 1 : 0);
+  if (isNew) m.endings.push(id);
+  m.fragments = Math.min(999, m.fragments + gain);
+  m.runs = Math.min(999, m.runs + 1);
+  return { gain, isNew };
+}
+
+/* 段落に入る:入手物の記録と、結末の登録 */
+function enter(s, m, pid) {
+  const p = P[pid];
+  if (!p) throw new Error('段落がありません: ' + pid);
+  s.at = pid;
+  s.gained = [];
+  for (const k of (p.gets || [])) {
+    if (k.indexOf('note') === 0) {
+      const n = +k.slice(4);
+      if (!s.notes.includes(n)) {
+        s.notes.push(n);
+        s.notes.sort((a, b) => a - b);
+        s.gained.push('手記' + CIRC[n]);
+      }
+    } else if (!s[k]) {
+      s[k] = true;
+      s.gained.push(ITEMS[k]);
+    }
+  }
+  if (p.end && !s.ended) {
+    const r = registerEnding(m, p.end);
+    s.ended = true; s.endGain = r.gain; s.endNew = r.isNew;
+  }
+  return s;
+}
+
+/* いまの段落で見せる選択肢 */
+function choices(s, m) {
+  const p = P[s.at];
+  if (!p || !p.c) return [];
+  const out = [];
+  p.c.forEach((c, i) => {
+    if (c.show && !c.show(s, m)) return;
+    const ok = !c.req || c.req.ok(s, m);
+    out.push({
+      i,
+      text: typeof c.t === 'function' ? c.t(s, m) : c.t,
+      to: typeof c.to === 'function' ? c.to(s, m) : c.to,
+      ok,
+      hint: ok ? '' : (c.req.hint ? c.req.hint(s, m) : 'いまは選べない。'),
+      why: ok ? '' : (c.req.why ? c.req.why(s, m) : ''),
+    });
+  });
+  return out;
+}
+
+function choose(s, m, idx) {
+  const item = choices(s, m).find((x) => x.i === idx);
+  if (!item || !item.ok) return false;
+  const c = P[s.at].c[idx];
+  if (c.fx) c.fx(s, m);
+  enter(s, m, item.to);
+  return true;
+}
+
+/* 本文を、表示用の部品(地の文・手記の引用)に展開する */
+function body(s, m) {
+  const out = [];
+  for (const seg of P[s.at].body) {
+    if (typeof seg === 'string') { out.push({ k: 'p', t: seg }); continue; }
+    if (seg.if && !seg.if(s, m)) continue;
+    if (seg.q) { out.push({ k: 'q', lines: seg.q }); continue; }
+    const t = typeof seg.t === 'function' ? seg.t(s, m) : seg.t;
+    if (t) out.push({ k: 'p', t });
+  }
+  return out;
+}
+
+/* テスト用の出発点 */
+function preset(name) {
+  const s = newRun();
+  if (name === 'all30') {
+    s.notes = [1, 2, 3, 4, 5]; s.gold = true; s.blue = true;
+    return s;
+  }
+  if (name === 'silver34') {
+    s.notes = [1, 2, 3, 4, 5, 6]; s.gold = s.blue = s.red = true;
+    s.silver = true; s.doubt = 2; s.at = 34;
+    return s;
+  }
+  return s;
+}
+
+/* ---- 引き継ぎコード(7文字。復活の呪文のような短い文字列) ---- */
+const ALPH = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
+
+function endMask(endings) {
+  let mask = 0;
+  [37, 38, 39, 40, 41].forEach((id, bit) => { if (endings.includes(id)) mask |= (1 << bit); });
+  return mask;
+}
+function checksum(f, mask, r) {
+  let h = 0x2d5;
+  h = (h * 37 + f) % 1021;
+  h = (h * 37 + mask) % 1021;
+  h = (h * 37 + r) % 1021;
+  return h;
+}
+function encodeMeta(m) {
+  const f = Math.min(999, m.fragments), r = Math.min(999, m.runs), mask = endMask(m.endings);
+  let n = BigInt(f);
+  n = (n << 5n) | BigInt(mask);
+  n = (n << 10n) | BigInt(r);
+  n = (n << 10n) | BigInt(checksum(f, mask, r));
+  let out = '';
+  for (let i = 0; i < 7; i++) { out = ALPH[Number(n & 31n)] + out; n >>= 5n; }
+  return out.slice(0, 4) + '-' + out.slice(4);
+}
+function decodeMeta(str) {
+  const t = String(str || '').toUpperCase().replace(/[\s\-]/g, '')
+    .replace(/O/g, '0').replace(/[IL]/g, '1').replace(/U/g, 'V');
+  if (t.length !== 7) return null;
+  let n = 0n;
+  for (const ch of t) {
+    const v = ALPH.indexOf(ch);
+    if (v < 0) return null;
+    n = (n << 5n) | BigInt(v);
+  }
+  const chk = Number(n & 1023n); n >>= 10n;
+  const r = Number(n & 1023n); n >>= 10n;
+  const mask = Number(n & 31n); n >>= 5n;
+  const f = Number(n);
+  if (f > 999 || r > 999) return null;
+  if (chk !== checksum(f, mask, r)) return null;
+  const endings = [37, 38, 39, 40, 41].filter((id, bit) => mask & (1 << bit));
+  return { fragments: f, endings, runs: r };
+}
+function sanitizeMeta(x) {
+  const m = newMeta();
+  if (!x || typeof x !== 'object') return m;
+  m.fragments = Math.max(0, Math.min(999, Math.floor(+x.fragments) || 0));
+  m.runs = Math.max(0, Math.min(999, Math.floor(+x.runs) || 0));
+  m.endings = Array.isArray(x.endings) ? x.endings.filter((id) => [37, 38, 39, 40, 41].includes(id)) : [];
+  return m;
+}
+function sanitizeRun(x) {
+  if (!x || typeof x !== 'object' || !P[x.at]) return null;
+  const s = Object.assign(newRun(), x);
+  s.notes = Array.isArray(x.notes) ? x.notes.filter((n) => n >= 1 && n <= 6) : [];
+  return s;
+}
+</script>
+<script>
+/* ============================================================
+   画面(表紙・本のページ・冒険記録紙)と保存
+   ============================================================ */
+(function () {
+  'use strict';
+
+  const K = { meta: 'nemuri-mori:meta', run: 'nemuri-mori:run', ui: 'nemuri-mori:ui' };
+  let storageOk = true;
+  try { localStorage.setItem('nemuri-mori:t', '1'); localStorage.removeItem('nemuri-mori:t'); } catch (e) { storageOk = false; }
+  function sget(k) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch (e) { storageOk = false; return null; } }
+  function sset(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { storageOk = false; } }
+  function sdel(k) { try { localStorage.removeItem(k); } catch (e) { storageOk = false; } }
+
+  let meta = sanitizeMeta(sget(K.meta));
+  let run = sanitizeRun(sget(K.run));
+  const saved = sget(K.ui) || {};
+  const ui = {
+    screen: 'cover',
+    sheet: saved.sheet !== undefined ? !!saved.sheet : window.innerWidth >= 960,
+    test: saved.test !== undefined ? !!saved.test : true,
+    msg: '', wipeArmed: false, open: {}, pz: null, pzFor: null,
+  };
+  let focusSel = null;
+  let scrollTo = null;
+
+  function saveAll() {
+    sset(K.meta, meta);
+    if (run) sset(K.run, run); else sdel(K.run);
+    sset(K.ui, { sheet: ui.sheet, test: ui.test });
+  }
+
+  const root = document.getElementById('root');
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  /* ---------- 部品 ---------- */
+  const BOTTLE = (cssVar) => '<svg viewBox="0 0 24 30" aria-hidden="true" style="color:var(' + cssVar + ')">' +
+    '<rect x="9" y="1" width="6" height="4" rx="1" fill="var(--ink-2)"/>' +
+    '<path d="M9 5h6v4l4 5v12a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V14l4-5z" fill="currentColor" stroke="var(--ink)" stroke-width="1.2"/>' +
+    '<path d="M9 16v8" stroke="var(--paper)" stroke-width="1.6" stroke-linecap="round" opacity=".55"/></svg>';
+  const SILVER = '<svg viewBox="0 0 24 30" aria-hidden="true" style="color:var(--silver)">' +
+    '<path d="M5 3h14l-1.2 8a5.8 5.8 0 0 1-11.6 0z" fill="currentColor" stroke="var(--ink)" stroke-width="1.2"/>' +
+    '<path d="M12 17v8M7.5 27h9" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></svg>';
+
+  function codeBlock(withRestore) {
+    const code = encodeMeta(meta);
+    return '<div class="code-box"><h2>引き継ぎコード</h2>' +
+      '<p class="note-s">結末の記録と記憶の断片を7文字にしたものです。別の端末で入力すると、続きから遊べます。</p>' +
+      '<div class="code-row"><input id="code-show" type="text" readonly value="' + code + '" aria-label="いまの引き継ぎコード">' +
+      '<button class="btn" data-act="copy">コピー</button></div>' +
+      (withRestore
+        ? '<div class="code-row"><input id="code-in" type="text" placeholder="コードを入力" maxlength="12" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="引き継ぎコードを入力">' +
+          '<button class="btn" data-act="restore">復元</button></div>'
+        : '') +
+      '<p class="msg" id="msg" role="status" aria-live="polite">' + esc(ui.msg) + '</p></div>';
+  }
+
+  function testBox(withStatus) {
+    let h = '<section class="testbox"><label><input type="checkbox" id="test-toggle" data-act="toggleTest"' + (ui.test ? ' checked' : '') + '> テスト表示</label>';
+    if (ui.test) {
+      if (withStatus && run) {
+        h += '<dl><dt>段落</dt><dd>' + run.at + ' ' + esc(P[run.at].title) + '</dd>' +
+          '<dt>疑い</dt><dd>' + run.doubt + '</dd>' +
+          '<dt>選んだ順</dt><dd>' + (run.order ? run.order.split('').map((k) => ORDER_NAME[k]).join('→') : '―') + '</dd>' +
+          '<dt>銀</dt><dd>' + (run.silver ? '持っている' : run.silverPlaced ? '床に置いた' : '持っていない') + '</dd>' +
+          '<dt>銀で結界</dt><dd>' + (run.shattered ? '割った' : '割っていない') + '</dd></dl>';
+      }
+      h += '<div class="row">' +
+        '<button class="btn" data-act="fragAdd">断片 +1</button>' +
+        '<button class="btn" data-act="fragZero">断片を0に</button>' +
+        '<button class="btn" data-act="preset" data-p="all30">全部集めて王子の間へ</button>' +
+        '<button class="btn" data-act="preset" data-p="silver34">銀・疑い2で34へ</button></div>';
+    }
+    return h + '</section>';
+  }
+
+  /* ---------- 挿絵 ---------- */
+  function plateHtml(key, extra) {
+    const d = PLATES[key];
+    if (!d) return '';
+    const src = (typeof PLATE_IMG !== 'undefined' && PLATE_IMG[key]) || '';
+    if (src) return '<figure class="plate' + (extra ? ' ' + extra : '') + '"><img src="' + src + '" alt="' + esc(d.alt) + '" decoding="async"' + (key === 'cover' ? '' : ' loading="lazy"') + '></figure>';
+    if (ui.test) return '<figure class="plate empty' + (extra ? ' ' + extra : '') + '" role="img" aria-label="挿絵の枠"><span>挿絵の枠 ・ ' + (key === 'cover' ? '表紙' : key + ' ' + esc(d.name)) + '<small>3:2 ・ 画像がないときは、テスト表示のときだけ出ます</small></span></figure>';
+    return '';
+  }
+
+  /* ---------- 表紙 ---------- */
+  function renderCover() {
+    const hasPlate = typeof PLATE_IMG !== 'undefined' && !!PLATE_IMG.cover;
+    const top = hasPlate
+      ? plateHtml('cover', 'cover-plate') + '<h1 class="cover-title">眠りの森の王子</h1>'
+      : (ui.test ? plateHtml('cover', 'cover-plate') : '') + '<div class="moon"><h1 aria-label="眠りの森の王子">' + '眠りの森の王子'.split('').map((c) => '<span aria-hidden="true">' + c + '</span>').join('') + '</h1></div>';
+    const seals = [37, 38, 39, 40, 41].map((id) =>
+      meta.endings.includes(id) ? '<li class="on">' + esc(ENDINGS[id].name) + '</li>' : '<li><span aria-hidden="true">？</span><span class="visually-hidden">未到達の結末</span></li>').join('');
+    const resume = !!run && !run.ended;
+    return '<section class="cover">' +
+      top +
+      '<p class="sub">ゲームブック ・ 全41段落</p>' +
+      '<p class="epi">「眠りを…守れ」</p>' +
+      '<div class="acts">' + (resume
+        ? '<button class="btn primary" data-act="resume">つづきから</button><button class="btn" data-act="start">最初からはじめる</button>'
+        : '<button class="btn primary" data-act="start">はじめる</button>') + '</div>' +
+      '<h2>結末の記録</h2><ul class="seals">' + seals + '</ul>' +
+      '<p class="stat">記憶の断片<b>' + meta.fragments + '</b></p>' +
+      codeBlock(true) +
+      '<p class="note-s">' + (storageOk
+        ? 'この端末のブラウザに、自動で保存されます。'
+        : 'この環境では自動保存ができません。引き継ぎコードを控えてください。') + '</p>' +
+      testBox(false) +
+      '<button class="btn danger" data-act="' + (ui.wipeArmed ? 'wipe' : 'wipeArm') + '">' + (ui.wipeArmed ? '本当に消す(元に戻せません)' : '記録をすべて消す') + '</button>' +
+      '</section>';
+  }
+
+  /* ---------- 冒険記録紙 ---------- */
+  function renderSheet() {
+    const s = run || newRun();
+    const slot = (key, cssVar, name) => '<li class="item ' + (s[key] ? 'on' : 'off') + '">' + BOTTLE(cssVar) + '<span>' + (s[key] ? name : '？') + '</span></li>';
+    let items = slot('gold', '--b-gold', '金の瓶') + slot('blue', '--b-blue', '青の瓶') + slot('red', '--b-red', '赤の瓶');
+    if (s.silver) items += '<li class="item on">' + SILVER + '<span>銀の聖具</span></li>';
+    else if (s.silverPlaced) items += '<li class="item off">' + SILVER + '<span>床に置いた</span></li>';
+    const notes = [1, 2, 3, 4, 5, 6].map((n) => {
+      if (!s.notes.includes(n)) return '<li class="off"><span class="mark">' + CIRC[n] + '</span><span>未入手</span></li>';
+      return '<li><details data-note="' + n + '"' + (ui.open[n] ? ' open' : '') + '><summary><span class="mark">' + CIRC[n] + '</span><span>' + esc(NOTES[n].title) + '</span></summary>' +
+        '<div class="body">' + NOTES[n].lines.map((l) => '<p>' + esc(l) + '</p>').join('') + '</div></details></li>';
+    }).join('');
+    return '<aside class="sheet" aria-label="冒険記録紙"><h2>冒険記録紙</h2>' +
+      '<section><h3>持ち物</h3><ul class="items">' + items + '</ul></section>' +
+      '<section><h3>手記 ' + s.notes.length + ' / 6</h3><ol class="notes">' + notes + '</ol></section>' +
+      '<section><h3>記憶の断片</h3><p class="frag"><b>' + meta.fragments + '</b>結末 ' + meta.endings.length + ' / 5</p></section>' +
+      testBox(true) + '</aside>';
+  }
+
+  /* ---------- 本のページ ---------- */
+  function renderEnd(s) {
+    const e = ENDINGS[P[s.at].end];
+    return '<section class="end"><p class="seal" aria-hidden="true">終</p>' +
+      '<p class="end-name">' + esc(e.label) + '</p>' +
+      '<p class="end-gain">記憶の断片が <b>+' + s.endGain + '</b> 増えた' + (s.endNew ? '(新しい結末)' : '') + '。結末 ' + meta.endings.length + ' / 5</p>' +
+      '<div class="acts"><button class="btn primary" data-act="restart">もう一度はじめる</button><button class="btn" data-act="toCover">表紙へ</button></div>' +
+      codeBlock(false) + '</section>';
+  }
+
+  /* ---------- 山場の動画(枠) ---------- */
+  function videoKind(url) {
+    if (typeof url !== 'string') return null;
+    const u = url.trim();
+    if (!/^(https:\/\/|videos\/)[^\s"'<>]+$/i.test(u)) return null;
+    return /\.(mp4|webm|m4v)(\?[^\s]*)?$/i.test(u) ? 'file' : 'link';
+  }
+  function videoHtml(key) {
+    const v = typeof VIDEOS !== 'undefined' ? VIDEOS[key] : null;
+    if (!v) return '';
+    const kind = videoKind(v.url);
+    const title = esc(v.title || '演出動画');
+    if (!kind) {
+      return ui.test ? '<div class="vid empty" role="img" aria-label="動画の枠"><span>動画の枠 ・ ' + key + ' ' + title + '</span><small>URLを入れると、ここに出ます。テスト表示のときだけ見えます</small></div>' : '';
+    }
+    const url = esc(v.url.trim());
+    const note = v.note ? '<p class="vid-note">' + esc(v.note) + '</p>' : '';
+    if (kind === 'file') {
+      const pimg = (typeof VIDEO_POSTER !== 'undefined' && VIDEO_POSTER[key]) || (typeof PLATE_IMG !== 'undefined' && PLATE_IMG[key]) || '';
+      const poster = pimg ? ' poster="' + pimg + '"' : '';
+      return '<figure class="vid"><video controls playsinline preload="none"' + poster + ' src="' + url + '" aria-label="動画:' + title + '">動画を再生できません。<a href="' + url + '" target="_blank" rel="noopener noreferrer">別のタブで開く</a></video>' + note + '</figure>';
+    }
+    return '<div class="vid"><a class="vid-card" href="' + url + '" target="_blank" rel="noopener noreferrer"><span class="play" aria-hidden="true">▶</span>' +
+      '<span class="t">' + title + ' の動画を見る</span><span class="s">外部サイトが新しいタブで開きます。見なくても物語は進められます</span></a>' + note + '</div>';
+  }
+
+  /* ---------- パズル(5:苔むした石碑 / 27:結界の明滅) ---------- */
+  const BLINK_FAIL = ['壁が指を弾く。痛みはない。いまの薄れは短すぎた。', '壁が指を弾く。息の数を数えてみよう。薄れの長さは、いつも同じではない。', '壁が指を弾く。三つ数えたあと、四つ目の薄れを待つ。'];
+  function motionReduced() { try { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) { return false; } }
+  function newPz() { return { mode: motionReduced() ? 'step' : 'timed', started: false, t0: 0, step: 0, fails: 0, msg: '', moss: [], sel: null, wrong: 0, lastSolved: null, lastWrong: null }; }
+  let pzTimer = null;
+  function stopLoop() { if (pzTimer) { clearInterval(pzTimer); pzTimer = null; } }
+  function pzTick() {
+    const z = ui.pz, w = document.getElementById('pz-wall');
+    if (!z || !w || !z.started || z.mode !== 'timed') { stopLoop(); return; }
+    w.style.setProperty('--glow', blinkGlow(blinkPhase(performance.now() - z.t0)).toFixed(2));
+  }
+  function startLoop() { stopLoop(); pzTimer = setInterval(pzTick, 80); pzTick(); }
+
+  function blinkHtml(z) {
+    const step = z.mode === 'step';
+    const glow = step ? blinkGlow(blinkStepPhase(z.step)) : (z.started ? blinkGlow(blinkPhase(performance.now() - z.t0)) : 0.35);
+    const say = z.msg || (step ? BLINK_STEPS[z.step] : (z.started ? '' : '壁の息づかいを、数えはじめよう。'));
+    const btns = (step
+      ? '<button class="btn" data-act="pzStep">ひと呼吸、見守る</button><button class="btn primary pz-tap" data-act="pzTap">手を差し入れる</button>'
+      : (z.started ? '<button class="btn primary pz-tap" data-act="pzTap">手を差し入れる</button>' : '<button class="btn primary" data-act="pzStart">数えはじめる</button>'))
+      + '<button class="btn" data-act="pzMode" aria-pressed="' + step + '">一回ずつ進める(文字で見る)</button>'
+      + ((z.fails >= 3 || ui.test) ? '<button class="btn" data-act="pzSkip">壁をほどいて進む</button>' : '');
+    return '<section class="pz" aria-labelledby="pz-t"><p class="pz-h" id="pz-t" tabindex="-1">光の壁</p>' +
+      '<div class="pz-wall" id="pz-wall" role="img" aria-label="息をするように明滅する光の壁" style="--glow:' + glow.toFixed(2) + '"><i></i></div>' +
+      '<p class="pz-say" id="pz-say" role="status" aria-live="polite">' + esc(say) + '</p>' +
+      '<div class="acts">' + btns + '</div></section>';
+  }
+  /* 石碑の絵。座標は viewBox 320x440。字のマスは 44 角、右の列(眠りを乱す者)から読む */
+  const ST = { col: [205, 115], row0: 112, pitch: 48, cell: 44 };
+  const ST_CELLS = [
+    { c: '眠', col: 0, row: 0 }, { c: 'り', col: 0, row: 1 }, { c: 'を', col: 0, row: 2 },
+    { slot: 0, col: 0, row: 3 }, { slot: 1, col: 0, row: 4 }, { slot: 2, col: 0, row: 5 },
+    { slot: 3, col: 1, row: 0 }, { slot: 4, col: 1, row: 1 }, { slot: 5, col: 1, row: 2 },
+    { c: '守', col: 1, row: 3 }, { c: 'れ', col: 1, row: 4 },
+  ];
+  function rnd(seed) { let x = seed * 7919 + 13; return () => { x = (x * 9301 + 49297) % 233280; return x / 233280; }; }
+  function mossSvg(i) {
+    const r = rnd(i + 5), pts = [];
+    for (let k = 0; k < 14; k++) { const a = k / 14 * Math.PI * 2, rad = 25 + r() * 6; pts.push([22 + Math.cos(a) * rad, 22 + Math.sin(a) * rad]); }
+    let d = 'M' + ((pts[0][0] + pts[13][0]) / 2).toFixed(1) + ',' + ((pts[0][1] + pts[13][1]) / 2).toFixed(1);
+    for (let k = 0; k < 14; k++) { const n = pts[(k + 1) % 14]; d += ' Q' + pts[k][0].toFixed(1) + ',' + pts[k][1].toFixed(1) + ' ' + ((pts[k][0] + n[0]) / 2).toFixed(1) + ',' + ((pts[k][1] + n[1]) / 2).toFixed(1); }
+    let dots = '';
+    for (let k = 0; k < 16; k++) dots += '<circle cx="' + (r() * 46 - 1).toFixed(1) + '" cy="' + (r() * 46 - 1).toFixed(1) + '" r="' + (1.2 + r() * 2.6).toFixed(1) + '" fill="' + (r() < .5 ? '#4f6c37' : '#a3b874') + '" opacity="' + (.55 + r() * .4).toFixed(2) + '"/>';
+    return '<path d="' + d + 'Z" fill="#6c8847" stroke="#3f5a2b" stroke-width="1.2"/>' + dots;
+  }
+  function runeMark(x, y, k) {
+    const d = ['M0,-9 L0,9 M0,-3 L6,-9 M0,3 L6,-3', 'M0,-9 L0,9 M0,-9 L6,-4 L0,1', 'M-5,-9 L5,9 M5,-9 L-5,9', 'M0,-9 L0,9 M-5,-4 L0,-9 L5,-4'][k % 4];
+    return '<path d="' + d + '" transform="translate(' + x + ',' + y + ')"/>';
+  }
+  function steleSvg(z, lvl) {
+    const f = TABLET.reveal[lvl];
+    const body = 'M54,420 L47,362 L58,302 L46,238 L60,172 L72,112 L96,64 L132,38 L170,28 L206,46 L236,88 L258,142 L270,202 L262,262 L276,322 L268,378 L274,420 Z';
+    let runes = '';
+    [170, 215, 260, 305, 350].forEach((y, k) => { runes += runeMark(76, y, k) + runeMark(247, y + 10, k + 2); });
+    const knot = '<g transform="translate(170,82)"><circle r="27"/><circle r="22"/>' +
+      [0, 60, 120].map((a) => '<ellipse rx="9.5" ry="20" transform="rotate(' + a + ')"/>').join('') + '</g>';
+    let flies = '';
+    [[40, 300, 0], [282, 250, 1.2], [68, 200, .6], [250, 340, 2], [20, 380, 1.6], [300, 392, .3]].forEach(([x, y, dl]) => { flies += '<circle class="fly" cx="' + x + '" cy="' + y + '" r="2.2" fill="#d9f2ff" filter="url(#stGlow)" style="animation-delay:' + dl + 's"/>'; });
+    let flowers = '';
+    [[40, 432, 1], [58, 436, .8], [270, 434, 1], [290, 430, .8]].forEach(([x, y, k]) => {
+      flowers += '<g transform="translate(' + x + ',' + y + ') scale(' + k + ')"><path d="M0,0 Q-1,-8 0,-14" stroke="#3f5a3a" stroke-width="1.6" fill="none"/>' +
+        [0, 72, 144, 216, 288].map((a) => '<ellipse cx="0" cy="-19" rx="3" ry="5" fill="#eef1ee" stroke="#9aa4a8" stroke-width=".6" transform="rotate(' + a + ' 0 -14)"/>').join('') + '<circle cx="0" cy="-14" r="2" fill="#d8bd6a"/></g>';
+    });
+    let cells = '', ringHtml = '';
+    ST_CELLS.forEach((cl) => {
+      const x = ST.col[cl.col] - ST.cell / 2, y = ST.row0 + cl.row * ST.pitch;
+      if (cl.c) { cells += '<text x="' + (x + 22) + '" y="' + (y + 35) + '" class="eng">' + cl.c + '</text>'; return; }
+      const i = cl.slot, sl = TABLET.slots[i], solved = z.moss.includes(i);
+      const ex = sl.dir === 'l' ? [0, 0, 44 * f, 44] : sl.dir === 'r' ? [44 - 44 * f, 0, 44 * f, 44] : sl.dir === 'b' ? [0, 44 - 44 * f, 44, 44 * f] : [0, 0, 44, 44 * f];
+      const cls = solved ? (z.lastSolved === i ? 'moss-fall' : 'moss-gone') : (z.lastWrong === i ? 'moss-grow' : '');
+      cells += '<g transform="translate(' + x + ',' + y + ')">' +
+        '<rect x="0" y="0" width="44" height="44" rx="5" fill="#0b121b" opacity=".35"/>' +
+        '<text x="22" y="35" class="eng' + (solved ? ' hit' : '') + '">' + sl.ch + '</text>' +
+        (solved && cls === 'moss-gone' ? '' :
+          '<g class="' + cls + '"><g>' + mossSvg(i) + '</g>' +
+          '<g><clipPath id="cp' + i + '"><rect x="' + ex[0].toFixed(1) + '" y="' + ex[1].toFixed(1) + '" width="' + ex[2].toFixed(1) + '" height="' + ex[3].toFixed(1) + '" rx="4"/></clipPath>' +
+          '<rect x="' + ex[0].toFixed(1) + '" y="' + ex[1].toFixed(1) + '" width="' + ex[2].toFixed(1) + '" height="' + ex[3].toFixed(1) + '" rx="4" fill="#7d8c9b"/>' +
+          '<text x="22" y="35" class="eng cut" clip-path="url(#cp' + i + ')">' + sl.ch + '</text></g></g>') +
+        '</g>';
+      if (z.sel === i) ringHtml += '<rect class="sel-ring" x="' + (x - 3) + '" y="' + (y - 3) + '" width="50" height="50" rx="8"/>';
+    });
+    return '<svg viewBox="0 0 320 440" aria-hidden="true" focusable="false">' +
+      '<defs>' +
+      '<linearGradient id="stSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16233b"/><stop offset=".55" stop-color="#2b4562"/><stop offset="1" stop-color="#43606c"/></linearGradient>' +
+      '<linearGradient id="stBody" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6f8196"/><stop offset=".4" stop-color="#4a5a6c"/><stop offset="1" stop-color="#2a3442"/></linearGradient>' +
+      '<radialGradient id="stMoon" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f4f8ff" stop-opacity=".95"/><stop offset=".3" stop-color="#cfe0f5" stop-opacity=".5"/><stop offset="1" stop-color="#cfe0f5" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="stMist" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#cfe0e8" stop-opacity=".55"/><stop offset="1" stop-color="#cfe0e8" stop-opacity="0"/></radialGradient>' +
+      '<filter id="stNoise" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="7" result="n"/><feColorMatrix in="n" values="0 0 0 0 .05  0 0 0 0 .08  0 0 0 0 .12  0 0 0 .75 0"/></filter>' +
+      '<filter id="stWob"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="5" result="w"/><feDisplacementMap in="SourceGraphic" in2="w" scale="9"/></filter>' +
+      '<filter id="stGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
+      '<clipPath id="stClip"><path d="' + body + '"/></clipPath>' +
+      '</defs>' +
+      '<rect width="320" height="440" fill="url(#stSky)"/>' +
+      '<circle cx="52" cy="50" r="62" fill="url(#stMoon)"/><circle cx="52" cy="50" r="14" fill="#f3f7ff"/>' +
+      /* 木々 */
+      '<g fill="#0d1623"><path d="M0,0 L22,0 L26,150 L30,440 L0,440Z"/><path d="M320,0 L296,0 L292,120 L288,440 L320,440Z"/>' +
+      '<path d="M22,40 L60,70 L58,76 L22,56Z M296,64 L262,92 L264,98 L296,80Z M24,170 L52,196 L50,200 L24,184Z"/></g>' +
+      /* 奥の立石 */
+      '<g fill="#1f3044" opacity=".9"><path d="M64,404 L66,352 L74,330 L90,326 L98,352 L102,404Z"/><path d="M222,410 L224,372 L236,350 L252,356 L258,386 L262,410Z"/><path d="M104,414 L106,392 L116,384 L126,394 L128,414Z"/></g>' +
+      '<ellipse cx="160" cy="404" rx="190" ry="46" fill="url(#stMist)"/>' +
+      '<path d="M0,414 Q60,402 130,412 T250,408 T320,410 L320,440 L0,440Z" fill="#14202a"/>' +
+      '<ellipse cx="164" cy="424" rx="118" ry="11" fill="#05090e" opacity=".5"/>' +
+      /* 巨石 */
+      '<g filter="url(#stWob)">' +
+      '<path d="' + body + '" fill="url(#stBody)" stroke="#1a222d" stroke-width="3"/>' +
+      '<g clip-path="url(#stClip)"><rect x="30" y="20" width="270" height="420" filter="url(#stNoise)" opacity=".6"/>' +
+      '<path d="M54,420 L47,362 L58,302 L46,238 L60,172 L72,112 L96,64 L132,38 L170,28" fill="none" stroke="#cfe3f6" stroke-width="6" opacity=".28"/>' +
+      '<g stroke="#0d141d" stroke-width="1.8" fill="none" opacity=".6"><path d="M96,90 L104,128 L92,150 L100,186"/><path d="M262,300 L250,332 L258,360 L244,398"/><path d="M62,260 L78,274 L72,306"/><path d="M240,150 L228,176"/></g></g>' +
+      '</g>' +
+      /* 光る紋様 */
+      '<g class="rune" fill="none" stroke="#9fe3ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#stGlow)">' + knot + runes + '</g>' +
+      /* いばら・苔・花 */
+      '<g stroke="#2f4a33" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M290,432 C306,388 268,358 292,308 C312,268 276,240 288,204"/><path d="M24,430 C12,396 38,370 22,338"/></g>' +
+      '<path d="M44,404 Q48,386 66,388 Q82,376 92,396 Q104,404 100,420 L44,420Z" fill="#587a42" stroke="#304a28" stroke-width="1.2"/>' +
+      '<path d="M236,408 Q244,390 262,394 Q276,386 284,402 L284,420 L236,420Z" fill="#587a42" stroke="#304a28" stroke-width="1.2"/>' +
+      flowers + flies + cells + ringHtml + '</svg>';
+  }
+  function tabletHtml(z) {
+    const lvl = tabletLevel(meta), n = TABLET.slots.length;
+    const all = z.moss.length >= n;
+    const btns = ST_CELLS.filter((cl) => cl.slot !== undefined && !z.moss.includes(cl.slot)).map((cl) => {
+      const x = ST.col[cl.col] - ST.cell / 2, y = ST.row0 + cl.row * ST.pitch;
+      return '<button class="slot" data-act="pzMoss" data-i="' + cl.slot + '" style="left:' + (x / 3.2).toFixed(2) + '%;top:' + (y / 4.4).toFixed(2) + '%;width:' + (ST.cell / 3.2).toFixed(2) + '%;height:' + (ST.cell / 4.4).toFixed(2) + '%" aria-label="苔に覆われた文字(' + (cl.slot + 1) + ' / ' + n + ')。見える形から、刻まれた字を選ぶ"' + (z.sel === cl.slot ? ' aria-pressed="true"' : '') + '></button>';
+    }).join('');
+    const sl = z.sel !== null && z.sel !== undefined ? TABLET.slots[z.sel] : null;
+    const cands = all ? '' : '<div class="cands" role="group" aria-label="刻まれていた字の候補">' + (sl
+      ? sl.opts.map((o) => '<button class="cand' + (z.wrong >= 3 && o === sl.ch ? ' hint' : '') + '" data-act="pzPick" data-o="' + o + '" aria-label="候補:' + o + '">' + o + '</button>').join('')
+      : '<span class="cands-note">苔の隙間の形を手がかりに、触れてみよう。</span>') + '</div>';
+    const seq = '眠りを' + TABLET.slots.map((x, i) => z.moss.includes(i) ? x.ch : '□').join('') + '守れ';
+    const say = z.msg || (all ? '苔の下の文字が読める。「' + TABLET.full + '」' : '読めた字: ' + seq);
+    const low = all && meta.fragments >= 1 ? '<p class="pz-small">石の根元に、小さな別の字が刻まれている。「' + TABLET.low + '」</p>' : '';
+    return '<section class="pz" aria-labelledby="pz-t"><p class="pz-h" id="pz-t" tabindex="-1">苔むした石碑</p>' +
+      '<div class="stele' + (all ? ' done' : '') + '" role="group" aria-label="苔むした石碑">' + steleSvg(z, lvl) + btns + '</div>' +
+      cands +
+      '<p class="pz-say" role="status" aria-live="polite">' + esc(say) + '</p>' + low +
+      (all ? '' : '<div class="acts">' + ((z.wrong >= 3 || ui.test) ? '<button class="btn" data-act="pzMossAll">苔をすべて払う</button>' : '') + '</div>') + '</section>';
+  }
+  function pzHtml(s) {
+    const p = P[s.at];
+    if (!p || !p.puzzle) return '';
+    if (ui.pzFor !== s.at) { ui.pzFor = s.at; ui.pz = newPz(); stopLoop(); }
+    if (p.puzzle === 'blink') return s.p27 ? '' : blinkHtml(ui.pz);
+    if (p.puzzle === 'tablet') return tabletHtml(ui.pz);
+    return '';
+  }
+  function pzDone() { run.p27 = true; stopLoop(); focusSel = '.choice'; saveAll(); render(); }
+  function pzAct(name, el) {
+    const z = ui.pz;
+    if (!z || !run) return;
+    const now = performance.now();
+    switch (name) {
+      case 'pzMode': z.mode = z.mode === 'step' ? 'timed' : 'step'; z.started = false; z.step = 0; z.msg = ''; stopLoop(); focusSel = '[data-act="pzMode"]'; break;
+      case 'pzStart': z.started = true; z.t0 = now; z.msg = ''; focusSel = '.pz-tap'; break;
+      case 'pzStep': z.step = (z.step + 1) % 8; z.msg = ''; focusSel = '[data-act="pzStep"]'; break;
+      case 'pzTap': {
+        const ph = z.mode === 'step' ? blinkStepPhase(z.step) : blinkPhase(now - z.t0);
+        if (blinkOpen(ph)) { pzDone(); return; }
+        z.fails++; z.msg = BLINK_FAIL[Math.min(z.fails, 3) - 1];
+        if (z.mode === 'step') z.step = 0; else z.t0 = now;
+        focusSel = '.pz-tap'; break;
+      }
+      case 'pzSkip': pzDone(); return;
+      case 'pzMoss': { z.sel = +el.dataset.i; z.msg = ''; focusSel = '.cand'; break; }
+      case 'pzPick': {
+        const slot = z.sel;
+        if (slot === null || slot === undefined) return;
+        z.lastSolved = null; z.lastWrong = null;
+        if (tabletPick(z, slot, el.dataset.o)) {
+          z.lastSolved = slot; z.sel = null; z.msg = '';
+          const nxt = TABLET.slots.findIndex((x, i) => !z.moss.includes(i));
+          focusSel = nxt >= 0 ? '[data-act="pzMoss"][data-i="' + nxt + '"]' : '#pz-t';
+        } else {
+          z.lastWrong = slot; z.msg = z.wrong >= 3 ? 'この字ではない。苔がまた伸びる。……候補の一つが、ほのかに光った。' : 'この字ではない。苔がまた伸びる。';
+          focusSel = '.cand';
+        }
+        break;
+      }
+      case 'pzMossAll': z.moss = TABLET.slots.map((x, i) => i); z.sel = null; z.msg = ''; z.lastSolved = null; focusSel = '#pz-t'; break;
+      default: return;
+    }
+    render();
+    if (z.mode === 'timed' && z.started && ui.pzFor === 27) startLoop();
+  }
+
+  function renderPage() {
+    const s = run, p = P[s.at], ch = chapterOf(s.at);
+    const text = body(s, meta).map((b) => {
+      if (b.k === 'q') return '<blockquote class="note">' + b.lines.map((l) => '<p>' + esc(l) + '</p>').join('') + '</blockquote>';
+      const say = b.t.charAt(0) === '「' || b.t.charAt(0) === '『';
+      return '<p' + (say ? ' class="say"' : '') + '>' + esc(b.t) + '</p>';
+    }).join('');
+    const gains = s.gained && s.gained.length
+      ? '<div class="gains">' + s.gained.map((g) => '<span class="stamp">入手 ' + esc(g) + '</span>').join('') + '</div>' : '';
+    let tail;
+    if (p.end) {
+      tail = renderEnd(s);
+    } else if (!choices(s, meta).length) {
+      tail = '';
+    } else {
+      tail = '<ul class="choices">' + choices(s, meta).map((c) => {
+        const go = c.ok ? '<span class="go">' + c.to + '<small>へ</small></span>' : '<span class="go" aria-hidden="true">×</span>';
+        const why = c.ok ? '' : '<p class="why">' + esc(c.hint) + (ui.test && c.why ? ' <b>条件</b> ' + esc(c.why) : '') + '</p>';
+        return '<li><button class="choice" data-act="choose" data-i="' + c.i + '"' + (c.ok ? '' : ' disabled aria-disabled="true"') + '>' +
+          '<span class="t">' + esc(c.text) + '</span><span class="dots" aria-hidden="true"></span>' + go + '</button>' + why + '</li>';
+      }).join('') + '</ul>';
+    }
+    return '<article class="book" id="book" style="scroll-margin-top:4rem"><div class="fade">' +
+      '<header class="phead"><p class="chap">' + esc(ch.name) + '</p>' +
+      '<h1 class="no" id="pno" tabindex="-1" aria-label="段落' + s.at + '">' + s.at + '</h1>' +
+      (ui.test ? '<p class="ptitle">' + esc(p.title) + '</p>' : '') + '</header>' +
+      plateHtml(s.at) +
+      '<div class="text">' + text + '</div>' + pzHtml(s) + videoHtml(s.at) + gains + tail + '</div></article>';
+  }
+
+  function render() {
+    const reading = ui.screen === 'read' && run;
+    if (!reading) ui.screen = 'cover';
+    const bar = '<header class="bar"><button class="name" data-act="toCover">眠りの森の王子</button>' +
+      '<div class="tools">' + (reading ? '<button class="btn" data-act="toggleSheet" aria-pressed="' + ui.sheet + '">記録紙</button>' : '') + '</div></header>';
+    const main = reading
+      ? '<div class="layout' + (ui.sheet ? ' has-sheet' : '') + '">' + (ui.sheet ? renderSheet() : '') + renderPage() + '</div>'
+      : renderCover();
+    root.innerHTML = bar + main;
+    if (scrollTo === 'book') {
+      const b = document.getElementById('book'); if (b) b.scrollIntoView({ block: 'start' });
+      const h = document.getElementById('pno'); if (h) h.focus({ preventScroll: true });
+    } else if (scrollTo === 'top') {
+      window.scrollTo(0, 0);
+    }
+    scrollTo = null;
+    if (ui.pz) { ui.pz.lastSolved = null; ui.pz.lastWrong = null; }
+    if (focusSel) { const f = document.querySelector(focusSel); if (f) f.focus({ preventScroll: true }); focusSel = null; }
+  }
+
+  /* ---------- 操作 ---------- */
+  function flash(t) { ui.msg = t; const el = document.getElementById('msg'); if (el) el.textContent = t; }
+
+  async function copyCode() {
+    const code = encodeMeta(meta);
+    try { await navigator.clipboard.writeText(code); flash('コピーしました。'); }
+    catch (e) {
+      const inp = document.getElementById('code-show');
+      if (inp) { inp.focus(); inp.select(); }
+      flash('コードを選択しました。コピーしてください。');
+    }
+  }
+
+  function act(name, el) {
+    const wasArmed = ui.wipeArmed;
+    if (name !== 'wipeArm') ui.wipeArmed = false;
+    if (['choose', 'start', 'restart', 'preset', 'toCover'].includes(name)) ui.pzFor = null;
+    switch (name) {
+      case 'start': case 'restart': run = enter(newRun(), meta, 1); ui.screen = 'read'; ui.msg = ''; scrollTo = 'book'; break;
+      case 'resume': ui.screen = 'read'; scrollTo = 'book'; break;
+      case 'toCover': ui.screen = 'cover'; scrollTo = 'top'; break;
+      case 'choose': if (run && choose(run, meta, +el.dataset.i)) scrollTo = 'book'; break;
+      case 'toggleSheet': ui.sheet = !ui.sheet; break;
+      case 'toggleTest': ui.test = !!el.checked; break;
+      case 'copy': copyCode(); return;
+      case 'restore': {
+        const input = document.getElementById('code-in');
+        const d = decodeMeta(input ? input.value : '');
+        if (!d) { flash('コードを読み取れませんでした。文字を確かめてください。'); return; }
+        meta = sanitizeMeta(d);
+        ui.msg = '復元しました。記憶の断片 ' + meta.fragments + '、結末 ' + meta.endings.length + ' / 5。';
+        break;
+      }
+      case 'wipeArm': ui.wipeArmed = true; break;
+      case 'wipe':
+        if (!wasArmed) break;
+        meta = newMeta(); run = null; ui.msg = '記録を消しました。'; break;
+      case 'fragAdd': meta.fragments = Math.min(999, meta.fragments + 1); break;
+      case 'fragZero': meta.fragments = 0; break;
+      case 'preset': {
+        const p = el.dataset.p;
+        run = preset(p);
+        enter(run, meta, p === 'all30' ? 30 : 34);
+        ui.screen = 'read'; scrollTo = 'book'; break;
+      }
+    }
+    saveAll();
+    render();
+  }
+
+  root.addEventListener('click', (e) => {
+    const el = e.target.closest('[data-act]');
+    if (!el || el.tagName === 'INPUT') return;
+    if (el.dataset.act.indexOf('pz') === 0) { pzAct(el.dataset.act, el); return; }
+    act(el.dataset.act, el);
+  });
+  root.addEventListener('change', (e) => {
+    if (e.target.dataset && e.target.dataset.act === 'toggleTest') act('toggleTest', e.target);
+  });
+  root.addEventListener('toggle', (e) => {
+    const d = e.target;
+    if (d.dataset && d.dataset.note) ui.open[d.dataset.note] = d.open;
+  }, true);
+  root.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.target.id === 'code-in') act('restore', e.target);
+  });
+
+  render();
+})();
+</script>
+
+</body></html>
