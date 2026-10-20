@@ -977,10 +977,12 @@ function sanitizeRun(x) {
   let meta = sanitizeMeta(sget(K.meta));
   let run = sanitizeRun(sget(K.run));
   const saved = sget(K.ui) || {};
+  // 公開版: アドレスの末尾に ?test=1 を付けたときだけ、テスト表示の切り替えが現れる
+  const TESTABLE = (function () { try { return /[?&]test=1(&|$)/.test(location.search); } catch (e) { return false; } })();
   const ui = {
     screen: 'cover',
     sheet: saved.sheet !== undefined ? !!saved.sheet : window.innerWidth >= 960,
-    test: saved.test !== undefined ? !!saved.test : true,
+    test: TESTABLE ? (saved.test !== undefined ? !!saved.test : true) : false,
     msg: '', wipeArmed: false, open: {}, pz: null, pzFor: null,
   };
   let focusSel = null;
@@ -1018,6 +1020,7 @@ function sanitizeRun(x) {
   }
 
   function testBox(withStatus) {
+    if (!TESTABLE) return '';
     let h = '<section class="testbox"><label><input type="checkbox" id="test-toggle" data-act="toggleTest"' + (ui.test ? ' checked' : '') + '> テスト表示</label>';
     if (ui.test) {
       if (withStatus && run) {
