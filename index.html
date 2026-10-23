@@ -133,6 +133,9 @@ button { font: inherit; color: inherit; }
   background: var(--paper-2); border: 1px solid var(--rule); border-radius: 0;
 }
 .code-row input::placeholder { color: var(--ink-2); opacity: .6; letter-spacing: .1em; font-weight: 400; font-size: .95rem; }
+.legal { margin: 0; font-family: var(--font-ui); font-size: .75rem; letter-spacing: .12em; color: var(--ink-2); }
+.credit-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; font-family: var(--font-ui); font-size: .9rem; line-height: 1.6; }
+.credit-list li span { display: block; font-size: .75rem; letter-spacing: .1em; color: var(--ink-2); }
 .note-s { margin: 0; font-size: .8rem; line-height: 1.7; color: var(--ink-2); }
 .msg { min-height: 1.4em; margin: 0; font-family: var(--font-ui); font-size: .85rem; color: var(--accent); text-align: center; }
 
@@ -1073,6 +1076,25 @@ function sanitizeRun(x) {
         : 'この環境では自動保存ができません。引き継ぎコードを控えてください。') + '</p>' +
       testBox(false) +
       '<button class="btn danger" data-act="' + (ui.wipeArmed ? 'wipe' : 'wipeArm') + '">' + (ui.wipeArmed ? '本当に消す(元に戻せません)' : '記録をすべて消す') + '</button>' +
+      '<button class="btn" data-act="toCredits">このゲームについて</button>' +
+      '<p class="legal">© 2026 FILWEN</p>' +
+      '</section>';
+  }
+
+  /* ---------- クレジット ---------- */
+  function renderCredits() {
+    return '<section class="cover credits">' +
+      '<p class="sub">FILWEN TALES</p>' +
+      '<h2>眠りの森の王子</h2>' +
+      '<p class="note-s">企画・物語構成<br><b>FILWEN</b></p>' +
+      '<h2>制作協力・使用AIツール</h2>' +
+      '<ul class="credit-list">' +
+      '<li><span>アプリ開発・物語制作支援</span>Claude(Anthropic)</li>' +
+      '<li><span>イラスト生成</span>Seedream</li>' +
+      '<li><span>動画生成</span>MiniMax</li></ul>' +
+      '<p class="note-s">本作品には生成AIを使用した文章・画像・映像が含まれています。</p>' +
+      '<p class="legal">© 2026 FILWEN</p>' +
+      '<div class="acts"><button class="btn primary" data-act="toCover">表紙へ戻る</button></div>' +
       '</section>';
   }
 
@@ -1347,12 +1369,13 @@ function sanitizeRun(x) {
 
   function render() {
     const reading = ui.screen === 'read' && run;
-    if (!reading) ui.screen = 'cover';
-    const bar = '<header class="bar"><button class="name" data-act="toCover">眠りの森の王子</button>' +
+    const credits = !reading && ui.screen === 'credits';
+    if (!reading && !credits) ui.screen = 'cover';
+    const bar = '<header class="bar"><button class="name" data-act="toCover">' + (reading ? '眠りの森の王子' : 'FILWEN TALES') + '</button>' +
       '<div class="tools">' + (reading ? '<button class="btn" data-act="toggleSheet" aria-pressed="' + ui.sheet + '">記録紙</button>' : '') + '</div></header>';
     const main = reading
       ? '<div class="layout' + (ui.sheet ? ' has-sheet' : '') + '">' + (ui.sheet ? renderSheet() : '') + renderPage() + '</div>'
-      : renderCover();
+      : credits ? renderCredits() : renderCover();
     root.innerHTML = bar + main;
     if (scrollTo === 'book') {
       const b = document.getElementById('book'); if (b) b.scrollIntoView({ block: 'start' });
@@ -1386,6 +1409,7 @@ function sanitizeRun(x) {
       case 'start': case 'restart': run = enter(newRun(), meta, 1); ui.screen = 'read'; ui.msg = ''; scrollTo = 'book'; break;
       case 'resume': ui.screen = 'read'; scrollTo = 'book'; break;
       case 'toCover': ui.screen = 'cover'; scrollTo = 'top'; break;
+      case 'toCredits': ui.screen = 'credits'; scrollTo = 'top'; break;
       case 'choose': if (run && choose(run, meta, +el.dataset.i)) scrollTo = 'book'; break;
       case 'toggleSheet': ui.sheet = !ui.sheet; break;
       case 'toggleTest': ui.test = !!el.checked; break;
