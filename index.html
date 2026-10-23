@@ -711,6 +711,7 @@ const PLATE_IMG = {
   41: "images/plate_41.webp"
 };
 const VIDEO_POSTER = {
+  bonus: "images/poster_bonus.webp",
   28: "images/poster_28.webp",
   37: "images/poster_37.webp",
   38: "images/poster_38.webp",
@@ -726,6 +727,7 @@ const VIDEO_POSTER = {
    url が空のままなら、テスト表示のときだけ点線の枠が出て、ふだんは何も出ません。
    note は、カードの下に小さく出る一言です(空でもかまいません)。 */
 const VIDEOS = {
+  bonus: { title: 'ボーナス映像', url: 'videos/bonus.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
   28: { title: '決着', url: 'videos/scene28.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
   37: { title: '犠牲者', url: 'videos/scene37.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
   38: { title: '逃走', url: 'videos/scene38.mp4', note: '音が出ます。再生ボタンを押したときだけ鳴ります。' },
@@ -1069,6 +1071,7 @@ function sanitizeRun(x) {
         ? '<button class="btn primary" data-act="resume">つづきから</button><button class="btn" data-act="start">最初からはじめる</button>'
         : '<button class="btn primary" data-act="start">はじめる</button>') + '</div>' +
       '<h2>結末の記録</h2><ul class="seals">' + seals + '</ul>' +
+      (bonusOpen() ? '<div class="acts"><button class="btn primary" data-act="toBonus">ボーナス映像を見る</button></div>' : '') +
       '<p class="stat">記憶の断片<b>' + meta.fragments + '</b></p>' +
       codeBlock(true) +
       '<p class="note-s">' + (storageOk
@@ -1078,6 +1081,19 @@ function sanitizeRun(x) {
       '<button class="btn danger" data-act="' + (ui.wipeArmed ? 'wipe' : 'wipeArm') + '">' + (ui.wipeArmed ? '本当に消す(元に戻せません)' : '記録をすべて消す') + '</button>' +
       '<button class="btn" data-act="toCredits">このゲームについて</button>' +
       '<p class="legal">© 2026 FILWEN</p>' +
+      '</section>';
+  }
+
+  /* ---------- ボーナス映像(結末を5つ集めた人へ) ---------- */
+  function bonusOpen() { return meta.endings.length >= 5 || ui.test; }
+  function renderBonus() {
+    return '<section class="cover credits">' +
+      '<p class="sub">FILWEN TALES</p>' +
+      '<h2>ボーナス映像</h2>' +
+      '<p class="note-s">5つの結末を見届けたあなたへ。</p>' +
+      videoHtml('bonus') +
+      '<p class="epi">― つづく ―</p>' +
+      '<div class="acts"><button class="btn primary" data-act="toCover">表紙へ戻る</button></div>' +
       '</section>';
   }
 
@@ -1370,12 +1386,13 @@ function sanitizeRun(x) {
   function render() {
     const reading = ui.screen === 'read' && run;
     const credits = !reading && ui.screen === 'credits';
-    if (!reading && !credits) ui.screen = 'cover';
+    const bonus = !reading && ui.screen === 'bonus' && bonusOpen();
+    if (!reading && !credits && !bonus) ui.screen = 'cover';
     const bar = '<header class="bar"><button class="name" data-act="toCover">' + (reading ? '眠りの森の王子' : 'FILWEN TALES') + '</button>' +
       '<div class="tools">' + (reading ? '<button class="btn" data-act="toggleSheet" aria-pressed="' + ui.sheet + '">記録紙</button>' : '') + '</div></header>';
     const main = reading
       ? '<div class="layout' + (ui.sheet ? ' has-sheet' : '') + '">' + (ui.sheet ? renderSheet() : '') + renderPage() + '</div>'
-      : credits ? renderCredits() : renderCover();
+      : credits ? renderCredits() : bonus ? renderBonus() : renderCover();
     root.innerHTML = bar + main;
     if (scrollTo === 'book') {
       const b = document.getElementById('book'); if (b) b.scrollIntoView({ block: 'start' });
@@ -1410,6 +1427,7 @@ function sanitizeRun(x) {
       case 'resume': ui.screen = 'read'; scrollTo = 'book'; break;
       case 'toCover': ui.screen = 'cover'; scrollTo = 'top'; break;
       case 'toCredits': ui.screen = 'credits'; scrollTo = 'top'; break;
+      case 'toBonus': ui.screen = 'bonus'; scrollTo = 'top'; break;
       case 'choose': if (run && choose(run, meta, +el.dataset.i)) scrollTo = 'book'; break;
       case 'toggleSheet': ui.sheet = !ui.sheet; break;
       case 'toggleTest': ui.test = !!el.checked; break;
