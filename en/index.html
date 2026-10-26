@@ -1,0 +1,1496 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="../favicon-192.png" sizes="192x192" type="image/png"><link rel="shortcut icon" href="../favicon.ico"><link rel="apple-touch-icon" href="../apple-touch-icon.png"><meta name="theme-color" content="#1e2d40"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>The Prince of the Sleeping Forest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,800;1,400&family=Source+Sans+3:wght@400;700&display=swap">
+<style>
+/* 配置: 一頁の本を机に置いた見た目。段落番号を大きく据え、選択肢は点線の引出線で行き先の番号に結ぶ。
+   色: 再生紙(灰みの黄)・墨・臙脂。小瓶の青/赤/金だけが物語の色。夜は青黒い紙に変わる。
+   書体: 見出しと本文は明朝(しっぽり明朝)、記録紙の見出しとラベルは角ゴシック。 */
+:root {
+  --desk: #d3ccb6;
+  --paper: #e6e3d2;
+  --paper-2: #dad6c1;
+  --ink: #1f1c1a;
+  --ink-2: #5a5549;
+  --rule: #b1ab94;
+  --accent: #7b1f2a;
+  --accent-ink: #f3eee0;
+  --moon: #26231f;
+  --moon-ink: #ece6d2;
+  --b-blue: #3b66a8;
+  --b-red: #a52c2c;
+  --b-gold: #a97d12;
+  --silver: #6f7a85;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2  0 0 0 0 .17  0 0 0 0 .1  0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  --shadow: 0 1px 0 rgba(255,255,255,.35) inset, 0 10px 30px -12px rgba(40,30,10,.45);
+  --plate-filter: none;
+  --font-display: 'EB Garamond', 'Iowan Old Style', 'Palatino Linotype', Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --font-body: 'EB Garamond', 'Iowan Old Style', 'Palatino Linotype', Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --font-ui: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --desk: #0d0e11; --paper: #191a1f; --paper-2: #212228; --ink: #e4ddca; --ink-2: #a39d8b;
+    --rule: #3b3c44; --accent: #d9776a; --accent-ink: #1a1112; --moon: #ebe5d1; --moon-ink: #1a1b20;
+    --b-blue: #6f9be0; --b-red: #e0645e; --b-gold: #e0b94c; --silver: #aeb8c2;
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9  0 0 0 0 .88  0 0 0 0 .8  0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+    --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 12px 34px -14px rgba(0,0,0,.8);
+    --plate-filter: brightness(.9) saturate(.95);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --desk: #0d0e11; --paper: #191a1f; --paper-2: #212228; --ink: #e4ddca; --ink-2: #a39d8b;
+  --rule: #3b3c44; --accent: #d9776a; --accent-ink: #1a1112; --moon: #ebe5d1; --moon-ink: #1a1b20;
+  --b-blue: #6f9be0; --b-red: #e0645e; --b-gold: #e0b94c; --silver: #aeb8c2;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9  0 0 0 0 .88  0 0 0 0 .8  0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+  --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 12px 34px -14px rgba(0,0,0,.8);
+  --plate-filter: brightness(.9) saturate(.95);
+    color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--desk);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.9;
+  padding-inline: 16px;
+  padding-block: 0 48px;
+  -webkit-text-size-adjust: 100%;
+}
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.wrap { max-width: 64rem; margin-inline: auto; }
+
+/* ---- 上の帯 ---- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+  padding-block: .6rem; margin-bottom: .75rem;
+  background: var(--desk);
+  font-family: var(--font-ui);
+}
+.bar .name {
+  background: none; border: 0; padding: .4rem 0; cursor: pointer;
+  font-family: var(--font-display); font-weight: 600; letter-spacing: .12em; font-size: .95rem;
+}
+.bar .tools { display: flex; gap: .5rem; flex-wrap: wrap; justify-content: flex-end; }
+.btn {
+  font-family: var(--font-ui); font-size: .85rem; letter-spacing: .06em;
+  min-height: 2.5rem; padding: .35rem .95rem; cursor: pointer;
+  background: transparent; border: 1px solid var(--rule); color: var(--ink);
+}
+.btn:hover { border-color: var(--ink-2); background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
+.btn.primary:hover { background: color-mix(in srgb, var(--accent) 88%, var(--ink)); }
+.btn[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.btn.danger { color: var(--accent); }
+
+/* ---- 表紙 ---- */
+.cover {
+  max-width: 40rem; margin-inline: auto;
+  background: var(--paper) var(--grain); border: 1px solid var(--rule); box-shadow: var(--shadow);
+  padding: clamp(1.25rem, 5vw, 2.5rem) clamp(1rem, 5vw, 2.5rem) 2rem;
+  display: flex; flex-direction: column; align-items: center; gap: 1.4rem; text-align: center;
+}
+.moon {
+  width: min(78vw, 19rem); aspect-ratio: 1; border-radius: 50%;
+  background: var(--moon); color: var(--moon-ink);
+  box-shadow: 0 0 0 .55rem color-mix(in srgb, var(--moon) 14%, transparent), 0 0 0 1.1rem color-mix(in srgb, var(--moon) 6%, transparent);
+  display: grid; place-items: center;
+}
+.moon h1 {
+  margin: 0; display: flex; flex-direction: column; align-items: center; gap: .24em;
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(1.7rem, 7.2vw, 2.2rem);
+  line-height: 1;
+}
+.moon h1 span { display: block; }
+.cover .sub { margin: 0; font-family: var(--font-ui); font-size: .8rem; letter-spacing: .3em; color: var(--ink-2); }
+.cover .epi { margin: 0; font-size: 1rem; letter-spacing: .12em; color: var(--ink-2); }
+.cover .acts { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+
+.seals { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin: 0; padding: 0; list-style: none; }
+.seals li {
+  min-width: 5.2rem; padding: .45rem .6rem; font-family: var(--font-ui); font-size: .82rem; letter-spacing: .1em;
+  border: 1px dashed var(--rule); color: var(--ink-2);
+}
+.seals li.on { border: 1.5px solid var(--accent); color: var(--accent); font-weight: 700; }
+.cover h2, .sheet h2 {
+  margin: 0; font-family: var(--font-ui); font-size: .78rem; font-weight: 700; letter-spacing: .24em; color: var(--ink-2);
+}
+.stat { margin: 0; font-family: var(--font-ui); font-size: .9rem; color: var(--ink-2); }
+.stat b { font-family: var(--font-display); font-size: 1.5rem; color: var(--ink); font-weight: 800; padding-inline: .15em; }
+
+.code-box { width: 100%; display: grid; gap: .6rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); font-family: var(--font-ui); }
+.code-row { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; align-items: center; }
+.code-row input {
+  font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; letter-spacing: .2em; text-align: center;
+  width: 11rem; min-height: 2.5rem; padding: .2rem .5rem; color: var(--ink);
+  background: var(--paper-2); border: 1px solid var(--rule); border-radius: 0;
+}
+.code-row input::placeholder { color: var(--ink-2); opacity: .6; letter-spacing: .1em; font-weight: 400; font-size: .95rem; }
+.legal { margin: 0; font-family: var(--font-ui); font-size: .75rem; letter-spacing: .12em; color: var(--ink-2); }
+.credit-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; font-family: var(--font-ui); font-size: .9rem; line-height: 1.6; }
+.credit-list li span { display: block; font-size: .75rem; letter-spacing: .1em; color: var(--ink-2); }
+.note-s { margin: 0; font-size: .8rem; line-height: 1.7; color: var(--ink-2); }
+.msg { min-height: 1.4em; margin: 0; font-family: var(--font-ui); font-size: .85rem; color: var(--accent); text-align: center; }
+
+/* ---- 読む画面 ---- */
+.layout { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 60rem) {
+  .layout.has-sheet { grid-template-columns: minmax(0, 40rem) 19rem; justify-content: center; align-items: start; gap: 1.5rem; }
+  .layout.has-sheet .book { grid-column: 1; grid-row: 1; }
+  .layout.has-sheet .sheet { grid-column: 2; grid-row: 1; position: sticky; top: calc(4rem + env(safe-area-inset-top, 0px)); }
+  .layout:not(.has-sheet) .book { max-width: 40rem; margin-inline: auto; width: 100%; }
+}
+.book {
+  background: var(--paper) var(--grain); border: 1px solid var(--rule); box-shadow: var(--shadow);
+  padding: clamp(1.1rem, 4.5vw, 2.6rem) clamp(1.1rem, 4.5vw, 2.8rem) clamp(1.4rem, 4vw, 2.4rem);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .book .fade { animation: arrive .45s ease-out; }
+  @keyframes arrive { from { opacity: .3; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+}
+.phead { display: grid; justify-items: center; gap: .1rem; margin-bottom: 1.4rem; }
+.chap { margin: 0; font-family: var(--font-ui); font-size: .76rem; letter-spacing: .34em; color: var(--ink-2); padding-left: .34em; }
+.no {
+  margin: 0; width: 100%; display: flex; align-items: center; gap: 1rem;
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(2.5rem, 10vw, 3.5rem); line-height: 1.15;
+  color: var(--accent); letter-spacing: .04em; justify-content: center;
+}
+.no::before, .no::after { content: ''; flex: 1; height: 1px; background: var(--rule); max-width: 7rem; }
+.no:focus { outline: none; }
+.ptitle { margin: 0; font-family: var(--font-ui); font-size: .78rem; color: var(--ink-2); letter-spacing: .08em; }
+
+.text p { margin: 0 0 .9em; text-indent: 1em; line-break: strict; text-wrap: pretty; }
+.text p.say { text-indent: 0; }
+.text blockquote.note {
+  margin: 1.1em 1.2em 1.3em; padding-block: .7em; border-block: 1px dotted var(--ink-2);
+  font-size: .95em; line-height: 1.85; letter-spacing: .02em; color: var(--ink);
+}
+.text blockquote.note p { text-indent: 0; margin: 0 0 .5em; }
+.text blockquote.note p:last-child { margin-bottom: 0; }
+
+.gains { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.2rem 0 .2rem; }
+.stamp {
+  display: inline-block; padding: .15rem .8rem; border: 1.5px solid var(--accent); color: var(--accent);
+  font-family: var(--font-ui); font-weight: 700; font-size: .82rem; letter-spacing: .1em; transform: rotate(-1.2deg);
+}
+
+.pz { margin: 1.4rem 0 0; padding: 1rem 1rem 1.1rem; border: 1px solid var(--rule); background: color-mix(in srgb, var(--paper-2) 70%, transparent); display: grid; gap: .8rem; justify-items: center; text-align: center; }
+.pz-h { margin: 0; font-family: var(--font-ui); font-size: .78rem; font-weight: 700; letter-spacing: .3em; color: var(--ink-2); padding-left: .3em; }
+.pz-h:focus { outline: none; }
+.pz-say { margin: 0; min-height: 3.2em; font-size: .95rem; line-height: 1.7; color: var(--ink); }
+.pz-small { margin: 0; font-size: .9rem; color: var(--ink-2); }
+.pz .acts { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+.pz-wall { position: relative; width: 100%; max-width: 22rem; height: 8rem; overflow: hidden; border: 1px solid #3a4258; background: #141824; }
+.pz-wall i { position: absolute; inset: 0; opacity: var(--glow, .35); transition: opacity .1s linear;
+  background: repeating-linear-gradient(90deg, transparent 0 1.1rem, rgba(255,243,196,.25) 1.1rem 1.18rem), radial-gradient(ellipse at 50% 50%, #fff3c4 0, rgba(255,243,196,.55) 38%, transparent 75%); }
+@media (prefers-reduced-motion: reduce) { .pz-wall i { transition: none; } }
+.stele { position: relative; width: min(100%, 20rem); aspect-ratio: 320 / 440; }
+.stele svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; overflow: hidden; border-radius: 10px; border: 1px solid color-mix(in srgb, var(--ink-2) 40%, transparent); }
+.stele .slot { position: absolute; padding: 0; margin: 0; border: 0; background: transparent; cursor: pointer; border-radius: 8px; }
+.stele .slot:hover { background: rgba(255,255,255,.14); }
+.stele .slot:focus-visible { outline: 2px solid #fff; outline-offset: 1px; box-shadow: 0 0 0 4px var(--accent); }
+.stele .sel-ring { fill: none; stroke: #fff; stroke-width: 2.5; stroke-dasharray: 5 4; }
+.stele .rune { opacity: .5; transition: opacity .6s; }
+.stele.done .rune { opacity: 1; }
+.stele .fly { animation: none; }
+@media (prefers-reduced-motion: no-preference) { .stele .fly { animation: fly 4.5s ease-in-out infinite alternate; } @keyframes fly { from { opacity: .35; } to { opacity: 1; } } }
+@media (prefers-reduced-motion: no-preference) {
+  .moss-fall { animation: mossfall .7s ease-in forwards; transform-box: fill-box; transform-origin: 50% 100%; }
+  .moss-grow { animation: mossgrow .5s ease-out; transform-box: fill-box; transform-origin: 50% 50%; }
+  @keyframes mossfall { to { transform: translateY(14px) scale(.8, .6); opacity: 0; } }
+  @keyframes mossgrow { 0% { transform: scale(.9); } 55% { transform: scale(1.1); } 100% { transform: scale(1); } }
+}
+.stele text.eng { font-family: var(--font-display); font-size: 38px; font-weight: 800; text-anchor: middle; fill: #172030; paint-order: stroke; stroke: rgba(190,225,250,.65); stroke-width: 1.3px; }
+.stele text.eng.hit { fill: #eaf6ff; stroke: rgba(150,225,255,.9); stroke-width: 1.2px; filter: drop-shadow(0 0 4px #8fd6ff); }
+.stele text.eng.cut { fill: #0f151e; }
+.cands { display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap; min-height: 4rem; align-items: center; }
+.cands .cand { width: 3.6rem; height: 3.6rem; font-family: var(--font-display); font-size: 2rem; font-weight: 800; line-height: 1; cursor: pointer; padding: 0;
+  color: var(--ink); background: var(--paper); border: 1.5px solid var(--rule); box-shadow: 0 2px 0 var(--rule); }
+.cands .cand:hover { border-color: var(--accent); }
+.cands .cand.hint { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent); }
+.cands-note { font-family: var(--font-ui); font-size: .8rem; color: var(--ink-2); }
+.vid { margin: 1.4rem 0 0; display: grid; gap: .5rem; }
+.vid video { width: 100%; display: block; background: #0b0e14; border: 1px solid var(--rule); aspect-ratio: 16 / 9; }
+.vid-card { display: grid; grid-template-columns: auto 1fr; gap: .2rem .9rem; align-items: center; padding: .9rem 1rem; text-decoration: none; color: var(--ink);
+  border: 1px solid var(--rule); background: color-mix(in srgb, var(--paper-2) 70%, transparent); box-shadow: 0 2px 0 var(--rule); }
+.vid-card:hover { border-color: var(--accent); }
+.vid-card .play { grid-row: 1 / 3; width: 2.8rem; height: 2.8rem; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font-size: 1.1rem; padding-left: .15rem; }
+.vid-card .t { font-family: var(--font-ui); font-weight: 700; font-size: .95rem; letter-spacing: .04em; }
+.vid-card .s { font-family: var(--font-ui); font-size: .78rem; color: var(--ink-2); }
+.vid-note { margin: 0; font-family: var(--font-ui); font-size: .78rem; line-height: 1.6; color: var(--ink-2); }
+.vid.empty { padding: 1rem; text-align: center; border: 1px dashed var(--rule); color: var(--ink-2); font-family: var(--font-ui); font-size: .85rem; }
+.vid.empty small { display: block; margin-top: .2rem; font-size: .72rem; }
+.choices { list-style: none; margin: 1.4rem 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.choices li { border-bottom: 1px solid var(--rule); }
+.choice {
+  width: 100%; display: flex; align-items: baseline; gap: .5rem; text-align: left; cursor: pointer;
+  background: none; border: 0; padding: .8rem .35rem; line-height: 1.6; font-size: 1rem;
+}
+.choice:hover:not(:disabled) { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.choice .t { flex: 0 1 auto; min-width: 0; }
+.choice .dots { flex: 1 1 1.5rem; min-width: 1.2rem; border-bottom: 2px dotted var(--rule); align-self: flex-end; margin-bottom: .45em; }
+.choice .go { flex: none; font-family: var(--font-display); font-weight: 800; color: var(--accent); white-space: nowrap; }
+.choice .go small { font-weight: 600; font-size: .75em; margin-left: .15em; color: var(--ink-2); }
+.choice:disabled { cursor: not-allowed; color: var(--ink-2); opacity: .72; }
+.choice:disabled .go { color: var(--ink-2); }
+.why { margin: -.25rem .35rem .75rem; font-family: var(--font-ui); font-size: .78rem; line-height: 1.6; color: var(--ink-2); }
+.why b { color: var(--accent); font-weight: 700; letter-spacing: .08em; }
+
+.end { margin-top: 1.8rem; padding-top: 1.6rem; border-top: 1px solid var(--rule); display: grid; justify-items: center; gap: .6rem; text-align: center; }
+.seal {
+  margin: 0; width: 3.6rem; height: 3.6rem; display: grid; place-items: center; transform: rotate(-4deg);
+  border: 2px solid var(--accent); color: var(--accent); font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; line-height: 1;
+}
+.end-name { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; letter-spacing: .14em; }
+.end-gain { margin: 0; font-family: var(--font-ui); font-size: .88rem; color: var(--ink-2); }
+.end-gain b { color: var(--accent); }
+.end .acts { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin-top: .4rem; }
+.end .code-row { margin-top: .4rem; }
+
+/* ---- 冒険記録紙 ---- */
+.sheet {
+  background: var(--paper-2) var(--grain); border: 1px solid var(--rule); padding: 1.1rem 1.1rem 1.2rem;
+  font-family: var(--font-ui); font-size: .88rem; line-height: 1.7; display: grid; gap: 1rem; align-content: start;
+}
+.sheet section { display: grid; gap: .45rem; }
+.sheet h3 { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .22em; color: var(--ink-2); border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+.sheet ul, .sheet ol { list-style: none; margin: 0; padding: 0; }
+.items { display: flex; flex-wrap: wrap; gap: .6rem 1rem; }
+.item { display: grid; justify-items: center; gap: .1rem; min-width: 3.4rem; font-size: .76rem; color: var(--ink-2); }
+.item svg { width: 2rem; height: 2.4rem; display: block; }
+.item.off svg { opacity: .35; }
+.item.on { color: var(--ink); }
+.notes li { border-bottom: 1px dotted var(--rule); }
+.notes details summary { cursor: pointer; padding: .3rem 0; list-style: none; display: flex; gap: .5rem; align-items: baseline; }
+.notes details summary::-webkit-details-marker { display: none; }
+.notes .mark { font-family: var(--font-display); font-weight: 800; color: var(--accent); }
+.notes .off { display: flex; gap: .5rem; padding: .3rem 0; color: var(--ink-2); opacity: .6; }
+.notes .off .mark { color: var(--ink-2); }
+.notes .body { font-family: var(--font-body); font-size: .88rem; line-height: 1.8; padding: .1rem 0 .6rem 1.7rem; color: var(--ink); }
+.notes .body p { margin: 0 0 .4em; }
+.frag { margin: 0; color: var(--ink-2); }
+.frag b { font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); font-weight: 800; padding-inline: .15em; }
+.testbox { border-top: 1px dashed var(--ink-2); padding-top: .8rem; }
+.testbox label { display: flex; gap: .5rem; align-items: center; cursor: pointer; min-height: 2rem; }
+.testbox input[type=checkbox] { width: 1.1rem; height: 1.1rem; accent-color: var(--accent); }
+.testbox dl { display: grid; grid-template-columns: auto 1fr; gap: .1rem .8rem; margin: 0; font-size: .8rem; }
+.testbox dt { color: var(--ink-2); }
+.testbox dd { margin: 0; }
+.testbox .row { display: flex; flex-wrap: wrap; gap: .4rem; }
+.testbox .btn { min-height: 2.1rem; font-size: .78rem; padding: .2rem .65rem; }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* 表紙のテスト欄 */
+.cover .testbox { width: 100%; display: grid; gap: .6rem; justify-items: center; font-family: var(--font-ui); font-size: .85rem; }
+.cover .testbox .row { justify-content: center; }
+
+/* ---- 挿絵 ---- */
+.plate { margin: 0 0 1.5rem; }
+.plate img {
+  display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; filter: var(--plate-filter);
+  outline: 1px solid var(--rule); outline-offset: 3px; box-shadow: 0 8px 22px -14px rgba(30, 20, 5, .6);
+}
+.plate { padding: 4px; }
+.plate.empty {
+  aspect-ratio: 3 / 2; max-width: 100%; display: grid; place-items: center; text-align: center;
+  border: 1px dashed var(--rule); color: var(--ink-2); font-family: var(--font-ui); font-size: .85rem; letter-spacing: .08em; padding: 1rem;
+}
+.plate.empty span { display: grid; gap: .3rem; }
+.plate.empty small { font-size: .72rem; letter-spacing: .04em; opacity: .8; }
+.cover-plate { width: 100%; margin: 0; }
+.cover-title {
+  margin: 0; font-family: var(--font-display); font-weight: 800; letter-spacing: .24em; padding-left: .24em;
+  font-size: clamp(1.7rem, 7.2vw, 2.4rem); line-height: 1.3;
+}
+/* ---- English edition adjustments ---- */
+body { font-size: 18px; line-height: 1.7; }
+.moon h1 { font-size: clamp(1.5rem, 6.6vw, 2.05rem); font-weight: 600; gap: .16em; line-height: 1.05; }
+.cover-title { letter-spacing: .04em; padding-left: 0; font-size: clamp(1.8rem, 7vw, 2.5rem); }
+.cover h2, .sheet h2, .sheet h3, .chap, .pz-h, .cover .sub { text-transform: uppercase; }
+.seals li { min-width: 6rem; }
+.stele text.eng { font-size: 27px; font-weight: 600; letter-spacing: .01em; }
+.cands .cand { width: auto; min-width: 4.4rem; height: 3rem; padding: 0 .9rem; font-size: 1.4rem; }
+.bar .name { letter-spacing: .06em; }
+</style>
+<div class="wrap" id="root"></div>
+<script>
+/* ============================================================
+   眠りの森の王子 ― 本文と分岐のデータ(ここだけ直せば物語が変わる)
+   s = いまの周回の状態 / m = 周回をまたいで残る記録(記憶の断片など)
+   ============================================================ */
+'use strict';
+
+const CIRC = ['', '①', '②', '③', '④', '⑤', '⑥'];
+const ITEMS = { gold: 'Gold Vial', blue: 'Blue Vial', red: 'Red Vial' };
+const ORDER_NAME = { B: 'Blue', R: 'Red', G: 'Gold' };
+const CORRECT_ORDER = 'BRG'; // 青(苦しみ) → 赤(襲った日) → 金(幼い頃)
+
+const CHAPTERS = [
+  { name: "Prologue", from: 1, to: 5 },
+  { name: "The Sleeping Forest", from: 6, to: 13 },
+  { name: "The Ruined Castle", from: 14, to: 22 },
+  { name: "The Battle", from: 23, to: 29 },
+  { name: "The Prince's Chamber", from: 30, to: 36 },
+  { name: "Epilogue", from: 37, to: 41 },
+];
+
+const ENDINGS = {
+  37: { name: 'The Sacrifice', label: 'Ending: The Sacrifice' },
+  38: { name: 'The Flight', label: 'Ending: The Flight' },
+  39: { name: 'The Resealing', label: 'Ending: The Resealing' },
+  40: { name: 'The Slaying', label: 'Ending: The Slaying' },
+  41: { name: 'Release of the Soul', label: 'Ending: Release of the Soul (True Ending)' },
+};
+
+/* 挿絵の枠。画像そのものは plates.js(PLATE_IMG)に入れる。画像がなければ何も出さない */
+const PLATES = {
+  cover: { name: 'Cover', alt: "A traveler at the forest's edge, above the Valley of Silence under a full moon" },
+  6: { name: 'Forest Path', alt: 'A misty path splitting in three' },
+  17: { name: 'The Square', alt: 'A single flower blooming on a mound of ash' },
+  24: { name: 'The Illusion', alt: 'A man in a gray cloak, and the illusion of a prince and a king' },
+  29: { name: 'Smoke', alt: 'A man fading into smoke, a small vial at his feet' },
+  31: { name: 'The Prince', alt: 'A prince sitting up in bed, and a shadow in a slightly different pose' },
+  41: { name: 'Release of the Soul', alt: 'The prince turning to light and melting toward the window' },
+};
+
+/* 手記(記録紙で読み返せる) */
+const NOTES = {
+  1: { title: 'A Previous Traveler’s Notebook', lines: ['The vials have colors. Gold is a day long ago, blue is a night of sickness, red is the day of blood. … I couldn’t write “in order.” I got it wrong.'] },
+  2: { title: 'A Villager’s Journal', lines: ['He wept as he attacked people. That first night, right before my eyes. … So I could not hate him. I left the red vial outside the door of his room, so that he would not have to carry that day alone.'] },
+  3: { title: 'Records from the Hermitage', lines: ['The wound is older than the sin. Touch the oldest first.', 'M’s curse was beyond my power. Then I will keep watch over the boy’s sleep.', '(In small letters, in the margin) This spell turns whoever speaks it into a guardian.'] },
+  4: { title: 'The King’s Diary', lines: ['On the nights he had bad dreams, the boy would hold on to my sleeve and not let go. So I taught him: tell the unpleasant things first. Keep the happiest story for just before you fall asleep.'] },
+  5: { title: 'The King’s Prayer', lines: ['Please, let the boy sleep as he used to. There is nothing more I can give him now. Only sleep, at least.'] },
+  6: { title: 'A Journal in the Corridor', lines: ['He regrets the day he first attacked someone more than anyone does. That is why I think he should face his sin first. The suffering, and the days of his childhood, can come after.'] },
+};
+
+/* ---- 条件の小道具 ---- */
+const hasSilver = (s) => s.silver;
+const noteN = (s) => s.notes.length;
+const canTurnBack = {
+  ok: (s) => noteN(s) >= 2,
+  hint: () => 'You do not yet have enough reason to turn back.',
+  why: (s) => '2 or more Journal Pages (you have ' + noteN(s) + ')',
+};
+const go = (t, to, extra) => Object.assign({ t, to }, extra || {});
+
+/* 瓶を開ける選択肢(33) */
+const openBottles = {
+  ok: (s, m) => hasAll(s) && noteN(s) >= 6 && m.fragments >= 1,
+  hint: (s, m) => (hasAll(s) && noteN(s) >= 6)
+    ? 'The vials’ glow is too faint. You cannot open them yet.'
+    : 'You feel that something is still missing.',
+  why: (s, m) => {
+    const r = [];
+    if (!hasAll(s)) r.push('3 vials (you have ' + bottleCount(s) + ')');
+    if (noteN(s) < 6) r.push('6 Journal Pages (you have ' + noteN(s) + ')');
+    if (m.fragments < 1) r.push('Memory Fragments (second playthrough or later)');
+    return r.join(' / ');
+  },
+};
+
+/* 煙になったオルヴェンの最期の言葉(29) */
+function lastWords(s, m) {
+  const f = m.fragments;
+  if (f < 1) return 'The man’s lips move. But the whisper dissolves into the smoke, and you cannot make it out.';
+  const full = f >= 3;
+  if (s.shattered) {
+    const cut = full ? 'Let him sleep. …Just as he always fell as' : 'Let him sle';
+    return '“' + cut + '—” The words break off there.';
+  }
+  return full ? '“Let him sleep. …Just as he always fell asleep: in order.”' : '“Let him sleep. …”';
+}
+
+/* 幻に押し返される場面(25)。24で選んだ行動の文だけを出す。記録がなければ両方 */
+function pushedBack(s) {
+  const slash = 'Your sword cuts through nothing but mist. ';
+  const answer = 'Your foot, stepping toward the call, is pushed gently back by an unseen hand. ';
+  const first = s.r25 === 'slash' ? slash : s.r25 === 'answer' ? answer : slash + answer;
+  return first + 'No wound is made. The gray man draws a pained breath.';
+}
+
+/* ============================================================
+   段落
+   body: 文字列=地の文 / {q:[…]}=手記の引用 / {if,t}=条件つき
+   c: 選択肢 {t,to,show,req,fx}  end: 結末の番号
+   gets: 入手(gold,blue,red,note1〜note6)
+   ============================================================ */
+const P = {
+  1: { title: 'A Voice in the Dream', body: [
+    'You dream. In the mist, you sense a young man asleep. A voice reaches you, not at your ear but from deep within your chest. “…Wake me. I’ve been so sleepy for so long. No one will wake me.”',
+    'You wake to a cold pillow. Beyond the window, the name of an unfamiliar valley comes to mind: the Valley of Silence. The Sleeping Forest.',
+    { if: (s, m) => m.fragments >= 1, t: 'The voice does not stop there. “…You came back.”' },
+  ], c: [go('Go on', 2)] },
+
+  2: { title: 'The Old Woman at the Inn', body: [
+    'The old woman at the inn looks over your pack and frowns. “You mean to go into that forest? No one has come back from there in a hundred years.”',
+    'She holds out a steaming bowl and studies your face for a long moment, as though you reminded her of someone.',
+  ], c: [go('Ask why', 3), go('Thank her and let it pass', 4)] },
+
+  3: { title: 'The Old Woman’s Tale', body: [
+    '“A sorcerer lives in that forest. A wicked gray man, the one who shut the prince away.” The old woman speaks with complete certainty.',
+    'Then she adds, “That’s what my grandmother told me,” and lowers her eyes. She has never seen it herself.',
+  ], c: [go('Go on', 4)] },
+
+  4: { title: 'The Night Before', body: [
+    'That night, the voice in your dream becomes a clear call. “You’ll come, won’t you? I’m sure you will.”',
+    'The voice is gentle, and it trembles a little. You gather your things and step onto the road before dawn.',
+  ], c: [go('Go on', 5)] },
+
+  5: { title: 'The Forest’s Edge', puzzle: 'tablet', body: [
+    'At the entrance to the forest stands a moss-covered stone. The carving has weathered away until only one line can still be read: “Guard the sleep.”',
+    'Beyond the stone, the mist stirs quietly. This is the last place where you can turn back.',
+  ], c: [go('Enter the forest', 6)] },
+
+  6: { title: 'The Forest Path', body: [
+    'Mist clings to your ankles. There is not a single birdsong, only the voice from your dream, calling from somewhere ahead. The path splits in three: a ruined hut down the first, a fallen figure by the roadside on the second, and, deep along the third, the smell of smoke.',
+  ], c: [go('To the hunter’s hut', 7), go('To the fallen figure', 9), go('Toward the smell of smoke', 10), go('Head for the castle', 13)] },
+
+  7: { title: 'The Hunter’s Hut', body: [
+    'On the wall of the hut, whose roof has fallen in, many notches are cut at the height of a small child. Someone must have been measuring how he grew. Only the back of the hearth has been wiped clean of soot.',
+  ], c: [go('Search the hearth', 8), go('Leave the hut', 6)] },
+
+  8: { title: 'Behind the Hearth', gets: ['gold'], body: [
+    'Inside a sooty little box lies a vial that glows gold. It is faintly warm under your fingers. The light stirring within seems to have the shape of laughter. You tuck the vial inside your coat.',
+  ], c: [go('Return to the forest path', 6)] },
+
+  9: { title: 'A Traveler’s Belongings', gets: ['note1'], body: [
+    'A traveler’s body lies by the roadside. The clothes have rotted away, and dust has settled on the bones. In the notebook still clutched in one hand, there is trembling handwriting.',
+    { q: NOTES[1].lines },
+  ], c: [go('Return to the forest path', 6)] },
+
+  10: { title: 'The Side Trail', body: [
+    'Following the smell of smoke, you find a low stone hermitage standing among the trees. Threads of light stretched across the doorway tremble faintly as you approach. A ward. Yet it does not feel like a refusal. It feels more like a watchful eye.',
+  ], c: [go('Enter the hermitage', 11), go('Turn back', 6)] },
+
+  11: { title: 'The Sorcerer’s Hermitage', body: [
+    'Bundles of medicinal herbs and tools for sealing are lined up in careful order. There is no sign of the master. The walls are covered with scratch marks and countless tally lines, perhaps a hundred years of days. At the back of the desk, a half-written sheet of paper remains.',
+  ], c: [go('Read the paper on the desk', 12), go('Leave the hermitage', 6)] },
+
+  12: { title: 'The Unfinished Page', gets: ['note3'], body: [
+    { q: NOTES[3].lines.slice(0, 2) },
+    'In the corner of the paper, something has been added in small letters.',
+    { q: ['This spell turns whoever speaks it into a guardian.'] },
+  ], c: [go('Return to the forest path', 6)] },
+
+  13: { title: 'Out of the Forest', body: [
+    'The trees part, and at the bottom of the valley you see a gray castle. In one window, a pale light is burning. The voice from your dream is close.',
+    'You feel that once you take one step out of the forest, there will be no going back.',
+  ], c: [go('Leave the forest (you cannot return)', 14)] },
+
+  14: { title: 'The Castle Gate', body: [
+    'On the crumbling gate, only half of the word “Eldvar” remains. The valley is so quiet that even the wind seems to keep its voice down. It is called the Valley of Silence now.',
+    'As you pass through the gate, the voice from your dream draws a breath, just once, as if in delight.',
+  ], c: [go('To the town', 15)] },
+
+  15: { title: 'The Town Below the Castle', body: [
+    'Crooked houses line the gray cobblestones. There is no sign of anyone, yet you feel watched. A house, a square, a library up the slope, and beyond it a chapel. And straight ahead, the doors that lead to the castle’s great hall.',
+  ], c: [go('To the house', 16), go('To the square', 17), go('To the library', 18), go('To the chapel', 19), go('To the great hall', 22)] },
+
+  16: { title: 'The House', gets: ['note2'], body: [
+    'On the table lies a journal, half of its writing faded.',
+    { q: NOTES[2].lines },
+    'Partway through, the writing turns ragged, as though scratched in with fingernails.',
+  ], c: [go('Return to the town', 15)] },
+
+  17: { title: 'The Square', body: [
+    'In the center of the square, mounds of ash have piled up, one after another. Their shapes resemble the marks of people who once sat hugging their knees. On top of the ash blooms a single flower that the wind cannot scatter.',
+    'You stand there for a long while. It is so quiet that the sound of your own heartbeat seems loud.',
+  ], c: [go('Return to the town', 15)] },
+
+  18: { title: 'The Library', gets: ['note4'], body: [
+    'Deep among the dusty shelves, a single leather-bound diary remains. Its owner was the king. Entry after entry tells of the young prince’s sleeping face.',
+    { q: NOTES[4].lines },
+    'At the edge of the page there is a mark where someone’s name must once have been written. It has been scratched away, leaving only a single letter: “M.”',
+  ], c: [go('Return to the town', 15)] },
+
+  19: { title: 'The Chapel Entrance', body: [
+    'The door stands half open. In the dim interior, something on the altar returns a faint gleam.',
+  ], c: [go('Go further in', 20), go('Turn back', 15)] },
+
+  20: { title: 'The Altar', body: [
+    { if: (s) => !s.silver, t: 'A silver relic has been set on the altar. It is spotless, as if someone had polished it every day. At the foot of the altar, a folded piece of paper is tucked in.' },
+    { if: (s) => s.silver, t: 'Only the mark where the relic stood remains on the altar. At the foot of the altar, a folded piece of paper is tucked in.' },
+    { if: (s) => !s.silver, t: 'It might serve as a weapon. But it is also an offering.' },
+  ], c: [
+    go('Take the relic', 21, { show: (s) => !s.silver, fx: (s) => { s.silver = true; s.gained = []; } }),
+    go((s) => s.silver ? 'Read the paper at the altar’s foot again' : 'Leave the relic untouched and read only the paper', 21),
+    go('Leave without doing anything', 15),
+  ] },
+
+  21: { title: 'The King’s Prayer', gets: ['note5'], body: [
+    'The paper is in the king’s handwriting.',
+    { q: NOTES[5].lines },
+    'That is all of the prayer, and there is no signature.',
+  ], c: [go('Return to the town', 15)] },
+
+  22: { title: 'The Great Hall', body: [
+    'Beyond the doors lies a hall with a high ceiling. A man in a gray cloak stands holding a staff. His eyes are weary, as if he has stood there for a hundred years.',
+    '“…So you’ve come, traveler.”',
+    'From here on, there is no going back to the town.',
+  ], c: [go('Step into the hall', 23), go('Return to the town', 15)] },
+
+  23: { title: 'Face to Face', body: [
+    '“If you turn back here, I will do nothing.” The man speaks quietly, even as he raises his staff.',
+    '“But you will go on, won’t you? … Everyone who was called by that voice did.”',
+    'Gray light gathers at the tip of the staff. The fight cannot be avoided. You, too, put a hand on the hilt of your sword.',
+  ], c: [go('Go on', 24)] },
+
+  24: { title: 'Round One: The Illusion', body: [
+    'The light bursts, and figures stand in the hall: a young man with a gentle face, and a crowned man with a hand on his shoulder. The same soft smile as the voice in your dream turns toward you.',
+    '“Look, you came. …Come over here.”',
+  ], c: [go('Strike at the illusion', 25, { fx: (s) => { s.r25 = 'slash'; } }), go('Answer the illusion’s call', 25, { fx: (s) => { s.r25 = 'answer'; } }), go('Close your eyes and walk on', 26)] },
+
+  25: { title: 'Pushed Back', body: [
+    { t: pushedBack },
+    '“…That is not it. Once more.”',
+  ], c: [go('Face the illusion once more', 24)] },
+
+  26: { title: 'Round Two: The Barrier', body: [
+    'You walk on with your eyes closed, and the illusion melts away without a sound. In the next instant, a wall of light surrounds you on all four sides. It is a wall meant to hold you in. There is no sense that it will crush you.',
+  ], c: [
+    go('Shatter the wall with the silver relic', 28, { show: hasSilver, fx: (s) => { s.shattered = true; } }),
+    go('Look for a flaw in the wall', 27, { fx: (s) => { s.p27 = false; } }),
+  ] },
+
+  27: { title: 'Looking for a Flaw', puzzle: 'blink', body: [
+    'The wall flickers at regular intervals, as if breathing. You stand still and count the intervals.',
+    { if: (s) => s.p27, t: 'In the moment the light fades, you slip your hand through. The wall comes undone more easily than you expected.' },
+    { if: (s) => s.p27, t: 'The man seems to give a small nod.' },
+  ], c: [go('Go on', 28, { show: (s) => s.p27 })] },
+
+  28: { title: 'Round Three: The Showdown', body: [
+    'The gray staff points straight at you. Then it stops. The hand gripping it is trembling.',
+    'You take one step in and thrust out your sword.',
+    { if: (s) => s.notes.includes(3), t: '“…That is as it should be.” The man murmurs it, unmistakably.' },
+    { if: (s) => s.shattered, t: 'The silver that shattered the wall of light is still ringing, cold, in your hand.' },
+  ], c: [go('Go on', 29)] },
+
+  29: { title: 'Smoke', gets: ['blue'], body: [
+    'The man’s body unravels into smoke, starting at the edges. Not a single drop of blood is shed. The cloak, the staff, a hundred years of weariness, all of it turns to gray smoke and rises toward the ceiling.',
+    'A blue vial rolls to your feet. When you pick it up, it is cold, and a pained light stirs within.',
+    'Just as the smoke is about to vanish, the man says something.',
+    { t: lastWords },
+    { if: (s, m) => m.endings.includes(39), t: 'At the very end, you think you hear, “…You, too?”' },
+  ], c: [go('Go on', 30)] },
+
+  30: { title: 'The Corridor', gets: ['red', 'note6'], body: [
+    'A red vial has been set before the door. Its light, deep as blood, pulses slowly. Beside it lies a journal left by one of the townspeople.',
+    { q: NOTES[6].lines },
+    'From beyond the door comes the faint sound of breathing in sleep.',
+  ], c: [go('Open the door', 31)] },
+
+  31: { title: 'The Prince', body: [
+    'On the white bed, a young man sits up. His face is as flawless as the moon, and he smiles in the same way as the voice in your dream.',
+    '“You’ve finally come. I’ve waited a hundred years. … I am Selen. I was only asleep from an illness, and that gray man shut me in.”',
+    'His speech is smooth, and only his eyes are wet.',
+  ], c: [go('Listen to the prince’s words', (s) => s.silver ? 32 : 33)] },
+
+  32: { title: 'Silver', body: [
+    'The prince’s smile suddenly stops. His gaze drops to your coat.',
+    '“…You would speak with me while holding that?”',
+    'His voice is calm, and terribly lonely.',
+  ], c: [
+    go('Set the silver on the floor', 33, { fx: (s) => { s.silver = false; s.silverPlaced = true; } }),
+    go('Keep it and talk', 34),
+  ] },
+
+  33: { title: 'Trust', body: [
+    'The prince lets his shoulders relax and sits on the edge of the bed.',
+    '“Thank you. …May I tell you about my father? Whenever I ran a fever in the night, he always held my hand. That alone was enough to keep me from being afraid.”',
+    'His tale sounds true. Suddenly, the vials inside your coat grow warm.',
+  ], c: [
+    go('Open the vials', 35, { req: openBottles }),
+    go('Break the seal for him', 37, { fx: (s) => { s.r37 = 'seal'; } }),
+    go('Turn back', 38, { req: canTurnBack }),
+    go('Pick the silver up again', 37, { show: (s) => s.silverPlaced, fx: (s) => { s.silver = true; s.silverPlaced = false; s.r37 = 'silver'; } }),
+  ] },
+
+  34: { title: 'A Colder Tale', body: [
+    'The prince’s voice grows lower.',
+    '“I see. You’re on your guard. …That is wise. But the wiser a person is, the more surely they end up at my side.”',
+    'When you bring up the vials, he cuts you off with a smile: “I have no need of such things.”',
+    { if: (s) => s.doubt >= 1, t: 'Each time you press him, the prince’s smile grows a little thinner.' },
+  ], c: [
+    go('Press the prince with your doubts', 34, { fx: (s) => { s.doubt = Math.min(s.doubt + 1, 5); } }),
+    go('Break the seal for him', 37, { fx: (s) => { s.r37 = 'seal'; } }),
+    go('Turn back', 38, { req: canTurnBack }),
+    go('Speak the spell from Journal Page ③', 39, { req: {
+      ok: (s) => s.notes.includes(3) && s.silver,
+      hint: () => 'You do not yet know the spell you should speak.',
+      why: (s) => 'Journal Page ③ and the silver relic',
+    } }),
+    go('Stab the prince with the silver', 40, { req: {
+      ok: (s) => s.silver && s.doubt >= 2,
+      hint: () => 'You are not yet certain enough to raise the blade.',
+      why: (s) => 'The silver relic and doubt of 2 or more (now ' + s.doubt + ')',
+    } }),
+  ] },
+
+  35: { title: 'Opening the Vials', body: [
+    'You line the three vials up on the floor: blue, red, gold. Their lights sway, as though calling to one another.',
+    'In what order will you open them?',
+  ], c: ['BRG', 'BGR', 'RBG', 'RGB', 'GBR', 'GRB'].map((o) =>
+    go(o.split('').map((k) => ORDER_NAME[k]).join(' → '), 36, { fx: (s) => { s.order = o; } })) },
+
+  36: { title: 'Confirmation', body: [
+    'Your hand closes on the first stopper. The prince draws in a breath.',
+    '“…Are you sure, in that order?”',
+    'Once a light is opened, it cannot be put back.',
+    { t: (s) => 'Chosen order: ' + (s.order || '').split('').map((k) => ORDER_NAME[k]).join(' → ') },
+  ], c: [
+    go('Open them in this order', (s) => s.order === CORRECT_ORDER ? 41 : 37, { fx: (s) => { if (s.order !== CORRECT_ORDER) s.r37 = 'wrong'; } }),
+    go('Choose again', 35),
+  ] },
+
+  37: { title: 'The Sacrifice', end: 37, body: [
+    { if: (s) => s.r37 === 'wrong', t: '“…No. That’s not it,” the prince screams.' },
+    { if: (s) => s.r37 === 'silver', t: '“So that’s how it is, after all,” the prince murmurs sadly.' },
+    'The prince takes your hand. It is cold, yet strangely, you are not afraid.',
+    '“Thank you. …I have wanted someone to do this for me for so long.”',
+    'A pain, terribly gentle, runs along your neck. At the edge of your vision, the gray castle begins to regain its color for the first time in a hundred years.',
+    { if: (s) => s.r37 === 'seal', t: 'The prince’s smile stays gentle until the very end.' },
+    'The last thing you see is countless shadows outside the window, awakening.',
+    'The awakened prince looks out at the valley beyond the window. Deep within it, the surface of the water flashes white, just once. “…Ah, I can hear it.” The prince murmurs, speaking to no one in particular.',
+    'You can no longer hear the voice from your dream. That is because you have become a part of that voice.',
+  ] },
+
+  38: { title: 'The Flight', end: 38, body: [
+    '“…I’m sorry. I can’t stay here.”',
+    'You turn your back to the door. The prince does not stop you. He only says, in a small voice:',
+    '“I see. …I’ll call to you again, in your dreams.”',
+    'When you come out of the forest, the morning light stings your eyes. Looking back, you find the castle already hidden in mist.',
+    'On the road out of the forest, there are footprints in the mud. Slender, bare footprints. They run from the water’s edge in the valley and stop right beside your own.',
+    'But when night comes, the darkness at your pillow whispers.',
+    '“…Wake me.”',
+    'Before you realize it, the voice has begun to sound, just a little, like a woman’s.',
+  ] },
+
+  39: { title: 'The Resealing', end: 39, body: [
+    'You speak aloud the spell from Journal Page ③. The silver relic glows white, and an old circle spreads at your feet.',
+    'The prince cries out. “Stop! That is the same as that man—”',
+    'Gray smoke rises from your fingertips. There is no pain. Only your body, slowly growing lighter.',
+    'Before your consciousness dissolves into the wind, you understand. That man, too, was once a traveler.',
+    'Night gives way to dawn. At the entrance to the forest, a new traveler stands.',
+    'Turned to smoke, you block the way, unable to say anything.',
+    'Only to your eyes, now smoke, a woman’s shadow standing at the water’s edge in the valley appears. She looks up toward the entrance of the forest and does not move for a long time. She seems to bow her head, but whether in thanks or in apology, you cannot tell.',
+  ] },
+
+  40: { title: 'The Slaying', end: 40, body: [
+    'You drive the silver relic into the prince’s chest.',
+    'The prince does not look surprised. He only exhales, as if in relief.',
+    '“…At last.”',
+    'Throughout the castle, you hear the sound of ash crumbling. Those who could not sleep for a hundred years collapse all at once.',
+    'The light in the vials inside your coat goes out completely. The king’s prayer reaches no one, and silence descends.',
+    'After you leave the forest, you dream every night of a king you do not know. Beyond his back, a woman kneels at the water’s edge, weeping. You cannot see her face. Even after you wake, only the sound of her crying stays in your ears.',
+    'No one blames you. No one praises you.',
+  ] },
+
+  41: { title: 'Release of the Soul', end: 41, body: [
+    'You pull the stopper from the blue vial. The suffering of the night of illness flows back into the prince’s body. He grits his teeth, but he does not let go of your hand.',
+    'Next, the red vial. The memory of the day he attacked. The prince sobs. “…I’m sorry. I’m sorry.” You stroke his back.',
+    'Last, the gold vial. Laughter fills the room. Someone is lifting a small child into their arms. “Good night. Let’s save the happiest story for tomorrow.”',
+    'A single tear runs down the prince’s cheek.',
+    '“…Father.”',
+    'His body turns to light and melts away toward the window. From the mounds of ash in the square, flowers bloom, one by one.',
+    'You can no longer hear the voice from your dream.',
+    'Suddenly, from deep in the valley, you hear the sound of water stirring. The valley has no wind, yet ripples spread. From the bottom of the water comes someone’s lullaby, a single verse. It is a melody you do not know, written in neither the king’s diary nor any of the journals.',
+    'Looking at the emptied gold vial, you see a small mark stamped on its bottom: “M.”',
+    'The traveler quietly tucks the vial away inside the coat.',
+    'Morning comes to the forest.',
+  ] },
+};
+</script>
+<script>
+/* 挿絵の画像データ。make_plates.py が書き出す */
+const PLATE_IMG = {
+  cover: "../images/plate_cover.webp",
+  6: "../images/plate_6.webp",
+  17: "../images/plate_17.webp",
+  24: "../images/plate_24.webp",
+  29: "../images/plate_29.webp",
+  31: "../images/plate_31.webp",
+  41: "../images/plate_41.webp"
+};
+const VIDEO_POSTER = {
+  bonus: "../images/poster_bonus.webp",
+  28: "../images/poster_28.webp",
+  37: "../images/poster_37.webp",
+  38: "../images/poster_38.webp",
+  39: "../images/poster_39.webp",
+  40: "../images/poster_40.webp",
+  41: "../images/poster_41.webp"
+};
+</script>
+<script>
+/* 山場の動画。url に次のどちらかを入れると、その段落に出ます。
+     ・Xの投稿やYouTubeなどのリンク(https://…) → 「外部サイトで開く」カードになります
+     ・.mp4 / .webm の直リンク(https://…)        → アプリの中でそのまま再生できます
+   url が空のままなら、テスト表示のときだけ点線の枠が出て、ふだんは何も出ません。
+   note は、カードの下に小さく出る一言です(空でもかまいません)。 */
+const VIDEOS = {
+  bonus: { title: 'Bonus Film', url: '../videos/bonus.mp4', note: 'Contains sound. It plays only when you press play.' },
+  28: { title: 'Showdown', url: '../videos/scene28.mp4', note: 'Contains sound. It plays only when you press play.' },
+  37: { title: 'The Sacrifice', url: '../videos/scene37.mp4', note: 'Contains sound. It plays only when you press play.' },
+  38: { title: 'The Flight', url: '../videos/scene38.mp4', note: 'Contains sound. It plays only when you press play.' },
+  39: { title: 'The Resealing', url: '../videos/scene39.mp4', note: 'Contains sound. It plays only when you press play.' },
+  40: { title: 'The Slaying', url: '../videos/scene40.mp4', note: 'Contains sound. It plays only when you press play.' },
+  41: { title: 'Release of the Soul', url: '../videos/scene41.mp4', note: 'Contains sound. It plays only when you press play.' },
+};
+</script>
+<script>
+/* ============================================================
+   エンジン(画面に依存しない部分。テストでもそのまま使う)
+   ============================================================ */
+'use strict';
+
+function newMeta() { return { fragments: 0, endings: [], runs: 0 }; }
+
+function newRun() {
+  return {
+    at: 1, notes: [], gold: false, blue: false, red: false,
+    silver: false, silverPlaced: false, shattered: false,
+    doubt: 0, order: null, r37: null, r25: null, p27: false,
+    ended: false, endGain: 0, endNew: false, gained: [],
+  };
+}
+
+function clone(o) { return JSON.parse(JSON.stringify(o)); }
+function bottleCount(s) { return (s.gold ? 1 : 0) + (s.blue ? 1 : 0) + (s.red ? 1 : 0); }
+function hasAll(s) { return s.gold && s.blue && s.red; }
+function chapterOf(n) { return CHAPTERS.find((c) => n >= c.from && n <= c.to); }
+
+/* ---- パズル27「結界の明滅」: 三つの短い薄れのあと、四つ目だけ長く薄れる。その間だけ手が通る ---- */
+const BLINK = { glow: 1000, fade: 700, gapFade: 1900, beats: 4, ramp: 300, dimAfter: 400 };
+const BLINK_STEPS = [
+  'The light swells. (One)', 'The light fades, then returns at once.',
+  'The light swells. (Two)', 'The light fades, then returns at once.',
+  'The light swells. (Three)', 'The light fades, then returns at once.',
+  'The light swells. (Four)', 'The light fades, and stays faint for a long while.',
+];
+function blinkPhase(t) {
+  const B = BLINK;
+  const cyc = (B.beats - 1) * (B.glow + B.fade) + B.glow + B.gapFade;
+  t = ((t % cyc) + cyc) % cyc;
+  for (let b = 0; b < B.beats; b++) {
+    const last = b === B.beats - 1;
+    const f = last ? B.gapFade : B.fade;
+    if (t < B.glow) return { beat: b, kind: 'glow', into: t, long: false };
+    t -= B.glow;
+    if (t < f) return { beat: b, kind: 'fade', into: t, long: last };
+    t -= f;
+  }
+  return { beat: 0, kind: 'glow', into: 0, long: false };
+}
+function blinkStepPhase(i) {
+  const k = ((i % 8) + 8) % 8, beat = k >> 1;
+  return k % 2 === 0 ? { beat, kind: 'glow', into: 1000, long: false } : { beat, kind: 'fade', into: 1000, long: beat === BLINK.beats - 1 };
+}
+function blinkGlow(ph) {
+  return ph.kind === 'glow' ? 0.2 + 0.8 * Math.min(1, ph.into / BLINK.ramp) : 1 - 0.8 * Math.min(1, ph.into / BLINK.dimAfter);
+}
+function blinkOpen(ph) { return ph.kind === 'fade' && ph.long && ph.into >= BLINK.dimAfter; }
+
+/* ---- パズル5「苔むした石碑」: 苔を払うと、風化した文字が読める ---- */
+const TABLET = {
+  /* Six words hidden under moss, in reading order. opts = candidates (all the same length as the answer, `word`).
+     dir = the side where the moss has peeled away (l = left, r = right). */
+  slots: [
+    { word: 'Drive', opts: ['Dream', 'Drive', 'Dwarf', 'Drift'], dir: 'r' },
+    { word: 'out', opts: ['owl', 'oak', 'out', 'ore'], dir: 'r' },
+    { word: 'all', opts: ['aim', 'all', 'ash', 'awe'], dir: 'r' },
+    { word: 'who', opts: ['two', 'how', 'who', 'she'], dir: 'r' },
+    { word: 'would', opts: ['wound', 'woven', 'would', 'worse'], dir: 'r' },
+    { word: 'wake', opts: ['lake', 'wake', 'cake', 'mile'], dir: 'l' },
+  ],
+  /* How much of each word shows through. The more Memory Fragments, the thinner the moss. */
+  reveal: [0.4, 0.58, 0.78],
+  full: 'Guard the sleep. Drive out all who would wake it.',
+  low: 'Give sleep even to the sleepless.',
+};
+function tabletLevel(m) { return m.fragments >= 4 ? 2 : m.fragments >= 1 ? 1 : 0; }
+/* 候補を選ぶ。正解なら true */
+function tabletPick(z, slot, ch) {
+  if (TABLET.slots[slot].word !== ch) { z.wrong = (z.wrong || 0) + 1; return false; }
+  if (!z.moss.includes(slot)) z.moss.push(slot);
+  return true;
+}
+
+/* 結末に着いたときの記録(新しい結末なら断片が2、見たことのある結末なら1) */
+function registerEnding(m, id) {
+  const isNew = !m.endings.includes(id);
+  const gain = 1 + (isNew ? 1 : 0);
+  if (isNew) m.endings.push(id);
+  m.fragments = Math.min(999, m.fragments + gain);
+  m.runs = Math.min(999, m.runs + 1);
+  return { gain, isNew };
+}
+
+/* 段落に入る:入手物の記録と、結末の登録 */
+function enter(s, m, pid) {
+  const p = P[pid];
+  if (!p) throw new Error('Section not found: ' + pid);
+  s.at = pid;
+  s.gained = [];
+  for (const k of (p.gets || [])) {
+    if (k.indexOf('note') === 0) {
+      const n = +k.slice(4);
+      if (!s.notes.includes(n)) {
+        s.notes.push(n);
+        s.notes.sort((a, b) => a - b);
+        s.gained.push('Journal Page ' + CIRC[n]);
+      }
+    } else if (!s[k]) {
+      s[k] = true;
+      s.gained.push(ITEMS[k]);
+    }
+  }
+  if (p.end && !s.ended) {
+    const r = registerEnding(m, p.end);
+    s.ended = true; s.endGain = r.gain; s.endNew = r.isNew;
+  }
+  return s;
+}
+
+/* いまの段落で見せる選択肢 */
+function choices(s, m) {
+  const p = P[s.at];
+  if (!p || !p.c) return [];
+  const out = [];
+  p.c.forEach((c, i) => {
+    if (c.show && !c.show(s, m)) return;
+    const ok = !c.req || c.req.ok(s, m);
+    out.push({
+      i,
+      text: typeof c.t === 'function' ? c.t(s, m) : c.t,
+      to: typeof c.to === 'function' ? c.to(s, m) : c.to,
+      ok,
+      hint: ok ? '' : (c.req.hint ? c.req.hint(s, m) : 'Not available right now.'),
+      why: ok ? '' : (c.req.why ? c.req.why(s, m) : ''),
+    });
+  });
+  return out;
+}
+
+function choose(s, m, idx) {
+  const item = choices(s, m).find((x) => x.i === idx);
+  if (!item || !item.ok) return false;
+  const c = P[s.at].c[idx];
+  if (c.fx) c.fx(s, m);
+  enter(s, m, item.to);
+  return true;
+}
+
+/* 本文を、表示用の部品(地の文・手記の引用)に展開する */
+function body(s, m) {
+  const out = [];
+  for (const seg of P[s.at].body) {
+    if (typeof seg === 'string') { out.push({ k: 'p', t: seg }); continue; }
+    if (seg.if && !seg.if(s, m)) continue;
+    if (seg.q) { out.push({ k: 'q', lines: seg.q }); continue; }
+    const t = typeof seg.t === 'function' ? seg.t(s, m) : seg.t;
+    if (t) out.push({ k: 'p', t });
+  }
+  return out;
+}
+
+/* テスト用の出発点 */
+function preset(name) {
+  const s = newRun();
+  if (name === 'all30') {
+    s.notes = [1, 2, 3, 4, 5]; s.gold = true; s.blue = true;
+    return s;
+  }
+  if (name === 'silver34') {
+    s.notes = [1, 2, 3, 4, 5, 6]; s.gold = s.blue = s.red = true;
+    s.silver = true; s.doubt = 2; s.at = 34;
+    return s;
+  }
+  return s;
+}
+
+/* ---- 引き継ぎコード(7文字。復活の呪文のような短い文字列) ---- */
+const ALPH = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
+
+function endMask(endings) {
+  let mask = 0;
+  [37, 38, 39, 40, 41].forEach((id, bit) => { if (endings.includes(id)) mask |= (1 << bit); });
+  return mask;
+}
+function checksum(f, mask, r) {
+  let h = 0x2d5;
+  h = (h * 37 + f) % 1021;
+  h = (h * 37 + mask) % 1021;
+  h = (h * 37 + r) % 1021;
+  return h;
+}
+function encodeMeta(m) {
+  const f = Math.min(999, m.fragments), r = Math.min(999, m.runs), mask = endMask(m.endings);
+  let n = BigInt(f);
+  n = (n << 5n) | BigInt(mask);
+  n = (n << 10n) | BigInt(r);
+  n = (n << 10n) | BigInt(checksum(f, mask, r));
+  let out = '';
+  for (let i = 0; i < 7; i++) { out = ALPH[Number(n & 31n)] + out; n >>= 5n; }
+  return out.slice(0, 4) + '-' + out.slice(4);
+}
+function decodeMeta(str) {
+  const t = String(str || '').toUpperCase().replace(/[\s\-]/g, '')
+    .replace(/O/g, '0').replace(/[IL]/g, '1').replace(/U/g, 'V');
+  if (t.length !== 7) return null;
+  let n = 0n;
+  for (const ch of t) {
+    const v = ALPH.indexOf(ch);
+    if (v < 0) return null;
+    n = (n << 5n) | BigInt(v);
+  }
+  const chk = Number(n & 1023n); n >>= 10n;
+  const r = Number(n & 1023n); n >>= 10n;
+  const mask = Number(n & 31n); n >>= 5n;
+  const f = Number(n);
+  if (f > 999 || r > 999) return null;
+  if (chk !== checksum(f, mask, r)) return null;
+  const endings = [37, 38, 39, 40, 41].filter((id, bit) => mask & (1 << bit));
+  return { fragments: f, endings, runs: r };
+}
+function sanitizeMeta(x) {
+  const m = newMeta();
+  if (!x || typeof x !== 'object') return m;
+  m.fragments = Math.max(0, Math.min(999, Math.floor(+x.fragments) || 0));
+  m.runs = Math.max(0, Math.min(999, Math.floor(+x.runs) || 0));
+  m.endings = Array.isArray(x.endings) ? x.endings.filter((id) => [37, 38, 39, 40, 41].includes(id)) : [];
+  return m;
+}
+function sanitizeRun(x) {
+  if (!x || typeof x !== 'object' || !P[x.at]) return null;
+  const s = Object.assign(newRun(), x);
+  s.notes = Array.isArray(x.notes) ? x.notes.filter((n) => n >= 1 && n <= 6) : [];
+  return s;
+}
+</script>
+<script>
+/* ============================================================
+   画面(表紙・本のページ・冒険記録紙)と保存
+   ============================================================ */
+(function () {
+  'use strict';
+
+  // English edition's storage keys. Kept apart from the Japanese edition ('nemuri-mori:*').
+  // Change this one prefix and every key follows.
+  const KP = 'nemuri-mori-en';
+  const K = { meta: KP + ':meta', run: KP + ':run', ui: KP + ':ui' };
+  let storageOk = true;
+  try { localStorage.setItem(KP + ':t', '1'); localStorage.removeItem(KP + ':t'); } catch (e) { storageOk = false; }
+  function sget(k) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch (e) { storageOk = false; return null; } }
+  function sset(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { storageOk = false; } }
+  function sdel(k) { try { localStorage.removeItem(k); } catch (e) { storageOk = false; } }
+
+  let meta = sanitizeMeta(sget(K.meta));
+  let run = sanitizeRun(sget(K.run));
+  const saved = sget(K.ui) || {};
+  // 公開版: アドレスの末尾に ?test=1 を付けたときだけ、テスト表示の切り替えが現れる
+  const TESTABLE = (function () { try { return /[?&]test=1(&|$)/.test(location.search); } catch (e) { return false; } })();
+  const ui = {
+    screen: 'cover',
+    sheet: saved.sheet !== undefined ? !!saved.sheet : window.innerWidth >= 960,
+    test: TESTABLE ? (saved.test !== undefined ? !!saved.test : true) : false,
+    msg: '', wipeArmed: false, open: {}, pz: null, pzFor: null,
+  };
+  let focusSel = null;
+  let scrollTo = null;
+
+  function saveAll() {
+    sset(K.meta, meta);
+    if (run) sset(K.run, run); else sdel(K.run);
+    sset(K.ui, { sheet: ui.sheet, test: ui.test });
+  }
+
+  const root = document.getElementById('root');
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  /* ---------- 部品 ---------- */
+  const BOTTLE = (cssVar) => '<svg viewBox="0 0 24 30" aria-hidden="true" style="color:var(' + cssVar + ')">' +
+    '<rect x="9" y="1" width="6" height="4" rx="1" fill="var(--ink-2)"/>' +
+    '<path d="M9 5h6v4l4 5v12a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V14l4-5z" fill="currentColor" stroke="var(--ink)" stroke-width="1.2"/>' +
+    '<path d="M9 16v8" stroke="var(--paper)" stroke-width="1.6" stroke-linecap="round" opacity=".55"/></svg>';
+  const SILVER = '<svg viewBox="0 0 24 30" aria-hidden="true" style="color:var(--silver)">' +
+    '<path d="M5 3h14l-1.2 8a5.8 5.8 0 0 1-11.6 0z" fill="currentColor" stroke="var(--ink)" stroke-width="1.2"/>' +
+    '<path d="M12 17v8M7.5 27h9" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></svg>';
+
+  function codeBlock(withRestore) {
+    const code = encodeMeta(meta);
+    return '<div class="code-box"><h2>Transfer Code</h2>' +
+      '<p class="note-s">Your endings and Memory Fragments, packed into 7 characters. Enter it on another device to pick up where you left off. Codes from the Japanese edition work here too.</p>' +
+      '<div class="code-row"><input id="code-show" type="text" readonly value="' + code + '" aria-label="Your current transfer code">' +
+      '<button class="btn" data-act="copy">Copy</button></div>' +
+      (withRestore
+        ? '<div class="code-row"><input id="code-in" type="text" placeholder="Enter a code" maxlength="12" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Enter a transfer code">' +
+          '<button class="btn" data-act="restore">Restore</button></div>'
+        : '') +
+      '<p class="msg" id="msg" role="status" aria-live="polite">' + esc(ui.msg) + '</p></div>';
+  }
+
+  function testBox(withStatus) {
+    if (!TESTABLE) return '';
+    let h = '<section class="testbox"><label><input type="checkbox" id="test-toggle" data-act="toggleTest"' + (ui.test ? ' checked' : '') + '> Test view</label>';
+    if (ui.test) {
+      if (withStatus && run) {
+        h += '<dl><dt>Section</dt><dd>' + run.at + ' ' + esc(P[run.at].title) + '</dd>' +
+          '<dt>Doubt</dt><dd>' + run.doubt + '</dd>' +
+          '<dt>Order</dt><dd>' + (run.order ? run.order.split('').map((k) => ORDER_NAME[k]).join('→') : '―') + '</dd>' +
+          '<dt>Silver</dt><dd>' + (run.silver ? 'Carrying' : run.silverPlaced ? 'Set down' : 'Not carrying') + '</dd>' +
+          '<dt>Barrier</dt><dd>' + (run.shattered ? 'Shattered' : 'Intact') + '</dd></dl>';
+      }
+      h += '<div class="row">' +
+        '<button class="btn" data-act="fragAdd">Fragments +1</button>' +
+        '<button class="btn" data-act="fragZero">Fragments to 0</button>' +
+        '<button class="btn" data-act="preset" data-p="all30">All collected, to the Prince\'s Chamber</button>' +
+        '<button class="btn" data-act="preset" data-p="silver34">Silver + Doubt 2, to 34</button></div>';
+    }
+    return h + '</section>';
+  }
+
+  /* ---------- 挿絵 ---------- */
+  function plateHtml(key, extra) {
+    const d = PLATES[key];
+    if (!d) return '';
+    const src = (typeof PLATE_IMG !== 'undefined' && PLATE_IMG[key]) || '';
+    if (src) return '<figure class="plate' + (extra ? ' ' + extra : '') + '"><img src="' + src + '" alt="' + esc(d.alt) + '" decoding="async"' + (key === 'cover' ? '' : ' loading="lazy"') + '></figure>';
+    if (ui.test) return '<figure class="plate empty' + (extra ? ' ' + extra : '') + '" role="img" aria-label="Plate frame"><span>Plate frame · ' + (key === 'cover' ? 'Cover' : key + ' ' + esc(d.name)) + '<small>3:2 · Shown only in test view when there is no image</small></span></figure>';
+    return '';
+  }
+
+  /* ---------- 表紙 ---------- */
+  function renderCover() {
+    const hasPlate = typeof PLATE_IMG !== 'undefined' && !!PLATE_IMG.cover;
+    const top = hasPlate
+      ? plateHtml('cover', 'cover-plate') + '<h1 class="cover-title">The Prince of the Sleeping Forest</h1>'
+      : (ui.test ? plateHtml('cover', 'cover-plate') : '') + '<div class="moon"><h1 aria-label="The Prince of the Sleeping Forest">' + ['The Prince', 'of the', 'Sleeping', 'Forest'].map((c) => '<span aria-hidden="true">' + c + '</span>').join('') + '</h1></div>';
+    const seals = [37, 38, 39, 40, 41].map((id) =>
+      meta.endings.includes(id) ? '<li class="on">' + esc(ENDINGS[id].name) + '</li>' : '<li><span aria-hidden="true">？</span><span class="visually-hidden">Undiscovered ending</span></li>').join('');
+    const resume = !!run && !run.ended;
+    return '<section class="cover">' +
+      top +
+      '<p class="sub">A Gamebook · 41 Sections</p>' +
+      '<p class="epi">“…Guard the sleep.”</p>' +
+      '<div class="acts">' + (resume
+        ? '<button class="btn primary" data-act="resume">Continue</button><button class="btn" data-act="start">Start Over</button>'
+        : '<button class="btn primary" data-act="start">Begin</button>') + '</div>' +
+      '<h2>Endings Found</h2><ul class="seals">' + seals + '</ul>' +
+      (bonusOpen() ? '<div class="acts"><button class="btn primary" data-act="toBonus">Watch the Bonus Film</button></div>' : '') +
+      '<p class="stat">Memory Fragments <b>' + meta.fragments + '</b></p>' +
+      codeBlock(true) +
+      '<p class="note-s">' + (storageOk
+        ? 'Progress is saved automatically in this device\'s browser.'
+        : 'Autosave isn\'t available here. Please write down your transfer code.') + '</p>' +
+      testBox(false) +
+      '<button class="btn danger" data-act="' + (ui.wipeArmed ? 'wipe' : 'wipeArm') + '">' + (ui.wipeArmed ? 'Really erase? (cannot be undone)' : 'Erase All Records') + '</button>' +
+      '<button class="btn" data-act="toCredits">About This Game</button>' +
+      '<p class="legal">© 2026 FILWEN</p>' +
+      '</section>';
+  }
+
+  /* ---------- ボーナス映像(結末を5つ集めた人へ) ---------- */
+  function bonusOpen() { return meta.endings.length >= 5 || ui.test; }
+  function renderBonus() {
+    return '<section class="cover credits">' +
+      '<p class="sub">FILWEN TALES</p>' +
+      '<h2>Bonus Film</h2>' +
+      '<p class="note-s">For those who have seen all five endings.</p>' +
+      videoHtml('bonus') +
+      '<p class="epi">— To be continued —</p>' +
+      '<div class="acts"><button class="btn primary" data-act="toCover">Back to Cover</button></div>' +
+      '</section>';
+  }
+
+  /* ---------- クレジット ---------- */
+  function renderCredits() {
+    return '<section class="cover credits">' +
+      '<p class="sub">FILWEN TALES</p>' +
+      '<h2>The Prince of the Sleeping Forest</h2>' +
+      '<p class="note-s">Story &amp; Design<br><b>FILWEN</b></p>' +
+      '<h2>Credits &amp; AI Tools</h2>' +
+      '<ul class="credit-list">' +
+      '<li><span>App development &amp; story support</span>Claude (Anthropic)</li>' +
+      '<li><span>Illustrations</span>Seedream</li>' +
+      '<li><span>Video</span>MiniMax</li></ul>' +
+      '<p class="note-s">This work contains text, images, and video created with generative AI.</p>' +
+      '<p class="legal">© 2026 FILWEN</p>' +
+      '<div class="acts"><button class="btn primary" data-act="toCover">Back to Cover</button></div>' +
+      '</section>';
+  }
+
+  /* ---------- 冒険記録紙 ---------- */
+  function renderSheet() {
+    const s = run || newRun();
+    const slot = (key, cssVar, name) => '<li class="item ' + (s[key] ? 'on' : 'off') + '">' + BOTTLE(cssVar) + '<span>' + (s[key] ? name : '？') + '</span></li>';
+    let items = slot('gold', '--b-gold', ITEMS.gold) + slot('blue', '--b-blue', ITEMS.blue) + slot('red', '--b-red', ITEMS.red);
+    if (s.silver) items += '<li class="item on">' + SILVER + '<span>Silver Relic</span></li>';
+    else if (s.silverPlaced) items += '<li class="item off">' + SILVER + '<span>Set down</span></li>';
+    const notes = [1, 2, 3, 4, 5, 6].map((n) => {
+      if (!s.notes.includes(n)) return '<li class="off"><span class="mark">' + CIRC[n] + '</span><span>Not found</span></li>';
+      return '<li><details data-note="' + n + '"' + (ui.open[n] ? ' open' : '') + '><summary><span class="mark">' + CIRC[n] + '</span><span>' + esc(NOTES[n].title) + '</span></summary>' +
+        '<div class="body">' + NOTES[n].lines.map((l) => '<p>' + esc(l) + '</p>').join('') + '</div></details></li>';
+    }).join('');
+    return '<aside class="sheet" aria-label="Adventure Record"><h2>Adventure Record</h2>' +
+      '<section><h3>Items</h3><ul class="items">' + items + '</ul></section>' +
+      '<section><h3>Journal Pages ' + s.notes.length + ' / 6</h3><ol class="notes">' + notes + '</ol></section>' +
+      '<section><h3>Memory Fragments</h3><p class="frag"><b>' + meta.fragments + '</b> · Endings ' + meta.endings.length + ' / 5</p></section>' +
+      testBox(true) + '</aside>';
+  }
+
+  /* ---------- 本のページ ---------- */
+  function renderEnd(s) {
+    const e = ENDINGS[P[s.at].end];
+    return '<section class="end"><p class="seal" aria-hidden="true">End</p>' +
+      '<p class="end-name">' + esc(e.label) + '</p>' +
+      '<p class="end-gain">Memory Fragments <b>+' + s.endGain + '</b>' + (s.endNew ? ' (new ending)' : '') + '. Endings ' + meta.endings.length + ' / 5</p>' +
+      '<div class="acts"><button class="btn primary" data-act="restart">Play Again</button><button class="btn" data-act="toCover">Cover</button></div>' +
+      codeBlock(false) + '</section>';
+  }
+
+  /* ---------- 山場の動画(枠) ---------- */
+  function videoKind(url) {
+    if (typeof url !== 'string') return null;
+    const u = url.trim();
+    if (!/^(https:\/\/|(\.\.\/)?videos\/)[^\s"'<>]+$/i.test(u)) return null;
+    return /\.(mp4|webm|m4v)(\?[^\s]*)?$/i.test(u) ? 'file' : 'link';
+  }
+  function videoHtml(key) {
+    const v = typeof VIDEOS !== 'undefined' ? VIDEOS[key] : null;
+    if (!v) return '';
+    const kind = videoKind(v.url);
+    const title = esc(v.title || 'Cutscene');
+    if (!kind) {
+      return ui.test ? '<div class="vid empty" role="img" aria-label="Video frame"><span>Video frame · ' + key + ' ' + title + '</span><small>Appears here once a URL is set. Visible only in test view</small></div>' : '';
+    }
+    const url = esc(v.url.trim());
+    const note = v.note ? '<p class="vid-note">' + esc(v.note) + '</p>' : '';
+    if (kind === 'file') {
+      const pimg = (typeof VIDEO_POSTER !== 'undefined' && VIDEO_POSTER[key]) || (typeof PLATE_IMG !== 'undefined' && PLATE_IMG[key]) || '';
+      const poster = pimg ? ' poster="' + pimg + '"' : '';
+      return '<figure class="vid"><video controls playsinline preload="none"' + poster + ' src="' + url + '" aria-label="Video: ' + title + '">Your browser can\'t play this video.<a href="' + url + '" target="_blank" rel="noopener noreferrer">Open in a new tab</a></video>' + note + '</figure>';
+    }
+    return '<div class="vid"><a class="vid-card" href="' + url + '" target="_blank" rel="noopener noreferrer"><span class="play" aria-hidden="true">▶</span>' +
+      '<span class="t">Watch: ' + title + '</span><span class="s">Opens an external site in a new tab. You can play on without watching.</span></a>' + note + '</div>';
+  }
+
+  /* ---------- パズル(5:苔むした石碑 / 27:結界の明滅) ---------- */
+  const BLINK_FAIL = ['The wall flicks your fingers away. It doesn\'t hurt. That fade was too short.', 'The wall flicks your fingers away. Try counting its breaths. The fades are not always the same length.', 'The wall flicks your fingers away. Count three, then wait for the fourth fade.'];
+  function motionReduced() { try { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) { return false; } }
+  function newPz() { return { mode: motionReduced() ? 'step' : 'timed', started: false, t0: 0, step: 0, fails: 0, msg: '', moss: [], sel: null, wrong: 0, lastSolved: null, lastWrong: null }; }
+  let pzTimer = null;
+  function stopLoop() { if (pzTimer) { clearInterval(pzTimer); pzTimer = null; } }
+  function pzTick() {
+    const z = ui.pz, w = document.getElementById('pz-wall');
+    if (!z || !w || !z.started || z.mode !== 'timed') { stopLoop(); return; }
+    w.style.setProperty('--glow', blinkGlow(blinkPhase(performance.now() - z.t0)).toFixed(2));
+  }
+  function startLoop() { stopLoop(); pzTimer = setInterval(pzTick, 80); pzTick(); }
+
+  function blinkHtml(z) {
+    const step = z.mode === 'step';
+    const glow = step ? blinkGlow(blinkStepPhase(z.step)) : (z.started ? blinkGlow(blinkPhase(performance.now() - z.t0)) : 0.35);
+    const say = z.msg || (step ? BLINK_STEPS[z.step] : (z.started ? '' : 'Start counting the wall\'s breaths.'));
+    const btns = (step
+      ? '<button class="btn" data-act="pzStep">Watch One Breath</button><button class="btn primary pz-tap" data-act="pzTap">Reach In</button>'
+      : (z.started ? '<button class="btn primary pz-tap" data-act="pzTap">Reach In</button>' : '<button class="btn primary" data-act="pzStart">Start Counting</button>'))
+      + '<button class="btn" data-act="pzMode" aria-pressed="' + step + '">Step by step (text mode)</button>'
+      + ((z.fails >= 3 || ui.test) ? '<button class="btn" data-act="pzSkip">Unravel the Wall and Go On</button>' : '');
+    return '<section class="pz" aria-labelledby="pz-t"><p class="pz-h" id="pz-t" tabindex="-1">The Barrier of Light</p>' +
+      '<div class="pz-wall" id="pz-wall" role="img" aria-label="A wall of light flickering as if it were breathing" style="--glow:' + glow.toFixed(2) + '"><i></i></div>' +
+      '<p class="pz-say" id="pz-say" role="status" aria-live="polite">' + esc(say) + '</p>' +
+      '<div class="acts">' + btns + '</div></section>';
+  }
+  /* 石碑の絵。座標は viewBox 320x440。字のマスは 44 角、右の列(眠りを乱す者)から読む */
+  /* Layout on the stone (viewBox 320x440). Visible lines are plain text; the six hidden words sit in boxes, two per row. */
+  const ST = { cx: 167 };
+  const ST_LINES = [{ t: 'Guard the', y: 140 }, { t: 'sleep.', y: 180 }, { t: 'it.', y: 382 }];
+  const ST_SLOTS = (() => {
+    const out = [], rows = [[0, 1], [2, 3], [4, 5]];
+    rows.forEach((r, k) => {
+      const ws = r.map((i) => 14 + 14 * TABLET.slots[i].word.length);
+      let x = ST.cx - (ws[0] + 10 + ws[1]) / 2;
+      r.forEach((i, j) => { out[i] = { x: Math.round(x), y: 196 + 52 * k, w: ws[j] }; x += ws[j] + 10; });
+    });
+    return out;
+  })();
+  function rnd(seed) { let x = seed * 7919 + 13; return () => { x = (x * 9301 + 49297) % 233280; return x / 233280; }; }
+  function mossSvg(i) {
+    const r = rnd(i + 5), pts = [];
+    for (let k = 0; k < 14; k++) { const a = k / 14 * Math.PI * 2, rad = 25 + r() * 6; pts.push([22 + Math.cos(a) * rad, 22 + Math.sin(a) * rad]); }
+    let d = 'M' + ((pts[0][0] + pts[13][0]) / 2).toFixed(1) + ',' + ((pts[0][1] + pts[13][1]) / 2).toFixed(1);
+    for (let k = 0; k < 14; k++) { const n = pts[(k + 1) % 14]; d += ' Q' + pts[k][0].toFixed(1) + ',' + pts[k][1].toFixed(1) + ' ' + ((pts[k][0] + n[0]) / 2).toFixed(1) + ',' + ((pts[k][1] + n[1]) / 2).toFixed(1); }
+    let dots = '';
+    for (let k = 0; k < 16; k++) dots += '<circle cx="' + (r() * 46 - 1).toFixed(1) + '" cy="' + (r() * 46 - 1).toFixed(1) + '" r="' + (1.2 + r() * 2.6).toFixed(1) + '" fill="' + (r() < .5 ? '#4f6c37' : '#a3b874') + '" opacity="' + (.55 + r() * .4).toFixed(2) + '"/>';
+    return '<path d="' + d + 'Z" fill="#6c8847" stroke="#3f5a2b" stroke-width="1.2"/>' + dots;
+  }
+  function runeMark(x, y, k) {
+    const d = ['M0,-9 L0,9 M0,-3 L6,-9 M0,3 L6,-3', 'M0,-9 L0,9 M0,-9 L6,-4 L0,1', 'M-5,-9 L5,9 M5,-9 L-5,9', 'M0,-9 L0,9 M-5,-4 L0,-9 L5,-4'][k % 4];
+    return '<path d="' + d + '" transform="translate(' + x + ',' + y + ')"/>';
+  }
+  function steleSvg(z, lvl) {
+    const f = TABLET.reveal[lvl];
+    const body = 'M54,420 L47,362 L58,302 L46,238 L60,172 L72,112 L96,64 L132,38 L170,28 L206,46 L236,88 L258,142 L270,202 L262,262 L276,322 L268,378 L274,420 Z';
+    let runes = '';
+    [170, 215, 260, 305, 350].forEach((y, k) => { runes += runeMark(70, y, k) + runeMark(256, y + 10, k + 2); });
+    const knot = '<g transform="translate(170,82)"><circle r="27"/><circle r="22"/>' +
+      [0, 60, 120].map((a) => '<ellipse rx="9.5" ry="20" transform="rotate(' + a + ')"/>').join('') + '</g>';
+    let flies = '';
+    [[40, 300, 0], [282, 250, 1.2], [68, 200, .6], [250, 340, 2], [20, 380, 1.6], [300, 392, .3]].forEach(([x, y, dl]) => { flies += '<circle class="fly" cx="' + x + '" cy="' + y + '" r="2.2" fill="#d9f2ff" filter="url(#stGlow)" style="animation-delay:' + dl + 's"/>'; });
+    let flowers = '';
+    [[40, 432, 1], [58, 436, .8], [270, 434, 1], [290, 430, .8]].forEach(([x, y, k]) => {
+      flowers += '<g transform="translate(' + x + ',' + y + ') scale(' + k + ')"><path d="M0,0 Q-1,-8 0,-14" stroke="#3f5a3a" stroke-width="1.6" fill="none"/>' +
+        [0, 72, 144, 216, 288].map((a) => '<ellipse cx="0" cy="-19" rx="3" ry="5" fill="#eef1ee" stroke="#9aa4a8" stroke-width=".6" transform="rotate(' + a + ' 0 -14)"/>').join('') + '<circle cx="0" cy="-14" r="2" fill="#d8bd6a"/></g>';
+    });
+    let cells = '', ringHtml = '';
+    ST_LINES.forEach((ln) => { cells += '<text x="' + ST.cx + '" y="' + ln.y + '" class="eng">' + ln.t + '</text>'; });
+    ST_SLOTS.forEach((pos, i) => {
+      const sl = TABLET.slots[i], w = pos.w, solved = z.moss.includes(i);
+      const ex = sl.dir === 'l' ? [0, 0, w * f, 44] : [w - w * f, 0, w * f, 44];
+      const cls = solved ? (z.lastSolved === i ? 'moss-fall' : 'moss-gone') : (z.lastWrong === i ? 'moss-grow' : '');
+      cells += '<g transform="translate(' + pos.x + ',' + pos.y + ')">' +
+        '<rect x="0" y="0" width="' + w + '" height="44" rx="5" fill="#0b121b" opacity=".35"/>' +
+        '<text x="' + (w / 2) + '" y="31" class="eng' + (solved ? ' hit' : '') + '">' + sl.word + '</text>' +
+        (solved && cls === 'moss-gone' ? '' :
+          '<g class="' + cls + '"><g transform="translate(' + (w / 2) + ',22) scale(' + (w / 44).toFixed(3) + ',1) translate(-22,-22)">' + mossSvg(i) + '</g>' +
+          '<g><clipPath id="cp' + i + '"><rect x="' + ex[0].toFixed(1) + '" y="' + ex[1].toFixed(1) + '" width="' + ex[2].toFixed(1) + '" height="' + ex[3].toFixed(1) + '" rx="4"/></clipPath>' +
+          '<rect x="' + ex[0].toFixed(1) + '" y="' + ex[1].toFixed(1) + '" width="' + ex[2].toFixed(1) + '" height="' + ex[3].toFixed(1) + '" rx="4" fill="#7d8c9b"/>' +
+          '<text x="' + (w / 2) + '" y="31" class="eng cut" clip-path="url(#cp' + i + ')">' + sl.word + '</text></g></g>') +
+        '</g>';
+      if (z.sel === i) ringHtml += '<rect class="sel-ring" x="' + (pos.x - 3) + '" y="' + (pos.y - 3) + '" width="' + (w + 6) + '" height="50" rx="8"/>';
+    });
+    return '<svg viewBox="0 0 320 440" aria-hidden="true" focusable="false">' +
+      '<defs>' +
+      '<linearGradient id="stSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16233b"/><stop offset=".55" stop-color="#2b4562"/><stop offset="1" stop-color="#43606c"/></linearGradient>' +
+      '<linearGradient id="stBody" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6f8196"/><stop offset=".4" stop-color="#4a5a6c"/><stop offset="1" stop-color="#2a3442"/></linearGradient>' +
+      '<radialGradient id="stMoon" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f4f8ff" stop-opacity=".95"/><stop offset=".3" stop-color="#cfe0f5" stop-opacity=".5"/><stop offset="1" stop-color="#cfe0f5" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="stMist" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#cfe0e8" stop-opacity=".55"/><stop offset="1" stop-color="#cfe0e8" stop-opacity="0"/></radialGradient>' +
+      '<filter id="stNoise" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="7" result="n"/><feColorMatrix in="n" values="0 0 0 0 .05  0 0 0 0 .08  0 0 0 0 .12  0 0 0 .75 0"/></filter>' +
+      '<filter id="stWob"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="5" result="w"/><feDisplacementMap in="SourceGraphic" in2="w" scale="9"/></filter>' +
+      '<filter id="stGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
+      '<clipPath id="stClip"><path d="' + body + '"/></clipPath>' +
+      '</defs>' +
+      '<rect width="320" height="440" fill="url(#stSky)"/>' +
+      '<circle cx="52" cy="50" r="62" fill="url(#stMoon)"/><circle cx="52" cy="50" r="14" fill="#f3f7ff"/>' +
+      /* 木々 */
+      '<g fill="#0d1623"><path d="M0,0 L22,0 L26,150 L30,440 L0,440Z"/><path d="M320,0 L296,0 L292,120 L288,440 L320,440Z"/>' +
+      '<path d="M22,40 L60,70 L58,76 L22,56Z M296,64 L262,92 L264,98 L296,80Z M24,170 L52,196 L50,200 L24,184Z"/></g>' +
+      /* 奥の立石 */
+      '<g fill="#1f3044" opacity=".9"><path d="M64,404 L66,352 L74,330 L90,326 L98,352 L102,404Z"/><path d="M222,410 L224,372 L236,350 L252,356 L258,386 L262,410Z"/><path d="M104,414 L106,392 L116,384 L126,394 L128,414Z"/></g>' +
+      '<ellipse cx="160" cy="404" rx="190" ry="46" fill="url(#stMist)"/>' +
+      '<path d="M0,414 Q60,402 130,412 T250,408 T320,410 L320,440 L0,440Z" fill="#14202a"/>' +
+      '<ellipse cx="164" cy="424" rx="118" ry="11" fill="#05090e" opacity=".5"/>' +
+      /* 巨石 */
+      '<g filter="url(#stWob)">' +
+      '<path d="' + body + '" fill="url(#stBody)" stroke="#1a222d" stroke-width="3"/>' +
+      '<g clip-path="url(#stClip)"><rect x="30" y="20" width="270" height="420" filter="url(#stNoise)" opacity=".6"/>' +
+      '<path d="M54,420 L47,362 L58,302 L46,238 L60,172 L72,112 L96,64 L132,38 L170,28" fill="none" stroke="#cfe3f6" stroke-width="6" opacity=".28"/>' +
+      '<g stroke="#0d141d" stroke-width="1.8" fill="none" opacity=".6"><path d="M96,90 L104,128 L92,150 L100,186"/><path d="M262,300 L250,332 L258,360 L244,398"/><path d="M62,260 L78,274 L72,306"/><path d="M240,150 L228,176"/></g></g>' +
+      '</g>' +
+      /* 光る紋様 */
+      '<g class="rune" fill="none" stroke="#9fe3ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#stGlow)">' + knot + runes + '</g>' +
+      /* いばら・苔・花 */
+      '<g stroke="#2f4a33" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M290,432 C306,388 268,358 292,308 C312,268 276,240 288,204"/><path d="M24,430 C12,396 38,370 22,338"/></g>' +
+      '<path d="M44,404 Q48,386 66,388 Q82,376 92,396 Q104,404 100,420 L44,420Z" fill="#587a42" stroke="#304a28" stroke-width="1.2"/>' +
+      '<path d="M236,408 Q244,390 262,394 Q276,386 284,402 L284,420 L236,420Z" fill="#587a42" stroke="#304a28" stroke-width="1.2"/>' +
+      flowers + flies + cells + ringHtml + '</svg>';
+  }
+  function tabletHtml(z) {
+    const lvl = tabletLevel(meta), n = TABLET.slots.length;
+    const all = z.moss.length >= n;
+    const btns = ST_SLOTS.map((pos, i) => z.moss.includes(i) ? '' :
+      '<button class="slot" data-act="pzMoss" data-i="' + i + '" style="left:' + (pos.x / 3.2).toFixed(2) + '%;top:' + (pos.y / 4.4).toFixed(2) + '%;width:' + (pos.w / 3.2).toFixed(2) + '%;height:10%" aria-label="A word covered in moss (' + (i + 1) + ' of ' + n + '). Choose the word carved beneath."' + (z.sel === i ? ' aria-pressed="true"' : '') + '></button>').join('');
+    const sl = z.sel !== null && z.sel !== undefined ? TABLET.slots[z.sel] : null;
+    const cands = all ? '' : '<div class="cands" role="group" aria-label="Candidate words">' + (sl
+      ? sl.opts.map((o) => '<button class="cand' + (z.wrong >= 3 && o === sl.word ? ' hint' : '') + '" data-act="pzPick" data-o="' + o + '" aria-label="Candidate: ' + o + '">' + o + '</button>').join('')
+      : '<span class="cands-note">Touch a mossy word. The shape showing through is your clue.</span>') + '</div>';
+    const seq = 'Guard the sleep. ' + TABLET.slots.map((x, i) => z.moss.includes(i) ? x.word : '___').join(' ') + ' it.';
+    const say = z.msg || (all ? 'The moss falls away, and the words can be read: \u201c' + TABLET.full + '\u201d' : 'Read so far: ' + seq);
+    const low = all && meta.fragments >= 1 ? '<p class="pz-small">At the foot of the stone, smaller letters are carved: \u201c' + TABLET.low + '\u201d</p>' : '';
+    return '<section class="pz" aria-labelledby="pz-t"><p class="pz-h" id="pz-t" tabindex="-1">The Mossy Stone</p>' +
+      '<div class="stele' + (all ? ' done' : '') + '" role="group" aria-label="The mossy stone">' + steleSvg(z, lvl) + btns + '</div>' +
+      cands +
+      '<p class="pz-say" role="status" aria-live="polite">' + esc(say) + '</p>' + low +
+      (all ? '' : '<div class="acts">' + ((z.wrong >= 3 || ui.test) ? '<button class="btn" data-act="pzMossAll">Clear All the Moss</button>' : '') + '</div>') + '</section>';
+  }
+  function pzHtml(s) {
+    const p = P[s.at];
+    if (!p || !p.puzzle) return '';
+    if (ui.pzFor !== s.at) { ui.pzFor = s.at; ui.pz = newPz(); stopLoop(); }
+    if (p.puzzle === 'blink') return s.p27 ? '' : blinkHtml(ui.pz);
+    if (p.puzzle === 'tablet') return tabletHtml(ui.pz);
+    return '';
+  }
+  function pzDone() { run.p27 = true; stopLoop(); focusSel = '.choice'; saveAll(); render(); }
+  function pzAct(name, el) {
+    const z = ui.pz;
+    if (!z || !run) return;
+    const now = performance.now();
+    switch (name) {
+      case 'pzMode': z.mode = z.mode === 'step' ? 'timed' : 'step'; z.started = false; z.step = 0; z.msg = ''; stopLoop(); focusSel = '[data-act="pzMode"]'; break;
+      case 'pzStart': z.started = true; z.t0 = now; z.msg = ''; focusSel = '.pz-tap'; break;
+      case 'pzStep': z.step = (z.step + 1) % 8; z.msg = ''; focusSel = '[data-act="pzStep"]'; break;
+      case 'pzTap': {
+        const ph = z.mode === 'step' ? blinkStepPhase(z.step) : blinkPhase(now - z.t0);
+        if (blinkOpen(ph)) { pzDone(); return; }
+        z.fails++; z.msg = BLINK_FAIL[Math.min(z.fails, 3) - 1];
+        if (z.mode === 'step') z.step = 0; else z.t0 = now;
+        focusSel = '.pz-tap'; break;
+      }
+      case 'pzSkip': pzDone(); return;
+      case 'pzMoss': { z.sel = +el.dataset.i; z.msg = ''; focusSel = '.cand'; break; }
+      case 'pzPick': {
+        const slot = z.sel;
+        if (slot === null || slot === undefined) return;
+        z.lastSolved = null; z.lastWrong = null;
+        if (tabletPick(z, slot, el.dataset.o)) {
+          z.lastSolved = slot; z.sel = null; z.msg = '';
+          const nxt = TABLET.slots.findIndex((x, i) => !z.moss.includes(i));
+          focusSel = nxt >= 0 ? '[data-act="pzMoss"][data-i="' + nxt + '"]' : '#pz-t';
+        } else {
+          z.lastWrong = slot; z.msg = z.wrong >= 3 ? 'Not that word. The moss creeps back... one of the candidates glows faintly.' : 'Not that word. The moss creeps back.';
+          focusSel = '.cand';
+        }
+        break;
+      }
+      case 'pzMossAll': z.moss = TABLET.slots.map((x, i) => i); z.sel = null; z.msg = ''; z.lastSolved = null; focusSel = '#pz-t'; break;
+      default: return;
+    }
+    render();
+    if (z.mode === 'timed' && z.started && ui.pzFor === 27) startLoop();
+  }
+
+  function renderPage() {
+    const s = run, p = P[s.at], ch = chapterOf(s.at);
+    const text = body(s, meta).map((b) => {
+      if (b.k === 'q') return '<blockquote class="note">' + b.lines.map((l) => '<p>' + esc(l) + '</p>').join('') + '</blockquote>';
+      const say = b.t.charAt(0) === '「' || b.t.charAt(0) === '『';
+      return '<p' + (say ? ' class="say"' : '') + '>' + esc(b.t) + '</p>';
+    }).join('');
+    const gains = s.gained && s.gained.length
+      ? '<div class="gains">' + s.gained.map((g) => '<span class="stamp">Found ' + esc(g) + '</span>').join('') + '</div>' : '';
+    let tail;
+    if (p.end) {
+      tail = renderEnd(s);
+    } else if (!choices(s, meta).length) {
+      tail = '';
+    } else {
+      tail = '<ul class="choices">' + choices(s, meta).map((c) => {
+        const go = c.ok ? '<span class="go">→&nbsp;' + c.to + '</span>' : '<span class="go" aria-hidden="true">×</span>';
+        const why = c.ok ? '' : '<p class="why">' + esc(c.hint) + (ui.test && c.why ? ' <b>Requires</b> ' + esc(c.why) : '') + '</p>';
+        return '<li><button class="choice" data-act="choose" data-i="' + c.i + '"' + (c.ok ? '' : ' disabled aria-disabled="true"') + '>' +
+          '<span class="t">' + esc(c.text) + '</span><span class="dots" aria-hidden="true"></span>' + go + '</button>' + why + '</li>';
+      }).join('') + '</ul>';
+    }
+    return '<article class="book" id="book" style="scroll-margin-top:4rem"><div class="fade">' +
+      '<header class="phead"><p class="chap">' + esc(ch.name) + '</p>' +
+      '<h1 class="no" id="pno" tabindex="-1" aria-label="Section ' + s.at + '">' + s.at + '</h1>' +
+      (ui.test ? '<p class="ptitle">' + esc(p.title) + '</p>' : '') + '</header>' +
+      plateHtml(s.at) +
+      '<div class="text">' + text + '</div>' + pzHtml(s) + videoHtml(s.at) + gains + tail + '</div></article>';
+  }
+
+  function render() {
+    const reading = ui.screen === 'read' && run;
+    const credits = !reading && ui.screen === 'credits';
+    const bonus = !reading && ui.screen === 'bonus' && bonusOpen();
+    if (!reading && !credits && !bonus) ui.screen = 'cover';
+    const bar = '<header class="bar"><button class="name" data-act="toCover">' + (reading ? 'The Prince of the Sleeping Forest' : 'FILWEN TALES') + '</button>' +
+      '<div class="tools">' + (reading ? '<button class="btn" data-act="toggleSheet" aria-pressed="' + ui.sheet + '">Record</button>' : '') + '</div></header>';
+    const main = reading
+      ? '<div class="layout' + (ui.sheet ? ' has-sheet' : '') + '">' + (ui.sheet ? renderSheet() : '') + renderPage() + '</div>'
+      : credits ? renderCredits() : bonus ? renderBonus() : renderCover();
+    root.innerHTML = bar + main;
+    if (scrollTo === 'book') {
+      const b = document.getElementById('book'); if (b) b.scrollIntoView({ block: 'start' });
+      const h = document.getElementById('pno'); if (h) h.focus({ preventScroll: true });
+    } else if (scrollTo === 'top') {
+      window.scrollTo(0, 0);
+    }
+    scrollTo = null;
+    if (ui.pz) { ui.pz.lastSolved = null; ui.pz.lastWrong = null; }
+    if (focusSel) { const f = document.querySelector(focusSel); if (f) f.focus({ preventScroll: true }); focusSel = null; }
+  }
+
+  /* ---------- 操作 ---------- */
+  function flash(t) { ui.msg = t; const el = document.getElementById('msg'); if (el) el.textContent = t; }
+
+  async function copyCode() {
+    const code = encodeMeta(meta);
+    try { await navigator.clipboard.writeText(code); flash('Copied.'); }
+    catch (e) {
+      const inp = document.getElementById('code-show');
+      if (inp) { inp.focus(); inp.select(); }
+      flash('Code selected. Please copy it.');
+    }
+  }
+
+  function act(name, el) {
+    const wasArmed = ui.wipeArmed;
+    if (name !== 'wipeArm') ui.wipeArmed = false;
+    if (['choose', 'start', 'restart', 'preset', 'toCover'].includes(name)) ui.pzFor = null;
+    switch (name) {
+      case 'start': case 'restart': run = enter(newRun(), meta, 1); ui.screen = 'read'; ui.msg = ''; scrollTo = 'book'; break;
+      case 'resume': ui.screen = 'read'; scrollTo = 'book'; break;
+      case 'toCover': ui.screen = 'cover'; scrollTo = 'top'; break;
+      case 'toCredits': ui.screen = 'credits'; scrollTo = 'top'; break;
+      case 'toBonus': ui.screen = 'bonus'; scrollTo = 'top'; break;
+      case 'choose': if (run && choose(run, meta, +el.dataset.i)) scrollTo = 'book'; break;
+      case 'toggleSheet': ui.sheet = !ui.sheet; break;
+      case 'toggleTest': ui.test = !!el.checked; break;
+      case 'copy': copyCode(); return;
+      case 'restore': {
+        const input = document.getElementById('code-in');
+        const d = decodeMeta(input ? input.value : '');
+        if (!d) { flash('Couldn\'t read that code. Please check the characters.'); return; }
+        meta = sanitizeMeta(d);
+        ui.msg = 'Restored. Memory Fragments: ' + meta.fragments + ', endings: ' + meta.endings.length + ' / 5.';
+        break;
+      }
+      case 'wipeArm': ui.wipeArmed = true; break;
+      case 'wipe':
+        if (!wasArmed) break;
+        meta = newMeta(); run = null; ui.msg = 'All records erased.'; break;
+      case 'fragAdd': meta.fragments = Math.min(999, meta.fragments + 1); break;
+      case 'fragZero': meta.fragments = 0; break;
+      case 'preset': {
+        const p = el.dataset.p;
+        run = preset(p);
+        enter(run, meta, p === 'all30' ? 30 : 34);
+        ui.screen = 'read'; scrollTo = 'book'; break;
+      }
+    }
+    saveAll();
+    render();
+  }
+
+  root.addEventListener('click', (e) => {
+    const el = e.target.closest('[data-act]');
+    if (!el || el.tagName === 'INPUT') return;
+    if (el.dataset.act.indexOf('pz') === 0) { pzAct(el.dataset.act, el); return; }
+    act(el.dataset.act, el);
+  });
+  root.addEventListener('change', (e) => {
+    if (e.target.dataset && e.target.dataset.act === 'toggleTest') act('toggleTest', e.target);
+  });
+  root.addEventListener('toggle', (e) => {
+    const d = e.target;
+    if (d.dataset && d.dataset.note) ui.open[d.dataset.note] = d.open;
+  }, true);
+  root.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.target.id === 'code-in') act('restore', e.target);
+  });
+
+  render();
+})();
+</script>
+
+</body></html>
